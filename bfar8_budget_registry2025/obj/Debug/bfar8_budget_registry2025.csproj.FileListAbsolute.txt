@@ -1,0 +1,242 @@
+C:\Users\Lehana\Documents\BFAR 8 Budget Application\bfar8_budget_registry2025\bin\Debug\bfar8_budget_registry2025.exe.config
+C:\Users\Lehana\Documents\BFAR 8 Budget Application\bfar8_budget_registry2025\bin\Debug\bfar8_budget_registry2025.exe
+C:\Users\Lehana\Documents\BFAR 8 Budget Application\bfar8_budget_registry2025\bin\Debug\bfar8_budget_registry2025.pdb
+C:\Users\Lehana\Documents\BFAR 8 Budget Application\bfar8_budget_registry2025\bin\Debug\BouncyCastle.Cryptography.dll
+C:\Users\Lehana\Documents\BFAR 8 Budget Application\bfar8_budget_registry2025\bin\Debug\Google.Protobuf.dll
+C:\Users\Lehana\Documents\BFAR 8 Budget Application\bfar8_budget_registry2025\bin\Debug\Guna.UI2.dll
+C:\Users\Lehana\Documents\BFAR 8 Budget Application\bfar8_budget_registry2025\bin\Debug\K4os.Compression.LZ4.dll
+C:\Users\Lehana\Documents\BFAR 8 Budget Application\bfar8_budget_registry2025\bin\Debug\K4os.Compression.LZ4.Streams.dll
+C:\Users\Lehana\Documents\BFAR 8 Budget Application\bfar8_budget_registry2025\bin\Debug\K4os.Hash.xxHash.dll
+C:\Users\Lehana\Documents\BFAR 8 Budget Application\bfar8_budget_registry2025\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\Lehana\Documents\BFAR 8 Budget Application\bfar8_budget_registry2025\bin\Debug\MySql.Data.dll
+C:\Users\Lehana\Documents\BFAR 8 Budget Application\bfar8_budget_registry2025\bin\Debug\System.Buffers.dll
+C:\Users\Lehana\Documents\BFAR 8 Budget Application\bfar8_budget_registry2025\bin\Debug\System.Configuration.ConfigurationManager.dll
+C:\Users\Lehana\Documents\BFAR 8 Budget Application\bfar8_budget_registry2025\bin\Debug\System.Diagnostics.DiagnosticSource.dll
+C:\Users\Lehana\Documents\BFAR 8 Budget Application\bfar8_budget_registry2025\bin\Debug\System.IO.Pipelines.dll
+C:\Users\Lehana\Documents\BFAR 8 Budget Application\bfar8_budget_registry2025\bin\Debug\System.Memory.dll
+C:\Users\Lehana\Documents\BFAR 8 Budget Application\bfar8_budget_registry2025\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\Lehana\Documents\BFAR 8 Budget Application\bfar8_budget_registry2025\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\Lehana\Documents\BFAR 8 Budget Application\bfar8_budget_registry2025\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\Lehana\Documents\BFAR 8 Budget Application\bfar8_budget_registry2025\bin\Debug\ZstdSharp.dll
+C:\Users\Lehana\Documents\BFAR 8 Budget Application\bfar8_budget_registry2025\bin\Debug\BouncyCastle.Cryptography.xml
+C:\Users\Lehana\Documents\BFAR 8 Budget Application\bfar8_budget_registry2025\bin\Debug\Google.Protobuf.pdb
+C:\Users\Lehana\Documents\BFAR 8 Budget Application\bfar8_budget_registry2025\bin\Debug\Google.Protobuf.xml
+C:\Users\Lehana\Documents\BFAR 8 Budget Application\bfar8_budget_registry2025\bin\Debug\K4os.Compression.LZ4.xml
+C:\Users\Lehana\Documents\BFAR 8 Budget Application\bfar8_budget_registry2025\bin\Debug\K4os.Compression.LZ4.Streams.xml
+C:\Users\Lehana\Documents\BFAR 8 Budget Application\bfar8_budget_registry2025\bin\Debug\K4os.Hash.xxHash.xml
+C:\Users\Lehana\Documents\BFAR 8 Budget Application\bfar8_budget_registry2025\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+C:\Users\Lehana\Documents\BFAR 8 Budget Application\bfar8_budget_registry2025\bin\Debug\MySql.Data.xml
+C:\Users\Lehana\Documents\BFAR 8 Budget Application\bfar8_budget_registry2025\bin\Debug\System.Buffers.xml
+C:\Users\Lehana\Documents\BFAR 8 Budget Application\bfar8_budget_registry2025\bin\Debug\System.Configuration.ConfigurationManager.xml
+C:\Users\Lehana\Documents\BFAR 8 Budget Application\bfar8_budget_registry2025\bin\Debug\System.Diagnostics.DiagnosticSource.xml
+C:\Users\Lehana\Documents\BFAR 8 Budget Application\bfar8_budget_registry2025\bin\Debug\System.IO.Pipelines.xml
+C:\Users\Lehana\Documents\BFAR 8 Budget Application\bfar8_budget_registry2025\bin\Debug\System.Memory.xml
+C:\Users\Lehana\Documents\BFAR 8 Budget Application\bfar8_budget_registry2025\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\Lehana\Documents\BFAR 8 Budget Application\bfar8_budget_registry2025\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\Lehana\Documents\BFAR 8 Budget Application\bfar8_budget_registry2025\bin\Debug\System.Threading.Tasks.Extensions.xml
+C:\Users\Lehana\Documents\BFAR 8 Budget Application\bfar8_budget_registry2025\obj\Debug\bfar8_budget_registry2025.csproj.AssemblyReference.cache
+C:\Users\Lehana\Documents\BFAR 8 Budget Application\bfar8_budget_registry2025\obj\Debug\bfar8_budget_registry2025.dashboard.resources
+C:\Users\Lehana\Documents\BFAR 8 Budget Application\bfar8_budget_registry2025\obj\Debug\bfar8_budget_registry2025.Properties.Resources.resources
+C:\Users\Lehana\Documents\BFAR 8 Budget Application\bfar8_budget_registry2025\obj\Debug\bfar8_budget_registry2025.csproj.GenerateResource.cache
+C:\Users\Lehana\Documents\BFAR 8 Budget Application\bfar8_budget_registry2025\obj\Debug\bfar8_budget_registry2025.csproj.CoreCompileInputs.cache
+C:\Users\Lehana\Documents\BFAR 8 Budget Application\bfar8_budget_registry2025\obj\Debug\bfar8_bu.48589E61.Up2Date
+C:\Users\Lehana\Documents\BFAR 8 Budget Application\bfar8_budget_registry2025\obj\Debug\bfar8_budget_registry2025.exe
+C:\Users\Lehana\Documents\BFAR 8 Budget Application\bfar8_budget_registry2025\obj\Debug\bfar8_budget_registry2025.pdb
+C:\Users\Lehana\Documents\BFAR 8 Budget Application\bfar8_budget_registry2025\obj\Debug\bfar8_budget_registry2025.insertRegistry.resources
+C:\Users\Lehana\Documents\BFAR 8 Budget Application\bfar8_budget_registry2025\obj\Debug\bfar8_budget_registry2025.viewRegistry.resources
+D:\BFAR 8 Budget Application\bfar8_budget_registry2025\bin\Debug\bfar8_budget_registry2025.exe.config
+D:\BFAR 8 Budget Application\bfar8_budget_registry2025\bin\Debug\bfar8_budget_registry2025.exe
+D:\BFAR 8 Budget Application\bfar8_budget_registry2025\bin\Debug\bfar8_budget_registry2025.pdb
+D:\BFAR 8 Budget Application\bfar8_budget_registry2025\bin\Debug\BouncyCastle.Cryptography.dll
+D:\BFAR 8 Budget Application\bfar8_budget_registry2025\bin\Debug\Google.Protobuf.dll
+D:\BFAR 8 Budget Application\bfar8_budget_registry2025\bin\Debug\Guna.UI2.dll
+D:\BFAR 8 Budget Application\bfar8_budget_registry2025\bin\Debug\K4os.Compression.LZ4.dll
+D:\BFAR 8 Budget Application\bfar8_budget_registry2025\bin\Debug\K4os.Compression.LZ4.Streams.dll
+D:\BFAR 8 Budget Application\bfar8_budget_registry2025\bin\Debug\K4os.Hash.xxHash.dll
+D:\BFAR 8 Budget Application\bfar8_budget_registry2025\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+D:\BFAR 8 Budget Application\bfar8_budget_registry2025\bin\Debug\MySql.Data.dll
+D:\BFAR 8 Budget Application\bfar8_budget_registry2025\bin\Debug\System.Buffers.dll
+D:\BFAR 8 Budget Application\bfar8_budget_registry2025\bin\Debug\System.Configuration.ConfigurationManager.dll
+D:\BFAR 8 Budget Application\bfar8_budget_registry2025\bin\Debug\System.Diagnostics.DiagnosticSource.dll
+D:\BFAR 8 Budget Application\bfar8_budget_registry2025\bin\Debug\System.IO.Pipelines.dll
+D:\BFAR 8 Budget Application\bfar8_budget_registry2025\bin\Debug\System.Memory.dll
+D:\BFAR 8 Budget Application\bfar8_budget_registry2025\bin\Debug\System.Numerics.Vectors.dll
+D:\BFAR 8 Budget Application\bfar8_budget_registry2025\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+D:\BFAR 8 Budget Application\bfar8_budget_registry2025\bin\Debug\System.Threading.Tasks.Extensions.dll
+D:\BFAR 8 Budget Application\bfar8_budget_registry2025\bin\Debug\ZstdSharp.dll
+D:\BFAR 8 Budget Application\bfar8_budget_registry2025\bin\Debug\BouncyCastle.Cryptography.xml
+D:\BFAR 8 Budget Application\bfar8_budget_registry2025\bin\Debug\Google.Protobuf.pdb
+D:\BFAR 8 Budget Application\bfar8_budget_registry2025\bin\Debug\Google.Protobuf.xml
+D:\BFAR 8 Budget Application\bfar8_budget_registry2025\bin\Debug\K4os.Compression.LZ4.xml
+D:\BFAR 8 Budget Application\bfar8_budget_registry2025\bin\Debug\K4os.Compression.LZ4.Streams.xml
+D:\BFAR 8 Budget Application\bfar8_budget_registry2025\bin\Debug\K4os.Hash.xxHash.xml
+D:\BFAR 8 Budget Application\bfar8_budget_registry2025\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+D:\BFAR 8 Budget Application\bfar8_budget_registry2025\bin\Debug\MySql.Data.xml
+D:\BFAR 8 Budget Application\bfar8_budget_registry2025\bin\Debug\System.Buffers.xml
+D:\BFAR 8 Budget Application\bfar8_budget_registry2025\bin\Debug\System.Configuration.ConfigurationManager.xml
+D:\BFAR 8 Budget Application\bfar8_budget_registry2025\bin\Debug\System.Diagnostics.DiagnosticSource.xml
+D:\BFAR 8 Budget Application\bfar8_budget_registry2025\bin\Debug\System.IO.Pipelines.xml
+D:\BFAR 8 Budget Application\bfar8_budget_registry2025\bin\Debug\System.Memory.xml
+D:\BFAR 8 Budget Application\bfar8_budget_registry2025\bin\Debug\System.Numerics.Vectors.xml
+D:\BFAR 8 Budget Application\bfar8_budget_registry2025\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+D:\BFAR 8 Budget Application\bfar8_budget_registry2025\bin\Debug\System.Threading.Tasks.Extensions.xml
+D:\BFAR 8 Budget Application\bfar8_budget_registry2025\obj\Debug\bfar8_budget_registry2025.csproj.AssemblyReference.cache
+D:\BFAR 8 Budget Application\bfar8_budget_registry2025\obj\Debug\bfar8_budget_registry2025.dashboard.resources
+D:\BFAR 8 Budget Application\bfar8_budget_registry2025\obj\Debug\bfar8_budget_registry2025.insertRegistry.resources
+D:\BFAR 8 Budget Application\bfar8_budget_registry2025\obj\Debug\bfar8_budget_registry2025.viewRegistry.resources
+D:\BFAR 8 Budget Application\bfar8_budget_registry2025\obj\Debug\bfar8_budget_registry2025.csproj.GenerateResource.cache
+D:\BFAR 8 Budget Application\bfar8_budget_registry2025\obj\Debug\bfar8_budget_registry2025.csproj.CoreCompileInputs.cache
+D:\BFAR 8 Budget Application\bfar8_budget_registry2025\obj\Debug\bfar8_bu.48589E61.Up2Date
+D:\BFAR 8 Budget Application\bfar8_budget_registry2025\obj\Debug\bfar8_budget_registry2025.exe
+D:\BFAR 8 Budget Application\bfar8_budget_registry2025\obj\Debug\bfar8_budget_registry2025.pdb
+D:\BFAR 8 Budget Application\bfar8_budget_registry2025\bin\Debug\itextsharp.dll
+D:\BFAR 8 Budget Application\bfar8_budget_registry2025\bin\Debug\itextsharp.xml
+D:\BFAR 8 Budget Application\bfar8_budget_registry2025\obj\Debug\bfar8_budget_registry2025.ORSForm.resources
+D:\BFAR 8 Budget Application\bfar8_budget_registry2025\obj\Debug\bfar8_budget_registry2025.editObligation.resources
+D:\BFAR 8 Budget Application\bfar8_budget_registry2025\bin\Debug\FontAwesome.Sharp.dll
+D:\BFAR 8 Budget Application\bfar8_budget_registry2025\obj\Debug\bfar8_budget_registry2025.Properties.Resources.resources
+D:\BFAR 8 Budget Application\bfar8_budget_registry2025\obj\Debug\bfar8_budget_registry2025.viewDetails.resources
+D:\BFAR 8 Budget Application\bfar8_budget_registry2025\bin\Debug\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+D:\BFAR 8 Budget Application\bfar8_budget_registry2025\bin\Debug\Microsoft.Extensions.DependencyInjection.dll
+D:\BFAR 8 Budget Application\bfar8_budget_registry2025\bin\Debug\Microsoft.Extensions.Logging.Abstractions.dll
+D:\BFAR 8 Budget Application\bfar8_budget_registry2025\bin\Debug\Microsoft.Extensions.Logging.dll
+D:\BFAR 8 Budget Application\bfar8_budget_registry2025\bin\Debug\Microsoft.Extensions.Options.dll
+D:\BFAR 8 Budget Application\bfar8_budget_registry2025\bin\Debug\Microsoft.Extensions.Primitives.dll
+D:\BFAR 8 Budget Application\bfar8_budget_registry2025\bin\Debug\PdfiumViewer.dll
+D:\BFAR 8 Budget Application\bfar8_budget_registry2025\bin\Debug\PdfSharp-gdi.dll
+D:\BFAR 8 Budget Application\bfar8_budget_registry2025\bin\Debug\PdfSharp.BarCodes-gdi.dll
+D:\BFAR 8 Budget Application\bfar8_budget_registry2025\bin\Debug\PdfSharp.Charting-gdi.dll
+D:\BFAR 8 Budget Application\bfar8_budget_registry2025\bin\Debug\PdfSharp.Cryptography.dll
+D:\BFAR 8 Budget Application\bfar8_budget_registry2025\bin\Debug\PdfSharp.Quality-gdi.dll
+D:\BFAR 8 Budget Application\bfar8_budget_registry2025\bin\Debug\PdfSharp.Shared.dll
+D:\BFAR 8 Budget Application\bfar8_budget_registry2025\bin\Debug\PdfSharp.Snippets-gdi.dll
+D:\BFAR 8 Budget Application\bfar8_budget_registry2025\bin\Debug\PdfSharp.System.dll
+D:\BFAR 8 Budget Application\bfar8_budget_registry2025\bin\Debug\PdfSharp.WPFonts.dll
+D:\BFAR 8 Budget Application\bfar8_budget_registry2025\bin\Debug\System.Security.Cryptography.Pkcs.dll
+D:\BFAR 8 Budget Application\bfar8_budget_registry2025\bin\Debug\System.ValueTuple.dll
+D:\BFAR 8 Budget Application\bfar8_budget_registry2025\bin\Debug\Microsoft.Extensions.DependencyInjection.xml
+D:\BFAR 8 Budget Application\bfar8_budget_registry2025\bin\Debug\Microsoft.Extensions.DependencyInjection.Abstractions.xml
+D:\BFAR 8 Budget Application\bfar8_budget_registry2025\bin\Debug\Microsoft.Extensions.Logging.xml
+D:\BFAR 8 Budget Application\bfar8_budget_registry2025\bin\Debug\Microsoft.Extensions.Logging.Abstractions.xml
+D:\BFAR 8 Budget Application\bfar8_budget_registry2025\bin\Debug\Microsoft.Extensions.Options.xml
+D:\BFAR 8 Budget Application\bfar8_budget_registry2025\bin\Debug\Microsoft.Extensions.Primitives.xml
+D:\BFAR 8 Budget Application\bfar8_budget_registry2025\bin\Debug\PdfiumViewer.xml
+D:\BFAR 8 Budget Application\bfar8_budget_registry2025\bin\Debug\PdfSharp-gdi.pdb
+D:\BFAR 8 Budget Application\bfar8_budget_registry2025\bin\Debug\PdfSharp-gdi.xml
+D:\BFAR 8 Budget Application\bfar8_budget_registry2025\bin\Debug\PdfSharp.BarCodes-gdi.pdb
+D:\BFAR 8 Budget Application\bfar8_budget_registry2025\bin\Debug\PdfSharp.BarCodes-gdi.xml
+D:\BFAR 8 Budget Application\bfar8_budget_registry2025\bin\Debug\PdfSharp.Charting-gdi.pdb
+D:\BFAR 8 Budget Application\bfar8_budget_registry2025\bin\Debug\PdfSharp.Charting-gdi.xml
+D:\BFAR 8 Budget Application\bfar8_budget_registry2025\bin\Debug\PdfSharp.Cryptography.pdb
+D:\BFAR 8 Budget Application\bfar8_budget_registry2025\bin\Debug\PdfSharp.Cryptography.xml
+D:\BFAR 8 Budget Application\bfar8_budget_registry2025\bin\Debug\PdfSharp.Quality-gdi.pdb
+D:\BFAR 8 Budget Application\bfar8_budget_registry2025\bin\Debug\PdfSharp.Quality-gdi.xml
+D:\BFAR 8 Budget Application\bfar8_budget_registry2025\bin\Debug\PdfSharp.Shared.pdb
+D:\BFAR 8 Budget Application\bfar8_budget_registry2025\bin\Debug\PdfSharp.Shared.xml
+D:\BFAR 8 Budget Application\bfar8_budget_registry2025\bin\Debug\PdfSharp.Snippets-gdi.pdb
+D:\BFAR 8 Budget Application\bfar8_budget_registry2025\bin\Debug\PdfSharp.System.pdb
+D:\BFAR 8 Budget Application\bfar8_budget_registry2025\bin\Debug\PdfSharp.System.xml
+D:\BFAR 8 Budget Application\bfar8_budget_registry2025\bin\Debug\PdfSharp.WPFonts.pdb
+D:\BFAR 8 Budget Application\bfar8_budget_registry2025\bin\Debug\PdfSharp.WPFonts.xml
+D:\BFAR 8 Budget Application\bfar8_budget_registry2025\bin\Debug\System.Security.Cryptography.Pkcs.xml
+D:\BFAR 8 Budget Application\bfar8_budget_registry2025\bin\Debug\System.ValueTuple.xml
+D:\BFAR 8 Budget Application\bfar8_budget_registry2025\bin\Debug\nl\PdfiumViewer.resources.dll
+D:\BFAR_8_Budget_Application\bfar8_budget_registry2025\bin\Debug\bfar8_budget_registry2025.exe.config
+D:\BFAR_8_Budget_Application\bfar8_budget_registry2025\bin\Debug\bfar8_budget_registry2025.exe
+D:\BFAR_8_Budget_Application\bfar8_budget_registry2025\bin\Debug\bfar8_budget_registry2025.pdb
+D:\BFAR_8_Budget_Application\bfar8_budget_registry2025\bin\Debug\BouncyCastle.Cryptography.dll
+D:\BFAR_8_Budget_Application\bfar8_budget_registry2025\bin\Debug\FontAwesome.Sharp.dll
+D:\BFAR_8_Budget_Application\bfar8_budget_registry2025\bin\Debug\Google.Protobuf.dll
+D:\BFAR_8_Budget_Application\bfar8_budget_registry2025\bin\Debug\Guna.UI2.dll
+D:\BFAR_8_Budget_Application\bfar8_budget_registry2025\bin\Debug\itextsharp.dll
+D:\BFAR_8_Budget_Application\bfar8_budget_registry2025\bin\Debug\K4os.Compression.LZ4.dll
+D:\BFAR_8_Budget_Application\bfar8_budget_registry2025\bin\Debug\K4os.Compression.LZ4.Streams.dll
+D:\BFAR_8_Budget_Application\bfar8_budget_registry2025\bin\Debug\K4os.Hash.xxHash.dll
+D:\BFAR_8_Budget_Application\bfar8_budget_registry2025\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+D:\BFAR_8_Budget_Application\bfar8_budget_registry2025\bin\Debug\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+D:\BFAR_8_Budget_Application\bfar8_budget_registry2025\bin\Debug\Microsoft.Extensions.DependencyInjection.dll
+D:\BFAR_8_Budget_Application\bfar8_budget_registry2025\bin\Debug\Microsoft.Extensions.Logging.Abstractions.dll
+D:\BFAR_8_Budget_Application\bfar8_budget_registry2025\bin\Debug\Microsoft.Extensions.Logging.dll
+D:\BFAR_8_Budget_Application\bfar8_budget_registry2025\bin\Debug\Microsoft.Extensions.Options.dll
+D:\BFAR_8_Budget_Application\bfar8_budget_registry2025\bin\Debug\Microsoft.Extensions.Primitives.dll
+D:\BFAR_8_Budget_Application\bfar8_budget_registry2025\bin\Debug\MySql.Data.dll
+D:\BFAR_8_Budget_Application\bfar8_budget_registry2025\bin\Debug\PdfiumViewer.dll
+D:\BFAR_8_Budget_Application\bfar8_budget_registry2025\bin\Debug\PdfSharp-gdi.dll
+D:\BFAR_8_Budget_Application\bfar8_budget_registry2025\bin\Debug\PdfSharp.BarCodes-gdi.dll
+D:\BFAR_8_Budget_Application\bfar8_budget_registry2025\bin\Debug\PdfSharp.Charting-gdi.dll
+D:\BFAR_8_Budget_Application\bfar8_budget_registry2025\bin\Debug\PdfSharp.Cryptography.dll
+D:\BFAR_8_Budget_Application\bfar8_budget_registry2025\bin\Debug\PdfSharp.Quality-gdi.dll
+D:\BFAR_8_Budget_Application\bfar8_budget_registry2025\bin\Debug\PdfSharp.Shared.dll
+D:\BFAR_8_Budget_Application\bfar8_budget_registry2025\bin\Debug\PdfSharp.Snippets-gdi.dll
+D:\BFAR_8_Budget_Application\bfar8_budget_registry2025\bin\Debug\PdfSharp.System.dll
+D:\BFAR_8_Budget_Application\bfar8_budget_registry2025\bin\Debug\PdfSharp.WPFonts.dll
+D:\BFAR_8_Budget_Application\bfar8_budget_registry2025\bin\Debug\System.Buffers.dll
+D:\BFAR_8_Budget_Application\bfar8_budget_registry2025\bin\Debug\System.Configuration.ConfigurationManager.dll
+D:\BFAR_8_Budget_Application\bfar8_budget_registry2025\bin\Debug\System.Diagnostics.DiagnosticSource.dll
+D:\BFAR_8_Budget_Application\bfar8_budget_registry2025\bin\Debug\System.IO.Pipelines.dll
+D:\BFAR_8_Budget_Application\bfar8_budget_registry2025\bin\Debug\System.Memory.dll
+D:\BFAR_8_Budget_Application\bfar8_budget_registry2025\bin\Debug\System.Numerics.Vectors.dll
+D:\BFAR_8_Budget_Application\bfar8_budget_registry2025\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+D:\BFAR_8_Budget_Application\bfar8_budget_registry2025\bin\Debug\System.Security.Cryptography.Pkcs.dll
+D:\BFAR_8_Budget_Application\bfar8_budget_registry2025\bin\Debug\System.Threading.Tasks.Extensions.dll
+D:\BFAR_8_Budget_Application\bfar8_budget_registry2025\bin\Debug\System.ValueTuple.dll
+D:\BFAR_8_Budget_Application\bfar8_budget_registry2025\bin\Debug\ZstdSharp.dll
+D:\BFAR_8_Budget_Application\bfar8_budget_registry2025\bin\Debug\BouncyCastle.Cryptography.xml
+D:\BFAR_8_Budget_Application\bfar8_budget_registry2025\bin\Debug\Google.Protobuf.pdb
+D:\BFAR_8_Budget_Application\bfar8_budget_registry2025\bin\Debug\Google.Protobuf.xml
+D:\BFAR_8_Budget_Application\bfar8_budget_registry2025\bin\Debug\itextsharp.xml
+D:\BFAR_8_Budget_Application\bfar8_budget_registry2025\bin\Debug\K4os.Compression.LZ4.xml
+D:\BFAR_8_Budget_Application\bfar8_budget_registry2025\bin\Debug\K4os.Compression.LZ4.Streams.xml
+D:\BFAR_8_Budget_Application\bfar8_budget_registry2025\bin\Debug\K4os.Hash.xxHash.xml
+D:\BFAR_8_Budget_Application\bfar8_budget_registry2025\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+D:\BFAR_8_Budget_Application\bfar8_budget_registry2025\bin\Debug\Microsoft.Extensions.DependencyInjection.xml
+D:\BFAR_8_Budget_Application\bfar8_budget_registry2025\bin\Debug\Microsoft.Extensions.DependencyInjection.Abstractions.xml
+D:\BFAR_8_Budget_Application\bfar8_budget_registry2025\bin\Debug\Microsoft.Extensions.Logging.xml
+D:\BFAR_8_Budget_Application\bfar8_budget_registry2025\bin\Debug\Microsoft.Extensions.Logging.Abstractions.xml
+D:\BFAR_8_Budget_Application\bfar8_budget_registry2025\bin\Debug\Microsoft.Extensions.Options.xml
+D:\BFAR_8_Budget_Application\bfar8_budget_registry2025\bin\Debug\Microsoft.Extensions.Primitives.xml
+D:\BFAR_8_Budget_Application\bfar8_budget_registry2025\bin\Debug\MySql.Data.xml
+D:\BFAR_8_Budget_Application\bfar8_budget_registry2025\bin\Debug\PdfiumViewer.xml
+D:\BFAR_8_Budget_Application\bfar8_budget_registry2025\bin\Debug\PdfSharp-gdi.pdb
+D:\BFAR_8_Budget_Application\bfar8_budget_registry2025\bin\Debug\PdfSharp-gdi.xml
+D:\BFAR_8_Budget_Application\bfar8_budget_registry2025\bin\Debug\PdfSharp.BarCodes-gdi.pdb
+D:\BFAR_8_Budget_Application\bfar8_budget_registry2025\bin\Debug\PdfSharp.BarCodes-gdi.xml
+D:\BFAR_8_Budget_Application\bfar8_budget_registry2025\bin\Debug\PdfSharp.Charting-gdi.pdb
+D:\BFAR_8_Budget_Application\bfar8_budget_registry2025\bin\Debug\PdfSharp.Charting-gdi.xml
+D:\BFAR_8_Budget_Application\bfar8_budget_registry2025\bin\Debug\PdfSharp.Cryptography.pdb
+D:\BFAR_8_Budget_Application\bfar8_budget_registry2025\bin\Debug\PdfSharp.Cryptography.xml
+D:\BFAR_8_Budget_Application\bfar8_budget_registry2025\bin\Debug\PdfSharp.Quality-gdi.pdb
+D:\BFAR_8_Budget_Application\bfar8_budget_registry2025\bin\Debug\PdfSharp.Quality-gdi.xml
+D:\BFAR_8_Budget_Application\bfar8_budget_registry2025\bin\Debug\PdfSharp.Shared.pdb
+D:\BFAR_8_Budget_Application\bfar8_budget_registry2025\bin\Debug\PdfSharp.Shared.xml
+D:\BFAR_8_Budget_Application\bfar8_budget_registry2025\bin\Debug\PdfSharp.Snippets-gdi.pdb
+D:\BFAR_8_Budget_Application\bfar8_budget_registry2025\bin\Debug\PdfSharp.System.pdb
+D:\BFAR_8_Budget_Application\bfar8_budget_registry2025\bin\Debug\PdfSharp.System.xml
+D:\BFAR_8_Budget_Application\bfar8_budget_registry2025\bin\Debug\PdfSharp.WPFonts.pdb
+D:\BFAR_8_Budget_Application\bfar8_budget_registry2025\bin\Debug\PdfSharp.WPFonts.xml
+D:\BFAR_8_Budget_Application\bfar8_budget_registry2025\bin\Debug\System.Buffers.xml
+D:\BFAR_8_Budget_Application\bfar8_budget_registry2025\bin\Debug\System.Configuration.ConfigurationManager.xml
+D:\BFAR_8_Budget_Application\bfar8_budget_registry2025\bin\Debug\System.Diagnostics.DiagnosticSource.xml
+D:\BFAR_8_Budget_Application\bfar8_budget_registry2025\bin\Debug\System.IO.Pipelines.xml
+D:\BFAR_8_Budget_Application\bfar8_budget_registry2025\bin\Debug\System.Memory.xml
+D:\BFAR_8_Budget_Application\bfar8_budget_registry2025\bin\Debug\System.Numerics.Vectors.xml
+D:\BFAR_8_Budget_Application\bfar8_budget_registry2025\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+D:\BFAR_8_Budget_Application\bfar8_budget_registry2025\bin\Debug\System.Security.Cryptography.Pkcs.xml
+D:\BFAR_8_Budget_Application\bfar8_budget_registry2025\bin\Debug\System.Threading.Tasks.Extensions.xml
+D:\BFAR_8_Budget_Application\bfar8_budget_registry2025\bin\Debug\System.ValueTuple.xml
+D:\BFAR_8_Budget_Application\bfar8_budget_registry2025\bin\Debug\nl\PdfiumViewer.resources.dll
+D:\BFAR_8_Budget_Application\bfar8_budget_registry2025\obj\Debug\bfar8_budget_registry2025.csproj.AssemblyReference.cache
+D:\BFAR_8_Budget_Application\bfar8_budget_registry2025\obj\Debug\bfar8_budget_registry2025.exe.config
+D:\BFAR_8_Budget_Application\bfar8_budget_registry2025\obj\Debug\bfar8_budget_registry2025.dashboard.resources
+D:\BFAR_8_Budget_Application\bfar8_budget_registry2025\obj\Debug\bfar8_budget_registry2025.editObligation.resources
+D:\BFAR_8_Budget_Application\bfar8_budget_registry2025\obj\Debug\bfar8_budget_registry2025.insertRegistry.resources
+D:\BFAR_8_Budget_Application\bfar8_budget_registry2025\obj\Debug\bfar8_budget_registry2025.ORSForm.resources
+D:\BFAR_8_Budget_Application\bfar8_budget_registry2025\obj\Debug\bfar8_budget_registry2025.Properties.Resources.resources
+D:\BFAR_8_Budget_Application\bfar8_budget_registry2025\obj\Debug\bfar8_budget_registry2025.viewDetails.resources
+D:\BFAR_8_Budget_Application\bfar8_budget_registry2025\obj\Debug\bfar8_budget_registry2025.viewRegistry.resources
+D:\BFAR_8_Budget_Application\bfar8_budget_registry2025\obj\Debug\bfar8_budget_registry2025.csproj.GenerateResource.cache
+D:\BFAR_8_Budget_Application\bfar8_budget_registry2025\obj\Debug\bfar8_budget_registry2025.csproj.CoreCompileInputs.cache
+D:\BFAR_8_Budget_Application\bfar8_budget_registry2025\obj\Debug\bfar8_bu.48589E61.Up2Date
+D:\BFAR_8_Budget_Application\bfar8_budget_registry2025\obj\Debug\bfar8_budget_registry2025.exe
+D:\BFAR_8_Budget_Application\bfar8_budget_registry2025\obj\Debug\bfar8_budget_registry2025.pdb
+D:\BFAR_8_Budget_Application\bfar8_budget_registry2025\bin\Debug\x64\pdfium.dll
