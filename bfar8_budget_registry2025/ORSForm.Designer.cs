@@ -1045,14 +1045,17 @@
             this.txtSignatory.BorderColor = System.Drawing.Color.Transparent;
             this.txtSignatory.BorderThickness = 0;
             this.txtSignatory.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.txtSignatory.DropDownHeight = 250;
             this.txtSignatory.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.txtSignatory.FillColor = System.Drawing.SystemColors.ButtonHighlight;
             this.txtSignatory.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtSignatory.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtSignatory.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.txtSignatory.ForeColor = System.Drawing.SystemColors.Desktop;
+            this.txtSignatory.IntegralHeight = false;
             this.txtSignatory.ItemHeight = 30;
             this.txtSignatory.Location = new System.Drawing.Point(3, 4);
+            this.txtSignatory.MaxDropDownItems = 10;
             this.txtSignatory.Name = "txtSignatory";
             this.txtSignatory.Size = new System.Drawing.Size(326, 36);
             this.txtSignatory.TabIndex = 0;
@@ -1069,6 +1072,8 @@
             this.Controls.Add(this.btnPrint);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.ORSDocs);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "ORSForm";
             this.Text = "ORSForm";
             this.Load += new System.EventHandler(this.ORSForm_Load);

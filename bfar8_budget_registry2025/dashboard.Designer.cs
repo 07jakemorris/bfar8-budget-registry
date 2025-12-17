@@ -48,6 +48,8 @@
             this.btnManage = new Guna.UI2.WinForms.Guna2Button();
             this.btnView = new Guna.UI2.WinForms.Guna2Button();
             this.btnHome = new Guna.UI2.WinForms.Guna2Button();
+            this.btnReport = new Guna.UI2.WinForms.Guna2Button();
+            this.reportHighlight = new Guna.UI2.WinForms.Guna2Button();
             this.panelTop.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.logoPic)).BeginInit();
@@ -168,6 +170,8 @@
             // panelMenu
             // 
             this.panelMenu.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.panelMenu.Controls.Add(this.reportHighlight);
+            this.panelMenu.Controls.Add(this.btnReport);
             this.panelMenu.Controls.Add(this.manageHighlight);
             this.panelMenu.Controls.Add(this.viewHighlight);
             this.panelMenu.Controls.Add(this.insertEarmarkHighlight);
@@ -346,6 +350,47 @@
             this.btnHome.TextOffset = new System.Drawing.Point(-25, 0);
             this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
             // 
+            // btnReport
+            // 
+            this.btnReport.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnReport.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnReport.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnReport.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnReport.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnReport.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnReport.FillColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.btnReport.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReport.ForeColor = System.Drawing.Color.White;
+            this.btnReport.Image = ((System.Drawing.Image)(resources.GetObject("btnReport.Image")));
+            this.btnReport.ImageOffset = new System.Drawing.Point(-19, 0);
+            this.btnReport.ImageSize = new System.Drawing.Size(24, 24);
+            this.btnReport.Location = new System.Drawing.Point(0, 415);
+            this.btnReport.Name = "btnReport";
+            this.btnReport.Size = new System.Drawing.Size(224, 45);
+            this.btnReport.TabIndex = 11;
+            this.btnReport.Text = "Budget Report";
+            this.btnReport.TextOffset = new System.Drawing.Point(-17, 0);
+            this.btnReport.Click += new System.EventHandler(this.btnReport_Click);
+            // 
+            // reportHighlight
+            // 
+            this.reportHighlight.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.reportHighlight.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.reportHighlight.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.reportHighlight.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.reportHighlight.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.reportHighlight.FillColor = System.Drawing.Color.LightSkyBlue;
+            this.reportHighlight.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.reportHighlight.ForeColor = System.Drawing.Color.White;
+            this.reportHighlight.ImageOffset = new System.Drawing.Point(-30, 0);
+            this.reportHighlight.ImageSize = new System.Drawing.Size(22, 22);
+            this.reportHighlight.Location = new System.Drawing.Point(213, 415);
+            this.reportHighlight.Name = "reportHighlight";
+            this.reportHighlight.Size = new System.Drawing.Size(11, 45);
+            this.reportHighlight.TabIndex = 12;
+            this.reportHighlight.TextOffset = new System.Drawing.Point(-25, 0);
+            this.reportHighlight.Visible = false;
+            // 
             // dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -387,5 +432,7 @@
         private Guna.UI2.WinForms.Guna2Button insertObligationHighlight;
         private Guna.UI2.WinForms.Guna2Button manageHighlight;
         private Guna.UI2.WinForms.Guna2Button viewHighlight;
+        private Guna.UI2.WinForms.Guna2Button btnReport;
+        private Guna.UI2.WinForms.Guna2Button reportHighlight;
     }
 }

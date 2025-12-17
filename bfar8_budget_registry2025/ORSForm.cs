@@ -182,10 +182,10 @@ namespace bfar8_budget_registry2025
         private void comboBoxSettings()
         {
             //For signatory combo box
-            txtSignatory.DropDownStyle = ComboBoxStyle.DropDownList;
-            txtSignatory.IntegralHeight = false;
-            txtSignatory.DropDownHeight = 250;
-            txtSignatory.MaxDropDownItems = 10;
+            //txtSignatory.DropDownStyle = ComboBoxStyle.DropDownList;
+            //txtSignatory.IntegralHeight = false;
+            //txtSignatory.DropDownHeight = 250;
+            //txtSignatory.MaxDropDownItems = 10;
         }
 
         private void adjustBottomPanel()

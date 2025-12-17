@@ -45,6 +45,7 @@ namespace bfar8_budget_registry2025
             btnView.FillColor = darkBlue;
             btnEarmarks.FillColor = darkBlue;
             btnManage.FillColor = darkBlue;
+            btnReport.FillColor = darkBlue;
             panelTop.FillColor = darkBlue;
             MakePictureCircular(logoPic);
         }
@@ -99,6 +100,13 @@ namespace bfar8_budget_registry2025
             insertEarmarkHighlight.Visible = false;
             viewHighlight.Visible = false;
             manageHighlight.Visible = false;
+            reportHighlight.Visible = false;
+        }
+
+        private void btnReport_Click(object sender, EventArgs e)
+        {
+            hideHighlight();
+            reportHighlight.Visible = true;
         }
     }
 }
