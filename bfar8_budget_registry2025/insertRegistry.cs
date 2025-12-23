@@ -11,6 +11,7 @@ using System.Security.Principal;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Input;
 using System.Xml.Linq;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
@@ -50,8 +51,13 @@ namespace bfar8_budget_registry2025
         public static string selectedAccountID;
         public static string accountID;
 
+        private string payeeName;
+
         //List for Responsibility Center
         private List<(string Name, string Type)> allCenters = new List<(string, string)>();
+
+        private bool isAutoFilling = false;
+        private string suggestedText = "";
 
         public insertRegistry()
         {
@@ -118,6 +124,7 @@ namespace bfar8_budget_registry2025
             getExpensesType();
             loadOrsNo(newOrsNo);     
         }
+        
         private void getDepartmentCode()
         {
             
@@ -913,6 +920,11 @@ namespace bfar8_budget_registry2025
                         if (rowsAffected > 0)
                         {
                             MessageBox.Show("Record inserted successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            //Checks if Payee or Creditor already exist or not then it will save to database -->
+                            if (!PayeeExists(txtPayee.Text))
+                            {
+                                InsertPayee(txtPayee.Text);
+                            }
                             clearAllInputFields();
                         }
                         else
@@ -928,6 +940,46 @@ namespace bfar8_budget_registry2025
             }
         }
 
+        bool PayeeExists(string payeeName)
+        {
+            if (string.IsNullOrWhiteSpace(payeeName))
+                return false;
+
+            using (MySqlConnection con = new MySqlConnection(connString))
+            {
+                con.Open();
+
+                string query = @"SELECT 1
+                         FROM tbl_payee
+                         WHERE name = @Name
+                         LIMIT 1";
+
+                using (MySqlCommand cmd = new MySqlCommand(query, con))
+                {
+                    cmd.Parameters.AddWithValue("@Name", payeeName.Trim());
+
+                    object result = cmd.ExecuteScalar();
+                    return result != null;
+                }
+            }
+        }
+        void InsertPayee(string payeeName)
+        {
+            using (MySqlConnection con = new MySqlConnection(connString))
+            {
+                con.Open();
+
+                string query = @"INSERT INTO tbl_payee (`name`) 
+                         VALUES (@name)";
+
+                using (MySqlCommand cmd = new MySqlCommand(query, con))
+                {
+                    cmd.Parameters.AddWithValue("@name", payeeName);
+                    cmd.ExecuteNonQuery();
+                }
+            }
+        }
+
         private void btnInsert_Click(object sender, EventArgs e)
         {   
             if (!validInputs())
@@ -936,7 +988,7 @@ namespace bfar8_budget_registry2025
                 return;
             }
 
-            insertObligation(fund_cluster, financing_source, authorization_code, funding_code, department_code, agency_code, operating_unit, lower_operating_unit, position);
+            insertObligation(fund_cluster, financing_source, authorization_code, funding_code, department_code, agency_code, operating_unit, lower_operating_unit, position);         
         }
 
         private bool validInputs()
@@ -1070,6 +1122,69 @@ namespace bfar8_budget_registry2025
             {
                 editORS.Text = "Edit ORS";
                 txtORSNo.ReadOnly = true;
+            }
+        }
+
+        private void txtPayee_KeyDown(object sender, System.Windows.Forms.KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Tab && txtPayee.SelectionLength > 0)
+            {
+                txtPayee.SelectionStart = txtPayee.Text.Length;
+                txtPayee.SelectionLength = 0;
+
+                e.SuppressKeyPress = true;
+            }
+        }
+        //This function checks the payee and auto complete if exist -->
+        string GetSuggestedName(string input)
+        {
+            string result = null;
+
+            using (MySqlConnection con = new MySqlConnection(connString))
+            {
+                con.Open();
+
+                string query = @"SELECT name 
+                         FROM tbl_payee
+                         WHERE name LIKE @Name
+                         ORDER BY name
+                         LIMIT 1";
+
+                using (MySqlCommand cmd = new MySqlCommand(query, con))
+                {
+                    cmd.Parameters.AddWithValue("@Name", input + "%");
+
+                    object value = cmd.ExecuteScalar();
+                    if (value != null)
+                        result = value.ToString();
+                }
+            }
+
+            return result;
+        }
+
+        private void txtPayee_TextChanged(object sender, EventArgs e)
+        {
+            if (isAutoFilling) return;
+            int cursorPos = txtPayee.SelectionStart;
+            string typedText = txtPayee.Text;
+
+            if (string.IsNullOrWhiteSpace(typedText))
+                return;
+
+            string match = GetSuggestedName(typedText);
+
+            if (!string.IsNullOrEmpty(match) &&
+                match.StartsWith(typedText, StringComparison.OrdinalIgnoreCase))
+            {
+                isAutoFilling = true;
+
+                txtPayee.Text = match;
+                txtPayee.SelectionStart = typedText.Length;
+                txtPayee.SelectionLength = match.Length - typedText.Length;
+
+                suggestedText = match;
+                isAutoFilling = false;
             }
         }
     }

@@ -97,7 +97,6 @@ namespace bfar8_budget_registry2025
             getObligationToPrint(obligationIDToPrint);
             adjustBottomPanel();
             adjustHeight();
-            comboBoxSettings();
             getSignatory();
         }
         private void getObligationToPrint(string obligationIDToPrint)
@@ -178,14 +177,6 @@ namespace bfar8_budget_registry2025
                 }
             }
             txtSignatory.SelectedIndex = 0;
-        }
-        private void comboBoxSettings()
-        {
-            //For signatory combo box
-            //txtSignatory.DropDownStyle = ComboBoxStyle.DropDownList;
-            //txtSignatory.IntegralHeight = false;
-            //txtSignatory.DropDownHeight = 250;
-            //txtSignatory.MaxDropDownItems = 10;
         }
 
         private void adjustBottomPanel()

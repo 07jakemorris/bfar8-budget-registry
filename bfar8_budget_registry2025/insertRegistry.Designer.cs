@@ -84,6 +84,8 @@
             this.txtPayee.SelectedText = "";
             this.txtPayee.Size = new System.Drawing.Size(343, 40);
             this.txtPayee.TabIndex = 0;
+            this.txtPayee.TextChanged += new System.EventHandler(this.txtPayee_TextChanged);
+            this.txtPayee.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtPayee_KeyDown);
             // 
             // label2
             // 
