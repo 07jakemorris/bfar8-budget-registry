@@ -107,6 +107,8 @@ namespace bfar8_budget_registry2025
         {
             hideHighlight();
             reportHighlight.Visible = true;
+
+            LoadForm(new reports());
         }
     }
 }

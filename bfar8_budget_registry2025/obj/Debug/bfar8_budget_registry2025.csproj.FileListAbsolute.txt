@@ -326,7 +326,6 @@ C:\Users\Lehana\Documents\BFAR8Budget-Registry-Project\bfar8_budget_registry2025
 C:\Users\Lehana\Documents\BFAR8Budget-Registry-Project\bfar8_budget_registry2025\bin\Debug\System.ValueTuple.xml
 C:\Users\Lehana\Documents\BFAR8Budget-Registry-Project\bfar8_budget_registry2025\bin\Debug\nl\PdfiumViewer.resources.dll
 C:\Users\Lehana\Documents\BFAR8Budget-Registry-Project\bfar8_budget_registry2025\obj\Debug\bfar8_budget_registry2025.csproj.AssemblyReference.cache
-C:\Users\Lehana\Documents\BFAR8Budget-Registry-Project\bfar8_budget_registry2025\obj\Debug\bfar8_budget_registry2025.exe.config
 C:\Users\Lehana\Documents\BFAR8Budget-Registry-Project\bfar8_budget_registry2025\obj\Debug\bfar8_budget_registry2025.dashboard.resources
 C:\Users\Lehana\Documents\BFAR8Budget-Registry-Project\bfar8_budget_registry2025\obj\Debug\bfar8_budget_registry2025.editObligation.resources
 C:\Users\Lehana\Documents\BFAR8Budget-Registry-Project\bfar8_budget_registry2025\obj\Debug\bfar8_budget_registry2025.insertRegistry.resources
@@ -339,3 +338,4 @@ C:\Users\Lehana\Documents\BFAR8Budget-Registry-Project\bfar8_budget_registry2025
 C:\Users\Lehana\Documents\BFAR8Budget-Registry-Project\bfar8_budget_registry2025\obj\Debug\bfar8_bu.48589E61.Up2Date
 C:\Users\Lehana\Documents\BFAR8Budget-Registry-Project\bfar8_budget_registry2025\obj\Debug\bfar8_budget_registry2025.exe
 C:\Users\Lehana\Documents\BFAR8Budget-Registry-Project\bfar8_budget_registry2025\obj\Debug\bfar8_budget_registry2025.pdb
+C:\Users\Lehana\Documents\BFAR8Budget-Registry-Project\bfar8_budget_registry2025\obj\Debug\bfar8_budget_registry2025.reports.resources

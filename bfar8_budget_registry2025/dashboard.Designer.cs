@@ -40,6 +40,8 @@
             this.btnInsert = new Guna.UI2.WinForms.Guna2Button();
             this.btnEarmarks = new Guna.UI2.WinForms.Guna2Button();
             this.panelMenu = new System.Windows.Forms.Panel();
+            this.reportHighlight = new Guna.UI2.WinForms.Guna2Button();
+            this.btnReport = new Guna.UI2.WinForms.Guna2Button();
             this.manageHighlight = new Guna.UI2.WinForms.Guna2Button();
             this.viewHighlight = new Guna.UI2.WinForms.Guna2Button();
             this.insertEarmarkHighlight = new Guna.UI2.WinForms.Guna2Button();
@@ -48,8 +50,6 @@
             this.btnManage = new Guna.UI2.WinForms.Guna2Button();
             this.btnView = new Guna.UI2.WinForms.Guna2Button();
             this.btnHome = new Guna.UI2.WinForms.Guna2Button();
-            this.btnReport = new Guna.UI2.WinForms.Guna2Button();
-            this.reportHighlight = new Guna.UI2.WinForms.Guna2Button();
             this.panelTop.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.logoPic)).BeginInit();
@@ -189,6 +189,47 @@
             this.panelMenu.Size = new System.Drawing.Size(224, 900);
             this.panelMenu.TabIndex = 0;
             // 
+            // reportHighlight
+            // 
+            this.reportHighlight.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.reportHighlight.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.reportHighlight.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.reportHighlight.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.reportHighlight.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.reportHighlight.FillColor = System.Drawing.Color.LightSkyBlue;
+            this.reportHighlight.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.reportHighlight.ForeColor = System.Drawing.Color.White;
+            this.reportHighlight.ImageOffset = new System.Drawing.Point(-30, 0);
+            this.reportHighlight.ImageSize = new System.Drawing.Size(22, 22);
+            this.reportHighlight.Location = new System.Drawing.Point(217, 415);
+            this.reportHighlight.Name = "reportHighlight";
+            this.reportHighlight.Size = new System.Drawing.Size(7, 45);
+            this.reportHighlight.TabIndex = 12;
+            this.reportHighlight.TextOffset = new System.Drawing.Point(-25, 0);
+            this.reportHighlight.Visible = false;
+            // 
+            // btnReport
+            // 
+            this.btnReport.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnReport.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnReport.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnReport.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnReport.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnReport.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnReport.FillColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.btnReport.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReport.ForeColor = System.Drawing.Color.White;
+            this.btnReport.Image = ((System.Drawing.Image)(resources.GetObject("btnReport.Image")));
+            this.btnReport.ImageOffset = new System.Drawing.Point(-19, 0);
+            this.btnReport.ImageSize = new System.Drawing.Size(24, 24);
+            this.btnReport.Location = new System.Drawing.Point(0, 415);
+            this.btnReport.Name = "btnReport";
+            this.btnReport.Size = new System.Drawing.Size(224, 45);
+            this.btnReport.TabIndex = 11;
+            this.btnReport.Text = "Budget Report";
+            this.btnReport.TextOffset = new System.Drawing.Point(-17, 0);
+            this.btnReport.Click += new System.EventHandler(this.btnReport_Click);
+            // 
             // manageHighlight
             // 
             this.manageHighlight.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -201,9 +242,9 @@
             this.manageHighlight.ForeColor = System.Drawing.Color.White;
             this.manageHighlight.ImageOffset = new System.Drawing.Point(-30, 0);
             this.manageHighlight.ImageSize = new System.Drawing.Size(22, 22);
-            this.manageHighlight.Location = new System.Drawing.Point(213, 370);
+            this.manageHighlight.Location = new System.Drawing.Point(217, 370);
             this.manageHighlight.Name = "manageHighlight";
-            this.manageHighlight.Size = new System.Drawing.Size(11, 45);
+            this.manageHighlight.Size = new System.Drawing.Size(7, 45);
             this.manageHighlight.TabIndex = 10;
             this.manageHighlight.TextOffset = new System.Drawing.Point(-25, 0);
             this.manageHighlight.Visible = false;
@@ -220,9 +261,9 @@
             this.viewHighlight.ForeColor = System.Drawing.Color.White;
             this.viewHighlight.ImageOffset = new System.Drawing.Point(-30, 0);
             this.viewHighlight.ImageSize = new System.Drawing.Size(22, 22);
-            this.viewHighlight.Location = new System.Drawing.Point(213, 325);
+            this.viewHighlight.Location = new System.Drawing.Point(217, 325);
             this.viewHighlight.Name = "viewHighlight";
-            this.viewHighlight.Size = new System.Drawing.Size(11, 45);
+            this.viewHighlight.Size = new System.Drawing.Size(7, 45);
             this.viewHighlight.TabIndex = 9;
             this.viewHighlight.TextOffset = new System.Drawing.Point(-25, 0);
             this.viewHighlight.Visible = false;
@@ -239,9 +280,9 @@
             this.insertEarmarkHighlight.ForeColor = System.Drawing.Color.White;
             this.insertEarmarkHighlight.ImageOffset = new System.Drawing.Point(-30, 0);
             this.insertEarmarkHighlight.ImageSize = new System.Drawing.Size(22, 22);
-            this.insertEarmarkHighlight.Location = new System.Drawing.Point(213, 280);
+            this.insertEarmarkHighlight.Location = new System.Drawing.Point(217, 280);
             this.insertEarmarkHighlight.Name = "insertEarmarkHighlight";
-            this.insertEarmarkHighlight.Size = new System.Drawing.Size(11, 45);
+            this.insertEarmarkHighlight.Size = new System.Drawing.Size(7, 45);
             this.insertEarmarkHighlight.TabIndex = 8;
             this.insertEarmarkHighlight.TextOffset = new System.Drawing.Point(-25, 0);
             this.insertEarmarkHighlight.Visible = false;
@@ -258,9 +299,9 @@
             this.insertObligationHighlight.ForeColor = System.Drawing.Color.White;
             this.insertObligationHighlight.ImageOffset = new System.Drawing.Point(-30, 0);
             this.insertObligationHighlight.ImageSize = new System.Drawing.Size(22, 22);
-            this.insertObligationHighlight.Location = new System.Drawing.Point(213, 235);
+            this.insertObligationHighlight.Location = new System.Drawing.Point(217, 235);
             this.insertObligationHighlight.Name = "insertObligationHighlight";
-            this.insertObligationHighlight.Size = new System.Drawing.Size(11, 45);
+            this.insertObligationHighlight.Size = new System.Drawing.Size(7, 45);
             this.insertObligationHighlight.TabIndex = 7;
             this.insertObligationHighlight.TextOffset = new System.Drawing.Point(-25, 0);
             this.insertObligationHighlight.Visible = false;
@@ -277,9 +318,9 @@
             this.homeHighlight.ForeColor = System.Drawing.Color.White;
             this.homeHighlight.ImageOffset = new System.Drawing.Point(-30, 0);
             this.homeHighlight.ImageSize = new System.Drawing.Size(22, 22);
-            this.homeHighlight.Location = new System.Drawing.Point(213, 190);
+            this.homeHighlight.Location = new System.Drawing.Point(217, 190);
             this.homeHighlight.Name = "homeHighlight";
-            this.homeHighlight.Size = new System.Drawing.Size(11, 45);
+            this.homeHighlight.Size = new System.Drawing.Size(7, 45);
             this.homeHighlight.TabIndex = 6;
             this.homeHighlight.TextOffset = new System.Drawing.Point(-25, 0);
             this.homeHighlight.Visible = false;
@@ -349,47 +390,6 @@
             this.btnHome.Text = "Home";
             this.btnHome.TextOffset = new System.Drawing.Point(-25, 0);
             this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
-            // 
-            // btnReport
-            // 
-            this.btnReport.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnReport.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnReport.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnReport.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnReport.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnReport.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnReport.FillColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.btnReport.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnReport.ForeColor = System.Drawing.Color.White;
-            this.btnReport.Image = ((System.Drawing.Image)(resources.GetObject("btnReport.Image")));
-            this.btnReport.ImageOffset = new System.Drawing.Point(-19, 0);
-            this.btnReport.ImageSize = new System.Drawing.Size(24, 24);
-            this.btnReport.Location = new System.Drawing.Point(0, 415);
-            this.btnReport.Name = "btnReport";
-            this.btnReport.Size = new System.Drawing.Size(224, 45);
-            this.btnReport.TabIndex = 11;
-            this.btnReport.Text = "Budget Report";
-            this.btnReport.TextOffset = new System.Drawing.Point(-17, 0);
-            this.btnReport.Click += new System.EventHandler(this.btnReport_Click);
-            // 
-            // reportHighlight
-            // 
-            this.reportHighlight.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.reportHighlight.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.reportHighlight.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.reportHighlight.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.reportHighlight.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.reportHighlight.FillColor = System.Drawing.Color.LightSkyBlue;
-            this.reportHighlight.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.reportHighlight.ForeColor = System.Drawing.Color.White;
-            this.reportHighlight.ImageOffset = new System.Drawing.Point(-30, 0);
-            this.reportHighlight.ImageSize = new System.Drawing.Size(22, 22);
-            this.reportHighlight.Location = new System.Drawing.Point(213, 415);
-            this.reportHighlight.Name = "reportHighlight";
-            this.reportHighlight.Size = new System.Drawing.Size(11, 45);
-            this.reportHighlight.TabIndex = 12;
-            this.reportHighlight.TextOffset = new System.Drawing.Point(-25, 0);
-            this.reportHighlight.Visible = false;
             // 
             // dashboard
             // 

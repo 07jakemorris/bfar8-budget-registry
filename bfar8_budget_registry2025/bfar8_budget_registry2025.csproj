@@ -209,6 +209,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="reports.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="reports.Designer.cs">
+      <DependentUpon>reports.cs</DependentUpon>
+    </Compile>
     <Compile Include="roundedPanel.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -239,6 +245,9 @@
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reports.resx">
+      <DependentUpon>reports.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="viewDetails.resx">
       <DependentUpon>viewDetails.cs</DependentUpon>
