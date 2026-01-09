@@ -158,13 +158,13 @@
             this.btnEarmarks.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEarmarks.ForeColor = System.Drawing.Color.White;
             this.btnEarmarks.Image = ((System.Drawing.Image)(resources.GetObject("btnEarmarks.Image")));
-            this.btnEarmarks.ImageOffset = new System.Drawing.Point(-17, 0);
+            this.btnEarmarks.ImageOffset = new System.Drawing.Point(-24, 0);
             this.btnEarmarks.Location = new System.Drawing.Point(0, 280);
             this.btnEarmarks.Name = "btnEarmarks";
             this.btnEarmarks.Size = new System.Drawing.Size(224, 45);
             this.btnEarmarks.TabIndex = 2;
-            this.btnEarmarks.Text = "Insert Earmarks";
-            this.btnEarmarks.TextOffset = new System.Drawing.Point(-12, 0);
+            this.btnEarmarks.Text = "Earmarking";
+            this.btnEarmarks.TextOffset = new System.Drawing.Point(-20, 0);
             this.btnEarmarks.Click += new System.EventHandler(this.btnEarmarks_Click);
             // 
             // panelMenu

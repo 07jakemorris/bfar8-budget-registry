@@ -339,3 +339,4 @@ C:\Users\Lehana\Documents\BFAR8Budget-Registry-Project\bfar8_budget_registry2025
 C:\Users\Lehana\Documents\BFAR8Budget-Registry-Project\bfar8_budget_registry2025\obj\Debug\bfar8_budget_registry2025.exe
 C:\Users\Lehana\Documents\BFAR8Budget-Registry-Project\bfar8_budget_registry2025\obj\Debug\bfar8_budget_registry2025.pdb
 C:\Users\Lehana\Documents\BFAR8Budget-Registry-Project\bfar8_budget_registry2025\obj\Debug\bfar8_budget_registry2025.reports.resources
+C:\Users\Lehana\Documents\BFAR8Budget-Registry-Project\bfar8_budget_registry2025\obj\Debug\bfar8_budget_registry2025.earmarking.resources

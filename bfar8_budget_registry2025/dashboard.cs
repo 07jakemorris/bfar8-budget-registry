@@ -85,6 +85,8 @@ namespace bfar8_budget_registry2025
         {
             hideHighlight();
             insertEarmarkHighlight.Visible = true;
+
+            LoadForm(new earmarking());
         }
 
         private void btnHome_Click(object sender, EventArgs e)
