@@ -1,4 +1,5 @@
-﻿using MySql.Data.MySqlClient;
+﻿using iTextSharp.text.pdf.security;
+using MySql.Data.MySqlClient;
 using Mysqlx.Crud;
 using Mysqlx.Resultset;
 using System;
@@ -628,6 +629,7 @@ namespace bfar8_budget_registry2025
         {
             txtExpensesType.Items.Clear();
             txtAccountCode.Items.Clear();
+            txtSubAccountCode.Items.Clear();
 
             string selectedExpenseClass = txtExpensesClass.Text;
 
@@ -695,7 +697,7 @@ namespace bfar8_budget_registry2025
         private void txtExpensesType_SelectedIndexChanged(object sender, EventArgs e)
         {
             txtAccountCode.Items.Clear();
-
+            txtSubAccountCode.Items.Clear();
             string selectedExpenseType = txtExpensesType.Text;
 
             if (string.IsNullOrWhiteSpace(selectedExpenseType) || !selectedExpenseType.Contains("-"))
@@ -730,7 +732,7 @@ namespace bfar8_budget_registry2025
 
         private void getAccountCode(string expense_type_id)
         {
-            txtAccountCode.Items.Clear();
+            txtAccountCode.Items.Clear();          
             txtAccountCode.Items.Add("- Select Account Code -");        
             string fetchAccountCode = "SELECT codeNo, accountName FROM tbl_account_codes WHERE expensesCategoryID = @selectedExpensesType";
             using (MySqlConnection conn = new MySqlConnection(connString))
@@ -762,6 +764,7 @@ namespace bfar8_budget_registry2025
 
         private void txtAccountCode_SelectedIndexChanged(object sender, EventArgs e)
         {
+            txtSubAccountCode.Items.Clear();
             string selectedAccountCode = txtAccountCode.Text;
 
             if (string.IsNullOrWhiteSpace(selectedAccountCode) || !selectedAccountCode.Contains("-"))
@@ -769,20 +772,26 @@ namespace bfar8_budget_registry2025
 
             selectedAccountID = selectedAccountCode.Split(new string[] { " - " }, StringSplitOptions.None)[0];
 
-            string fetchSubAccountCode = "SELECT id FROM tbl_account_codes WHERE hasSubAccountCode = 1 AND codeNo = @selectedAccountID";
+            string fetchAccountCode = "SELECT id FROM tbl_account_codes WHERE hasSubAccountCode = 1 AND codeNo = @selectedAccountID";
             using (MySqlConnection conn = new MySqlConnection(connString))
             {
                 try
                 {
                     conn.Open();
-                    using (MySqlCommand cmd = new MySqlCommand(fetchSubAccountCode, conn))
+                    using (MySqlCommand cmd = new MySqlCommand(fetchAccountCode, conn))
                     {
                         cmd.Parameters.AddWithValue("@selectedAccountID", selectedAccountID);
                         using (MySqlDataReader reader = cmd.ExecuteReader())
                         {
                             if (reader.Read())
                             {
-                                accountID = reader["id"].ToString();                               
+                                accountID = reader["id"].ToString();
+                                getSubAccountCode(accountID);
+                            }
+                            else
+                            {
+                                txtSubAccountCode.Items.Add("- No Sub Account Code -");
+                                txtSubAccountCode.SelectedIndex = 0;
                             }
                         }
                     }
@@ -793,7 +802,37 @@ namespace bfar8_budget_registry2025
                 }
             }
         }
-
+        private void getSubAccountCode(string accountID)
+        {
+            txtSubAccountCode.Items.Clear();
+            txtSubAccountCode.Items.Add("- Select Sub Account Code -");        
+            string fetchSubAccountCode = "SELECT subAccountCode, subAccountName FROM tbl_sub_account_codes WHERE accountCodeID = @selectedAccountID";
+            using (MySqlConnection conn = new MySqlConnection(connString))
+            {
+                try
+                {
+                    conn.Open();
+                    using (MySqlCommand cmd = new MySqlCommand(fetchSubAccountCode, conn))
+                    {
+                        cmd.Parameters.AddWithValue("@selectedAccountID", accountID);
+                        using (MySqlDataReader reader = cmd.ExecuteReader())
+                        {
+                            while (reader.Read())
+                            {
+                                string code = reader["subAccountCode"].ToString();
+                                string account = reader["subAccountName"].ToString();
+                                txtSubAccountCode.Items.Add($"{code} - {account}");
+                            }
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error: " + ex.Message);
+                }
+            }
+            txtSubAccountCode.SelectedIndex = 0;
+        }
         private void txtAmount_KeyPress(object sender, KeyPressEventArgs e)
         {
             // Allow control keys (like Backspace)
@@ -908,7 +947,29 @@ namespace bfar8_budget_registry2025
                         cmd.Parameters.AddWithValue("@activityLevel", txtProjectInput4.Text);
                         cmd.Parameters.AddWithValue("@expenseClass", txtExpensesClass.Text);
                         cmd.Parameters.AddWithValue("@expenseType", txtExpensesType.Text);
-                        cmd.Parameters.AddWithValue("@accountCode", txtAccountCode.Text);
+
+                        //Concatenate Function for Account Code
+                        string accountCodeValue;
+                        if (txtSubAccountCode.Text == "- No Sub Account Code -")
+                        {
+                            accountCodeValue = txtAccountCode.Text.Trim();
+                        }
+                        else
+                        {
+                            // Parent account
+                            string parentRaw = txtAccountCode.Text.Trim();
+                            var parentParts = parentRaw.Split(new[] { " - " }, 2, StringSplitOptions.None);
+                            string parentName = parentParts.Length > 1 ? parentParts[1].Trim() : "";
+
+                            // Sub account
+                            string subRaw = txtSubAccountCode.Text.Trim();
+                            var subParts = subRaw.Split(new[] { " - " }, 2, StringSplitOptions.None);
+                            string subCode = subParts[0].Trim();
+                            string subName = subParts.Length > 1 ? subParts[1].Trim() : "";
+
+                            accountCodeValue = $"{subCode} - {parentName} - {subName}";
+                        }
+                        cmd.Parameters.Add("@accountCode", MySqlDbType.VarChar).Value = accountCodeValue;
 
                         // Safely parse amount
                         decimal amount = 0;
@@ -1000,7 +1061,6 @@ namespace bfar8_budget_registry2025
                 txtResponsibilityCenter.SelectedIndex != 0 &&
                 txtProjectInput1.SelectedIndex != 0 &&
                 txtProjectInput3.SelectedIndex != 0 &&
-                txtProjectInput4.SelectedIndex != 0 &&
                 txtFundCluster.SelectedIndex != 0 &&
                 txtExpensesClass.SelectedIndex != 0 &&
                 txtExpensesType.SelectedIndex != 0 &&
@@ -1113,14 +1173,14 @@ namespace bfar8_budget_registry2025
 
         private void editORS_Click(object sender, EventArgs e)
         {
-            if (txtORSNo.ReadOnly && editORS.Text == "Edit ORS")
+            if (txtORSNo.ReadOnly && editORS.Text == "Edit ORS No.")
             {
                 editORS.Text = "Save";
                 txtORSNo.ReadOnly = false;
             }
             else if (!txtORSNo.ReadOnly && editORS.Text == "Save")
             {
-                editORS.Text = "Edit ORS";
+                editORS.Text = "Edit ORS No.";
                 txtORSNo.ReadOnly = true;
             }
         }

@@ -34,6 +34,9 @@
             this.txtFundCluster = new Guna.UI2.WinForms.Guna2ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txtPRNo = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtSignatory = new Guna.UI2.WinForms.Guna2ComboBox();
             this.txtResponsibilityCenter = new Guna.UI2.WinForms.Guna2ComboBox();
             this.txtParticulars = new Guna.UI2.WinForms.Guna2TextBox();
@@ -53,9 +56,6 @@
             this.txtExpensesType = new Guna.UI2.WinForms.Guna2ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.txtExpensesClass = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.txtPRNo = new Guna.UI2.WinForms.Guna2TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
             this.guna2Panel1.SuspendLayout();
             this.guna2Panel2.SuspendLayout();
             this.SuspendLayout();
@@ -156,6 +156,50 @@
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.Size = new System.Drawing.Size(785, 494);
             this.guna2Panel1.TabIndex = 25;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.DimGray;
+            this.label7.Location = new System.Drawing.Point(385, 123);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(73, 21);
+            this.label7.TabIndex = 19;
+            this.label7.Text = "Quarter:";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.DimGray;
+            this.label3.Location = new System.Drawing.Point(408, 66);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(50, 21);
+            this.label3.TabIndex = 18;
+            this.label3.Text = "Date:";
+            // 
+            // txtPRNo
+            // 
+            this.txtPRNo.BorderColor = System.Drawing.Color.Silver;
+            this.txtPRNo.BorderRadius = 3;
+            this.txtPRNo.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtPRNo.DefaultText = "";
+            this.txtPRNo.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtPRNo.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtPRNo.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtPRNo.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtPRNo.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtPRNo.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPRNo.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.txtPRNo.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtPRNo.Location = new System.Drawing.Point(104, 59);
+            this.txtPRNo.Name = "txtPRNo";
+            this.txtPRNo.PlaceholderForeColor = System.Drawing.Color.Black;
+            this.txtPRNo.PlaceholderText = "Search";
+            this.txtPRNo.SelectedText = "";
+            this.txtPRNo.Size = new System.Drawing.Size(285, 34);
+            this.txtPRNo.TabIndex = 17;
             // 
             // txtSignatory
             // 
@@ -342,14 +386,14 @@
             this.btnInsert.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnInsert.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnInsert.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnInsert.FillColor = System.Drawing.Color.Green;
+            this.btnInsert.FillColor = System.Drawing.Color.DarkGreen;
             this.btnInsert.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnInsert.ForeColor = System.Drawing.Color.White;
-            this.btnInsert.Location = new System.Drawing.Point(598, 250);
+            this.btnInsert.Location = new System.Drawing.Point(599, 250);
             this.btnInsert.Name = "btnInsert";
             this.btnInsert.Size = new System.Drawing.Size(216, 52);
             this.btnInsert.TabIndex = 29;
-            this.btnInsert.Text = "Insert";
+            this.btnInsert.Text = "Earmark";
             this.btnInsert.Click += new System.EventHandler(this.btnInsert_Click);
             // 
             // label9
@@ -477,50 +521,6 @@
             this.txtExpensesClass.Name = "txtExpensesClass";
             this.txtExpensesClass.Size = new System.Drawing.Size(452, 36);
             this.txtExpensesClass.TabIndex = 21;
-            // 
-            // txtPRNo
-            // 
-            this.txtPRNo.BorderColor = System.Drawing.Color.Silver;
-            this.txtPRNo.BorderRadius = 3;
-            this.txtPRNo.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtPRNo.DefaultText = "";
-            this.txtPRNo.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtPRNo.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtPRNo.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtPRNo.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtPRNo.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtPRNo.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPRNo.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.txtPRNo.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtPRNo.Location = new System.Drawing.Point(104, 59);
-            this.txtPRNo.Name = "txtPRNo";
-            this.txtPRNo.PlaceholderForeColor = System.Drawing.Color.Black;
-            this.txtPRNo.PlaceholderText = "Search";
-            this.txtPRNo.SelectedText = "";
-            this.txtPRNo.Size = new System.Drawing.Size(285, 34);
-            this.txtPRNo.TabIndex = 17;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.DimGray;
-            this.label3.Location = new System.Drawing.Point(408, 66);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(50, 21);
-            this.label3.TabIndex = 18;
-            this.label3.Text = "Date:";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.DimGray;
-            this.label7.Location = new System.Drawing.Point(385, 123);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(73, 21);
-            this.label7.TabIndex = 19;
-            this.label7.Text = "Quarter:";
             // 
             // earmarking
             // 

@@ -93,11 +93,11 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label1.Location = new System.Drawing.Point(270, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(170, 25);
+            this.label1.Size = new System.Drawing.Size(149, 21);
             this.label1.TabIndex = 0;
             this.label1.Text = "Obligation Details";
             // 
@@ -304,90 +304,90 @@
             this.guna2Panel2.Controls.Add(this.projectHighlight);
             this.guna2Panel2.Location = new System.Drawing.Point(-3, 338);
             this.guna2Panel2.Name = "guna2Panel2";
-            this.guna2Panel2.Size = new System.Drawing.Size(713, 272);
+            this.guna2Panel2.Size = new System.Drawing.Size(713, 252);
             this.guna2Panel2.TabIndex = 15;
             // 
             // lblActivity
             // 
             this.lblActivity.AutoSize = true;
-            this.lblActivity.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblActivity.Location = new System.Drawing.Point(162, 218);
+            this.lblActivity.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblActivity.Location = new System.Drawing.Point(136, 202);
             this.lblActivity.MaximumSize = new System.Drawing.Size(500, 0);
             this.lblActivity.Name = "lblActivity";
-            this.lblActivity.Size = new System.Drawing.Size(471, 42);
+            this.lblActivity.Size = new System.Drawing.Size(472, 17);
             this.lblActivity.TabIndex = 22;
             this.lblActivity.Text = "3-1-02-00-1-00003-001 commercial fishing vessels and gears (Permit Issuance)";
             // 
             // label18
             // 
             this.label18.AutoSize = true;
-            this.label18.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(15, 217);
+            this.label18.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.Location = new System.Drawing.Point(45, 202);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(117, 21);
+            this.label18.Size = new System.Drawing.Size(90, 17);
             this.label18.TabIndex = 21;
             this.label18.Text = "Activity Level:";
             // 
             // lblSubCategory
             // 
             this.lblSubCategory.AutoSize = true;
-            this.lblSubCategory.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSubCategory.Location = new System.Drawing.Point(161, 160);
+            this.lblSubCategory.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSubCategory.Location = new System.Drawing.Point(137, 151);
             this.lblSubCategory.MaximumSize = new System.Drawing.Size(500, 0);
             this.lblSubCategory.Name = "lblSubCategory";
-            this.lblSubCategory.Size = new System.Drawing.Size(399, 21);
+            this.lblSubCategory.Size = new System.Drawing.Size(312, 17);
             this.lblSubCategory.TabIndex = 20;
             this.lblSubCategory.Text = "310200100000 - Quarantine, Registration & Licensing";
             // 
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(14, 159);
+            this.label16.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.Location = new System.Drawing.Point(43, 151);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(117, 21);
+            this.label16.Size = new System.Drawing.Size(94, 17);
             this.label16.TabIndex = 19;
             this.label16.Text = "Sub Category:";
             // 
             // lblCategory
             // 
             this.lblCategory.AutoSize = true;
-            this.lblCategory.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCategory.Location = new System.Drawing.Point(160, 104);
+            this.lblCategory.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCategory.Location = new System.Drawing.Point(138, 101);
             this.lblCategory.MaximumSize = new System.Drawing.Size(500, 0);
             this.lblCategory.Name = "lblCategory";
-            this.lblCategory.Size = new System.Drawing.Size(399, 21);
+            this.lblCategory.Size = new System.Drawing.Size(312, 17);
             this.lblCategory.TabIndex = 18;
             this.lblCategory.Text = "310200100000 - Quarantine, Registration & Licensing";
             // 
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(13, 103);
+            this.label15.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Location = new System.Drawing.Point(24, 101);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(142, 21);
+            this.label15.Size = new System.Drawing.Size(113, 17);
             this.label15.TabIndex = 17;
             this.label15.Text = "Project Category:";
             // 
             // lblProject
             // 
             this.lblProject.AutoSize = true;
-            this.lblProject.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblProject.Location = new System.Drawing.Point(160, 50);
+            this.lblProject.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblProject.Location = new System.Drawing.Point(137, 53);
             this.lblProject.MaximumSize = new System.Drawing.Size(500, 0);
             this.lblProject.Name = "lblProject";
-            this.lblProject.Size = new System.Drawing.Size(460, 42);
+            this.lblProject.Size = new System.Drawing.Size(418, 17);
             this.lblProject.TabIndex = 16;
             this.lblProject.Text = "310200000000 - Fisheries Regulatory and Law Enforcement Program";
             // 
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(13, 49);
+            this.label13.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(20, 53);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(148, 21);
+            this.label13.Size = new System.Drawing.Size(117, 17);
             this.label13.TabIndex = 15;
             this.label13.Text = "Program/Projects:";
             // 
@@ -395,11 +395,11 @@
             // 
             this.projectLabel.AutoSize = true;
             this.projectLabel.BackColor = System.Drawing.Color.Transparent;
-            this.projectLabel.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.projectLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.projectLabel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.projectLabel.Location = new System.Drawing.Point(287, 6);
+            this.projectLabel.Location = new System.Drawing.Point(287, 9);
             this.projectLabel.Name = "projectLabel";
-            this.projectLabel.Size = new System.Drawing.Size(139, 25);
+            this.projectLabel.Size = new System.Drawing.Size(121, 21);
             this.projectLabel.TabIndex = 2;
             this.projectLabel.Text = "Project Details";
             // 
@@ -432,145 +432,145 @@
             this.bottomPanel.Controls.Add(this.label26);
             this.bottomPanel.Controls.Add(this.fundingLabel);
             this.bottomPanel.Controls.Add(this.fundingHighlight);
-            this.bottomPanel.Location = new System.Drawing.Point(-13, 608);
+            this.bottomPanel.Location = new System.Drawing.Point(-13, 587);
             this.bottomPanel.Name = "bottomPanel";
-            this.bottomPanel.Size = new System.Drawing.Size(743, 283);
+            this.bottomPanel.Size = new System.Drawing.Size(743, 277);
             this.bottomPanel.TabIndex = 23;
             // 
             // lblAccountCode
             // 
             this.lblAccountCode.AutoSize = true;
-            this.lblAccountCode.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAccountCode.Location = new System.Drawing.Point(178, 238);
+            this.lblAccountCode.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAccountCode.Location = new System.Drawing.Point(151, 238);
             this.lblAccountCode.MaximumSize = new System.Drawing.Size(500, 0);
             this.lblAccountCode.Name = "lblAccountCode";
-            this.lblAccountCode.Size = new System.Drawing.Size(324, 21);
+            this.lblAccountCode.Size = new System.Drawing.Size(252, 17);
             this.lblAccountCode.TabIndex = 26;
             this.lblAccountCode.Text = "50201010-00 - Travelling Expenses - Local";
             // 
             // label19
             // 
             this.label19.AutoSize = true;
-            this.label19.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.Location = new System.Drawing.Point(26, 238);
+            this.label19.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label19.Location = new System.Drawing.Point(49, 238);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(120, 21);
+            this.label19.Size = new System.Drawing.Size(96, 17);
             this.label19.TabIndex = 25;
             this.label19.Text = "Account Code:";
             // 
             // lblExpenseClass
             // 
             this.lblExpenseClass.AutoSize = true;
-            this.lblExpenseClass.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblExpenseClass.Location = new System.Drawing.Point(178, 199);
+            this.lblExpenseClass.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblExpenseClass.Location = new System.Drawing.Point(151, 199);
             this.lblExpenseClass.MaximumSize = new System.Drawing.Size(500, 0);
             this.lblExpenseClass.Name = "lblExpenseClass";
-            this.lblExpenseClass.Size = new System.Drawing.Size(368, 21);
+            this.lblExpenseClass.Size = new System.Drawing.Size(297, 17);
             this.lblExpenseClass.TabIndex = 24;
             this.lblExpenseClass.Text = "2 - Maintenance and Other Operating Expenses";
             // 
             // label17
             // 
             this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(26, 199);
+            this.label17.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.Location = new System.Drawing.Point(52, 199);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(119, 21);
+            this.label17.Size = new System.Drawing.Size(95, 17);
             this.label17.TabIndex = 23;
             this.label17.Text = "Expense Class:";
             // 
             // lblFundCategory
             // 
             this.lblFundCategory.AutoSize = true;
-            this.lblFundCategory.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFundCategory.Location = new System.Drawing.Point(178, 162);
+            this.lblFundCategory.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFundCategory.Location = new System.Drawing.Point(151, 162);
             this.lblFundCategory.MaximumSize = new System.Drawing.Size(500, 0);
             this.lblFundCategory.Name = "lblFundCategory";
-            this.lblFundCategory.Size = new System.Drawing.Size(398, 21);
+            this.lblFundCategory.Size = new System.Drawing.Size(306, 17);
             this.lblFundCategory.TabIndex = 22;
             this.lblFundCategory.Text = "01101101 - Specific Budget of the Agency (Current)";
             // 
             // label20
             // 
             this.label20.AutoSize = true;
-            this.label20.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.Location = new System.Drawing.Point(26, 162);
+            this.label20.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label20.Location = new System.Drawing.Point(45, 162);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(126, 21);
+            this.label20.Size = new System.Drawing.Size(102, 17);
             this.label20.TabIndex = 21;
             this.label20.Text = "Fund Category:";
             // 
             // lblAuthCode
             // 
             this.lblAuthCode.AutoSize = true;
-            this.lblAuthCode.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAuthCode.Location = new System.Drawing.Point(178, 125);
+            this.lblAuthCode.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAuthCode.Location = new System.Drawing.Point(151, 125);
             this.lblAuthCode.MaximumSize = new System.Drawing.Size(500, 0);
             this.lblAuthCode.Name = "lblAuthCode";
-            this.lblAuthCode.Size = new System.Drawing.Size(303, 21);
+            this.lblAuthCode.Size = new System.Drawing.Size(235, 17);
             this.lblAuthCode.TabIndex = 20;
             this.lblAuthCode.Text = "01101000 - New General Approriations";
             // 
             // label22
             // 
             this.label22.AutoSize = true;
-            this.label22.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label22.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label22.Location = new System.Drawing.Point(26, 125);
             this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(153, 21);
+            this.label22.Size = new System.Drawing.Size(121, 17);
             this.label22.TabIndex = 19;
             this.label22.Text = "Autorization Code:";
             // 
             // lblFinancingSource
             // 
             this.lblFinancingSource.AutoSize = true;
-            this.lblFinancingSource.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFinancingSource.Location = new System.Drawing.Point(178, 88);
+            this.lblFinancingSource.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFinancingSource.Location = new System.Drawing.Point(151, 88);
             this.lblFinancingSource.MaximumSize = new System.Drawing.Size(500, 0);
             this.lblFinancingSource.Name = "lblFinancingSource";
-            this.lblFinancingSource.Size = new System.Drawing.Size(197, 21);
+            this.lblFinancingSource.Size = new System.Drawing.Size(154, 17);
             this.lblFinancingSource.TabIndex = 18;
             this.lblFinancingSource.Text = "01100000 - General Fund";
             // 
             // label24
             // 
             this.label24.AutoSize = true;
-            this.label24.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label24.Location = new System.Drawing.Point(26, 88);
+            this.label24.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label24.Location = new System.Drawing.Point(33, 88);
             this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(145, 21);
+            this.label24.Size = new System.Drawing.Size(114, 17);
             this.label24.TabIndex = 17;
             this.label24.Text = "Financing Source:";
             // 
             // lblFundCluster
             // 
             this.lblFundCluster.AutoSize = true;
-            this.lblFundCluster.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFundCluster.Location = new System.Drawing.Point(178, 52);
+            this.lblFundCluster.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFundCluster.Location = new System.Drawing.Point(151, 52);
             this.lblFundCluster.MaximumSize = new System.Drawing.Size(500, 0);
             this.lblFundCluster.Name = "lblFundCluster";
-            this.lblFundCluster.Size = new System.Drawing.Size(258, 21);
+            this.lblFundCluster.Size = new System.Drawing.Size(205, 17);
             this.lblFundCluster.TabIndex = 16;
             this.lblFundCluster.Text = "01000000 - Regular Agency Fund";
             // 
             // label26
             // 
             this.label26.AutoSize = true;
-            this.label26.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label26.Location = new System.Drawing.Point(26, 52);
+            this.label26.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label26.Location = new System.Drawing.Point(39, 52);
             this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(135, 21);
+            this.label26.Size = new System.Drawing.Size(108, 17);
             this.label26.TabIndex = 15;
             this.label26.Text = "Funding Cluster:";
             // 
             // fundingLabel
             // 
             this.fundingLabel.AutoSize = true;
-            this.fundingLabel.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.fundingLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.fundingLabel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.fundingLabel.Location = new System.Drawing.Point(293, 6);
+            this.fundingLabel.Location = new System.Drawing.Point(291, 9);
             this.fundingLabel.Name = "fundingLabel";
-            this.fundingLabel.Size = new System.Drawing.Size(151, 25);
+            this.fundingLabel.Size = new System.Drawing.Size(130, 21);
             this.fundingLabel.TabIndex = 2;
             this.fundingLabel.Text = "Funding Details";
             // 
@@ -589,7 +589,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(702, 891);
+            this.ClientSize = new System.Drawing.Size(702, 862);
             this.Controls.Add(this.bottomPanel);
             this.Controls.Add(this.guna2Panel2);
             this.Controls.Add(this.guna2Panel1);
