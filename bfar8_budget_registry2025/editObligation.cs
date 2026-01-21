@@ -19,8 +19,10 @@ namespace bfar8_budget_registry2025
         public static string project_code;
         public static string category_code;
         public static string sub_category_code;
+
         //Database configuration
         public static string connString = "server=localhost;port=3306;user id=root;password=;database=db_bfar8;";
+
         public static string expense_category;
         public static string account_code;
         public static string expenseCategoryID;

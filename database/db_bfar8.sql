@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 15, 2025 at 10:03 AM
+-- Generation Time: Jan 21, 2026 at 06:49 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -526,11 +526,25 @@ CREATE TABLE `tbl_obligations` (
 --
 
 INSERT INTO `tbl_obligations` (`id`, `month`, `day`, `year`, `quarter`, `orsNo`, `payee`, `creditorType`, `particulars`, `fund_cluster`, `financing_source`, `authorization_code`, `fund_category`, `full_funding_code`, `department_code`, `agency_code`, `operating_unit_classification`, `lower_level_unit`, `responsibility_center`, `signatory`, `position`, `program_project`, `project_category`, `project_sub_category`, `activity_level`, `expense_class`, `expense_type`, `account_code`, `obligations_incurred`) VALUES
-(1, 'December', '03', '2025', '4th Quarter', '25-11-0001', 'Karleen R. Destura', 'Internal Creditor', 'Reimburse TE for the month of December 24, 2025', '01000000 - Regular Agency Fund', '01100000 - General Fund', '01101000 - New General Approriations', '01101101 - Specific Budget of the Agency (Current)', '01101101', '05-000-00-00000 - Department of Agriculture', '05-003-00-00000 - BUREAU OF FISHERIES AND AQUATIC RESOURCES', '05-003-03-00000 - Regional Offices', '05-003-03-00008 - Region VIII', 'Finance and Administrative Division', 'DOMINADOR G. MAPUTOL', 'OIC, Regional Director', '1000000000 - General Administration and Support (GAS)', 'No Project Category', '100000100001 - General Management and Supervision', '1-0-00-00-1-00001-001 - Operation of BFAR Central and Regional Offices', '2 - Maintenance and Other Operating Expenses', '5 - Travelling Expenses', '50201010-00 - Travelling Expenses - Local', 12500.00),
-(3, 'December', '03', '2025', '4th Quarter', '25-12-0002', 'Christian Loy B. Paldez', 'Internal Creditor', 'Reimburse TE for the month of October 28 - 30, 2025', '01000000 - Regular Agency Fund', '01100000 - General Fund', '01101000 - New General Approriations', '01101101 - Specific Budget of the Agency (Current)', '01101101', '05-000-00-00000 - Department of Agriculture', '05-003-00-00000 - BUREAU OF FISHERIES AND AQUATIC RESOURCES', '05-003-03-00000 - Regional Offices', '05-003-03-00008 - Region VIII', 'Post Harvest', 'MARGIE RUTH C. ACABAL', 'Head, PHMS', '310100000000 - Fisheries Development Program', '310103000000 - Post-harvest Sub-Program', '310103100001 - Provision of Fishery On-Farm Equipements & Post-Harvest Facilities', '3-1-01-03-1-00001-001 - Others', '2 - Maintenance and Other Operating Expenses', '5 - Travelling Expenses', '50201010-00 - Travelling Expenses - Local', 750.00),
-(4, 'December', '03', '2025', '4th Quarter', '25-12-0003', 'Mansueto P. Fuentes, Jr.', 'Internal Creditor', 'Reimburse TE for the month of October 7 - 16, 2025', '01000000 - Regular Agency Fund', '01100000 - General Fund', '01101000 - New General Approriations', '01101101 - Specific Budget of the Agency (Current)', '01101101', '05-000-00-00000 - Department of Agriculture', '05-003-00-00000 - BUREAU OF FISHERIES AND AQUATIC RESOURCES', '05-003-03-00000 - Regional Offices', '05-003-03-00008 - Region VIII', 'MCS', 'ATTY. REA ABIGAIL M. CANDIDO', 'Chief, FMRED', '310200000000 - Fisheries Regulatory and Law Enforcement Program', '310200100000 - Monitoring, Control and Surveillance', '310200100001 - Monitoring, Control and Surveillance', '3-1-02-00-1-00001-001 - Number of FRPG operations conducted - Sea-borne', '2 - Maintenance and Other Operating Expenses', '5 - Travelling Expenses', '50201010-00 - Travelling Expenses - Local', 5250.00),
-(5, 'December', '03', '2025', '4th Quarter', '25-12-0004', 'Roan M. Salas', 'Internal Creditor', 'Reimburse TE for the month of October 2025', '01000000 - Regular Agency Fund', '01100000 - General Fund', '01101000 - New General Approriations', '01101101 - Specific Budget of the Agency (Current)', '01101101', '05-000-00-00000 - Department of Agriculture', '05-003-00-00000 - BUREAU OF FISHERIES AND AQUATIC RESOURCES', '05-003-03-00000 - Regional Offices', '05-003-03-00008 - Region VIII', 'Fish Health Laboratories', 'RIZA P. TAPDASAN', 'Chief, RFIL', '310200000000 - Fisheries Regulatory and Law Enforcement Program', '310200100000 - Quality Control and Inspection', '310200100002  - Quality Control and Inspection', '3-1-02-00-1-00002-001 - Number of disease sampling, detection, and analysis conducted Facilities', '2 - Maintenance and Other Operating Expenses', '5 - Travelling Expenses', '50201010-00 - Travelling Expenses - Local', 3.00),
-(6, 'December', '03', '2025', '4th Quarter', '25-12-0005', 'Rowvic B. Docena', 'Internal Creditor', 'Reimburse TE for the month of October 2025', '01000000 - Regular Agency Fund', '01100000 - General Fund', '01101000 - New General Approriations', '01101101 - Specific Budget of the Agency (Current)', '01101101', '05-000-00-00000 - Department of Agriculture', '05-003-00-00000 - BUREAU OF FISHERIES AND AQUATIC RESOURCES', '05-003-03-00000 - Regional Offices', '05-003-03-00008 - Region VIII', 'SAAD', 'DOMINADOR G. MAPUTOL', 'OIC, Regional Director', '310100000000 - Fisheries Development Program', '310105200000 - Locally-Funded Sub-Program', '310105200001 - Special Areas for Agricultural Development (SAAD) Program', '3-1-01-05-2-00001-000-01 - Program Management', '2 - Maintenance and Other Operating Expenses', '5 - Travelling Expenses', '50201010-00 - Travelling Expenses - Local', 12300.00);
+(1, 'January', '12', '2026', '1st Quarter', '26-01-0001', 'EDV Trading', 'External Creditor', 'Lot 1 procurement of tires for the repair and maintenance of BFAR RO 8 vehicle', '01000000 - Regular Agency Fund', '01100000 - General Fund', '01101000 - New General Approriations', '01101101 - Specific Budget of the Agency (Current)', '01101101', '05-000-00-00000 - Department of Agriculture', '05-003-00-00000 - BUREAU OF FISHERIES AND AQUATIC RESOURCES', '05-003-03-00000 - Regional Offices', '05-003-03-00008 - Region VIII', 'RO', 'JENNIFER G. CHAN', 'OIC, GSU', '310300000000 - Fisheries Extension Program', '310300100000 - Extension, Support, Education and Training Services (ESETS)', '310300100001 - Extension, Support, Education and Training Services (ESETS)', '- Select Activity -', '2 - Maintenance and Other Operating Expenses', '17 - Repairs and Maintenance', '50213060-01 - Transportation Equipment - Motor Vehicle', 423750.00);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_payee`
+--
+
+CREATE TABLE `tbl_payee` (
+  `id` int(11) NOT NULL,
+  `name` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `tbl_payee`
+--
+
+INSERT INTO `tbl_payee` (`id`, `name`) VALUES
+(1, 'EDV Trading');
 
 -- --------------------------------------------------------
 
@@ -626,6 +640,38 @@ INSERT INTO `tbl_project_sub_categ` (`id`, `subCategoryCode`, `subCategory`, `ca
 (17, '310200300001', 'Philippine Fisheries and Coastal Resiliency Project', '310200300000', '310200000000'),
 (18, '310300100001', 'Extension, Support, Education and Training Services (ESETS)', '310300100000', '310300000000'),
 (19, '310400100001', 'Formulation, Monitoring and Evaluation of Policies, Plans and Programs', '310400100001', '310400000000');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_prs`
+--
+
+CREATE TABLE `tbl_prs` (
+  `id` int(11) NOT NULL,
+  `index_no` varchar(10) NOT NULL,
+  `pr_no` varchar(20) NOT NULL,
+  `particulars` text NOT NULL,
+  `lot_no` int(10) NOT NULL,
+  `responsibility_center` varchar(50) NOT NULL,
+  `end_user` varchar(150) NOT NULL,
+  `position` varchar(50) NOT NULL,
+  `amount` double(10,2) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `tbl_prs`
+--
+
+INSERT INTO `tbl_prs` (`id`, `index_no`, `pr_no`, `particulars`, `lot_no`, `responsibility_center`, `end_user`, `position`, `amount`) VALUES
+(1, '2601001600', '26-01-0149', 'Printer (3-in-1 Functions: Print/Scan/Copy), Multifunction Color Inkjet Printer with ADF up to Legal Size Capability and with individual Tanks; Printing resolution: 600 DPI x 1,200 DPI (Horizontal x Vertical), wifi duplex.', 1, 'Legal', 'Atty. Duke Lester B. Chua', 'Legal Officer', 16000.00),
+(2, '2601001600', '26-01-0149', 'Mobile Phone with Processor - 2.2GHz, 2GHz, CPU Type - Octa-Core Size (Main Display)-169.1mm (6.7\" full rectangle) / 164.5mm (6.5\" rounded corners - Resolution (Main Display) - 1080 x 2340 (FHD+), Technology (Main Display) - Super AMOLED, Color Depth (Main Display) 16M', 2, 'Legal', 'Atty. Duke Lester B. Chua', 'Legal Officer', 10000.00),
+(3, '2512004700', '25-12-1043', 'Labor and Materials for Pond Improvements', 1, 'PFO-LY-SAAD', 'Loreginia P. Briones', 'PFO Leyte', 229215.00),
+(4, '2509009700', '25-09-0822', '6mm Mirror Glass Installation, Frosted Tint for Fixed Divider Glass and other supplies and materials for Repair of BFAR RO 8 Comfort Room; Installation of Lightings at BFAR 8, CRMC, Diit and additional Network Storage for\r\nENGAS.', 1, 'Finance Administrative Division', 'Karleen R. Destura', 'Chief, FAS', 63700.00),
+(5, '2509009700', '25-09-0822 ', 'Procurement of circuit breaker box, plug and other supplies for Repair of BFAR RO 8 Comfort Room; Installation of Lightings at BFAR 8, CRMC, Diit and additional Network Storage for ENGAS.\r\n', 2, 'Finance Administrative Division', 'Karleen R. Destura', 'Chief, FAS', 66425.00),
+(6, '2509009700', '25-09-0822', 'Procurement of Network attached storage for Repair of BFAR RO 8 Comfort Room; Installation of Lightings at BFAR 8, CRMC, Diit and additional Network Storage for ENGAS.', 3, 'Finance Administrative Division', 'Karleen R. Destura', 'Chief, FAS', 49000.00),
+(7, '2511004700', '25-12-1036 ', 'Procurement of Diesel and Gasoline for maintenance and operations at the Legislated Hatchery in San Jose, Northern Samar.', 1, 'LH - N. Samar', 'Maida G. Dela Cruz', 'PFO N. Samar', 15750.00),
+(8, '2511011500', '25-11-1023 ', 'Procurement of Tilapia Finisher (Floater), atleast 30% CP, 25kg/bag, Tilapia Fry mash and other supplies for Tilapia Grow out production in Brackishwater Fishpen', 1, 'TOS SRAPC-Operation', 'Jackie L. Lim', 'OIC, SRAPC', 161548.00);
 
 -- --------------------------------------------------------
 
@@ -1014,6 +1060,12 @@ ALTER TABLE `tbl_obligations`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `tbl_payee`
+--
+ALTER TABLE `tbl_payee`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `tbl_program_projects`
 --
 ALTER TABLE `tbl_program_projects`
@@ -1029,6 +1081,12 @@ ALTER TABLE `tbl_project_categ`
 -- Indexes for table `tbl_project_sub_categ`
 --
 ALTER TABLE `tbl_project_sub_categ`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `tbl_prs`
+--
+ALTER TABLE `tbl_prs`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -1093,7 +1151,13 @@ ALTER TABLE `tbl_fund_cluster`
 -- AUTO_INCREMENT for table `tbl_obligations`
 --
 ALTER TABLE `tbl_obligations`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT for table `tbl_payee`
+--
+ALTER TABLE `tbl_payee`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `tbl_program_projects`
@@ -1112,6 +1176,12 @@ ALTER TABLE `tbl_project_categ`
 --
 ALTER TABLE `tbl_project_sub_categ`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+
+--
+-- AUTO_INCREMENT for table `tbl_prs`
+--
+ALTER TABLE `tbl_prs`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `tbl_responsibility_center`

@@ -28,12 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(earmarking));
             this.label8 = new System.Windows.Forms.Label();
             this.txtProjectInput4 = new Guna.UI2.WinForms.Guna2ComboBox();
             this.txtProjectInput3 = new Guna.UI2.WinForms.Guna2ComboBox();
             this.txtFundCluster = new Guna.UI2.WinForms.Guna2ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.btnSearch = new Guna.UI2.WinForms.Guna2Button();
+            this.label11 = new System.Windows.Forms.Label();
+            this.txtLotNo = new Guna.UI2.WinForms.Guna2ComboBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.txtPRNo = new Guna.UI2.WinForms.Guna2TextBox();
@@ -143,6 +147,9 @@
             this.guna2Panel1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.guna2Panel1.BorderColor = System.Drawing.Color.DimGray;
             this.guna2Panel1.BorderThickness = 3;
+            this.guna2Panel1.Controls.Add(this.btnSearch);
+            this.guna2Panel1.Controls.Add(this.label11);
+            this.guna2Panel1.Controls.Add(this.txtLotNo);
             this.guna2Panel1.Controls.Add(this.label7);
             this.guna2Panel1.Controls.Add(this.label3);
             this.guna2Panel1.Controls.Add(this.txtPRNo);
@@ -156,6 +163,57 @@
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.Size = new System.Drawing.Size(785, 494);
             this.guna2Panel1.TabIndex = 25;
+            // 
+            // btnSearch
+            // 
+            this.btnSearch.CheckedState.BorderColor = System.Drawing.Color.Transparent;
+            this.btnSearch.CheckedState.FillColor = System.Drawing.Color.Transparent;
+            this.btnSearch.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSearch.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnSearch.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnSearch.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnSearch.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnSearch.FillColor = System.Drawing.Color.Transparent;
+            this.btnSearch.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnSearch.ForeColor = System.Drawing.Color.White;
+            this.btnSearch.HoverState.BorderColor = System.Drawing.Color.Transparent;
+            this.btnSearch.HoverState.CustomBorderColor = System.Drawing.Color.Transparent;
+            this.btnSearch.HoverState.FillColor = System.Drawing.Color.Transparent;
+            this.btnSearch.Image = ((System.Drawing.Image)(resources.GetObject("btnSearch.Image")));
+            this.btnSearch.Location = new System.Drawing.Point(350, 61);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(35, 30);
+            this.btnSearch.TabIndex = 22;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.Color.DimGray;
+            this.label11.Location = new System.Drawing.Point(63, 123);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(38, 21);
+            this.label11.TabIndex = 21;
+            this.label11.Text = "Lot:";
+            // 
+            // txtLotNo
+            // 
+            this.txtLotNo.BackColor = System.Drawing.Color.Transparent;
+            this.txtLotNo.BorderColor = System.Drawing.Color.Silver;
+            this.txtLotNo.BorderRadius = 3;
+            this.txtLotNo.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.txtLotNo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.txtLotNo.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtLotNo.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtLotNo.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.txtLotNo.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.txtLotNo.ItemHeight = 30;
+            this.txtLotNo.Location = new System.Drawing.Point(104, 116);
+            this.txtLotNo.MaxDropDownItems = 5;
+            this.txtLotNo.Name = "txtLotNo";
+            this.txtLotNo.Size = new System.Drawing.Size(163, 36);
+            this.txtLotNo.TabIndex = 20;
             // 
             // label7
             // 
@@ -389,7 +447,7 @@
             this.btnInsert.FillColor = System.Drawing.Color.DarkGreen;
             this.btnInsert.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnInsert.ForeColor = System.Drawing.Color.White;
-            this.btnInsert.Location = new System.Drawing.Point(599, 250);
+            this.btnInsert.Location = new System.Drawing.Point(599, 262);
             this.btnInsert.Name = "btnInsert";
             this.btnInsert.Size = new System.Drawing.Size(216, 52);
             this.btnInsert.TabIndex = 29;
@@ -459,7 +517,7 @@
             this.txtAccountCode.ItemHeight = 30;
             this.txtAccountCode.Location = new System.Drawing.Point(785, 84);
             this.txtAccountCode.Name = "txtAccountCode";
-            this.txtAccountCode.Size = new System.Drawing.Size(485, 36);
+            this.txtAccountCode.Size = new System.Drawing.Size(560, 36);
             this.txtAccountCode.TabIndex = 25;
             // 
             // label5
@@ -540,6 +598,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "earmarking";
             this.Text = "earmarking";
+            this.Load += new System.EventHandler(this.earmarking_Load);
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel1.PerformLayout();
             this.guna2Panel2.ResumeLayout(false);
@@ -579,5 +638,8 @@
         private Guna.UI2.WinForms.Guna2TextBox txtPRNo;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label7;
+        private Guna.UI2.WinForms.Guna2ComboBox txtLotNo;
+        private System.Windows.Forms.Label label11;
+        private Guna.UI2.WinForms.Guna2Button btnSearch;
     }
 }
