@@ -286,21 +286,13 @@ namespace bfar8_budget_registry2025
                         {
                             txtProjectInput2.Items.Add("- Select Project Category -");
 
-                            if (reader.HasRows)
+                            while (reader.Read())
                             {
-                                while (reader.Read())
-                                {
-                                    string code = reader["categoryCode"].ToString();
-                                    string name = reader["projectCategory"].ToString();
-                                    txtProjectInput2.Items.Add($"{code} - {name}");
-                                }
-                                txtProjectInput2.SelectedIndex = 0;
+                                string code = reader["categoryCode"].ToString();
+                                string name = reader["projectCategory"].ToString();
+                                txtProjectInput2.Items.Add($"{code} - {name}");
                             }
-                            else
-                            {
-                                txtProjectInput2.Items.Add("- No Project Category -");
-
-                            }
+                            txtProjectInput2.SelectedIndex = 0;
                         }
                     }
                 }

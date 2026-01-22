@@ -11,6 +11,7 @@ using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace bfar8_budget_registry2025
 {
@@ -22,6 +23,10 @@ namespace bfar8_budget_registry2025
         //To be used to automatically generate a Particulars for earmark -->
         public static string purpose;
         public static string initialParticular;
+
+        public static string project_code;
+        public static string category_code;
+        public static string sub_category_code;
 
 
         public earmarking()
@@ -37,6 +42,7 @@ namespace bfar8_budget_registry2025
         {         
             getResponsibilityCenter();
             getEndUsers();
+            getProject();
             comboBoxSettings();
         }
         private void btnSearch_Click(object sender, EventArgs e)
@@ -48,6 +54,149 @@ namespace bfar8_budget_registry2025
         private void txtLotNo_SelectedIndexChanged(object sender, EventArgs e)
         {
             getPRDetails(purpose);
+        }
+        private void txtAmount_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(txtAmount.Text))
+            {
+                txtAmount.Text = "0.00";
+                return;
+            }
+
+            if (decimal.TryParse(txtAmount.Text, out decimal value))
+            {
+                txtAmount.Text = value.ToString("N2");
+            }
+            else
+            {
+                txtAmount.Text = "0.00";
+            }
+        }
+        private void txtProjectInput1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            txtProjectInput2.Items.Clear();
+            txtProjectInput3.Items.Clear();
+            txtProjectInput4.Items.Clear();
+
+            string project = txtProjectInput1.Text;
+
+            if (string.IsNullOrWhiteSpace(project) || !project.Contains("-"))
+                return; // skip invalid text
+
+            string codePart = project.Split('-')[0].Trim();
+            project_code = codePart;
+
+            using (MySqlConnection conn = new MySqlConnection(connString))
+            {
+                try
+                {
+                    conn.Open();
+                    string query = @"
+                        SELECT code
+                        FROM tbl_program_projects WHERE code = @Code
+                        ";
+                    using (MySqlCommand cmd = new MySqlCommand(query, conn))
+                    {
+                        cmd.Parameters.AddWithValue("@Code", project_code);
+                        using (MySqlDataReader reader = cmd.ExecuteReader())
+                        {
+                            if (reader.Read())
+                            {
+                                getProjectCategory(project_code);
+                            }
+                            else
+                            {
+                                txtProjectInput2.Items.Add("No Project Category");
+                                txtProjectInput2.SelectedIndex = 0;
+                                getProjectSubCateg(category_code);
+                            }
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error: " + ex.Message);
+                }
+            }
+        }
+        private void txtProjectInput2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            txtProjectInput3.Items.Clear();
+            txtProjectInput4.Items.Clear();
+
+            string projectCategory = txtProjectInput2.Text;
+
+            if (string.IsNullOrWhiteSpace(projectCategory) || !projectCategory.Contains("-"))
+                return; // skip invalid text
+
+            string codePart = projectCategory.Split('-')[0].Trim();
+            category_code = codePart;
+
+            using (MySqlConnection conn = new MySqlConnection(connString))
+            {
+                try
+                {
+                    conn.Open();
+                    string query = @"
+                        SELECT categoryCode
+                        FROM tbl_project_categ WHERE project_code = @ProjectCode
+                        ";
+                    using (MySqlCommand cmd = new MySqlCommand(query, conn))
+                    {
+                        cmd.Parameters.AddWithValue("@ProjectCode", project_code);
+                        using (MySqlDataReader reader = cmd.ExecuteReader())
+                        {
+                            if (reader.HasRows)
+                            {
+                                getProjectSubCateg(category_code);
+                            }
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error: " + ex.Message);
+                }
+            }
+        }
+        private void txtProjectInput3_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            txtProjectInput4.Items.Clear();
+
+            string projectSubCategory = txtProjectInput3.Text;
+
+            if (string.IsNullOrWhiteSpace(projectSubCategory) || !projectSubCategory.Contains("-"))
+                return; // skip invalid text
+
+            string codePart = projectSubCategory.Split('-')[0].Trim();
+            sub_category_code = codePart;
+
+            using (MySqlConnection conn = new MySqlConnection(connString))
+            {
+                try
+                {
+                    conn.Open();
+                    string query = @"
+                        SELECT subCategoryCode
+                        FROM tbl_project_sub_categ WHERE subCategoryCode = @SubCategoryCode
+                        ";
+                    using (MySqlCommand cmd = new MySqlCommand(query, conn))
+                    {
+                        cmd.Parameters.AddWithValue("@SubCategoryCode", sub_category_code);
+                        using (MySqlDataReader reader = cmd.ExecuteReader())
+                        {
+                            if (reader.HasRows)
+                            {
+                                getActivity(sub_category_code);
+                            }
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error: " + ex.Message);
+                }
+            }
         }
         private void comboBoxSettings()
         {
@@ -68,7 +217,141 @@ namespace bfar8_budget_registry2025
             txtPosition.IntegralHeight = false;
             txtPosition.DropDownHeight = 250;
             txtPosition.MaxDropDownItems = 10;
-
+        }
+        private void getProject()
+        {
+            txtProjectInput1.Items.Clear();
+            txtProjectInput1.Items.Add("- Select Program / Project -");
+            using (MySqlConnection conn = new MySqlConnection(connString))
+            {
+                try
+                {
+                    conn.Open();
+                    string query = @"
+                        SELECT *
+                        FROM tbl_program_projects
+                        ";
+                    using (MySqlCommand cmd = new MySqlCommand(query, conn))
+                    {
+                        using (MySqlDataReader reader = cmd.ExecuteReader())
+                        {
+                            while (reader.Read())
+                            {
+                                string code = reader["code"].ToString();
+                                string name = reader["programs_projects"].ToString();
+                                txtProjectInput1.Items.Add($"{code} - {name}");
+                            }                        
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error: " + ex.Message);
+                }
+            }
+            txtProjectInput1.SelectedIndex = 0;
+        }
+        private void getProjectCategory(string project_code)
+        {
+            txtProjectInput2.Items.Clear();
+            txtProjectInput2.Items.Add("- Select Project Category -");
+            using (MySqlConnection conn = new MySqlConnection(connString))
+            {
+                try
+                {
+                    conn.Open();
+                    string query = @"
+                        SELECT *
+                        FROM tbl_project_categ WHERE project_code = @ProjectCode
+                        ";
+                    using (MySqlCommand cmd = new MySqlCommand(query, conn))
+                    {
+                        cmd.Parameters.AddWithValue("@ProjectCode", project_code);
+                        using (MySqlDataReader reader = cmd.ExecuteReader())
+                        {
+                            while (reader.Read())
+                            {
+                                string code = reader["categoryCode"].ToString();
+                                string name = reader["projectCategory"].ToString();
+                                txtProjectInput2.Items.Add($"{code} - {name}");
+                            }
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error: " + ex.Message);
+                }
+            }
+            txtProjectInput2.SelectedIndex = 0;
+        }
+        private void getProjectSubCateg(string category_code)
+        {
+            txtProjectInput3.Items.Clear();
+            txtProjectInput3.Items.Add("- Select Project Sub Category -");
+            using (MySqlConnection conn = new MySqlConnection(connString))
+            {
+                try
+                {
+                    conn.Open();
+                    string query = @"
+                        SELECT *
+                        FROM tbl_project_sub_categ WHERE categoryCode = @CategoryCode
+                        ";
+                    using (MySqlCommand cmd = new MySqlCommand(query, conn))
+                    {
+                        cmd.Parameters.AddWithValue("@CategoryCode", category_code);
+                        using (MySqlDataReader reader = cmd.ExecuteReader())
+                        {
+                            while (reader.Read())
+                            {
+                                string code = reader["subCategoryCode"].ToString();
+                                string name = reader["subCategory"].ToString();
+                                txtProjectInput3.Items.Add($"{code} - {name}");
+                            }
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error: " + ex.Message);
+                }
+            }
+            txtProjectInput3.SelectedIndex = 0;
+        }
+        private void getActivity(string sub_category_code)
+        {
+            txtProjectInput4.Items.Clear();
+            txtProjectInput4.Items.Add("- Select Activity -");
+            using (MySqlConnection conn = new MySqlConnection(connString))
+            {
+                try
+                {
+                    conn.Open();
+                    string query = @"
+                        SELECT *
+                        FROM tbl_activity WHERE project_sub_category_code = @ProjectSubCategoryCode
+                        ";
+                    using (MySqlCommand cmd = new MySqlCommand(query, conn))
+                    {
+                        cmd.Parameters.AddWithValue("@ProjectSubCategoryCode", sub_category_code);
+                        using (MySqlDataReader reader = cmd.ExecuteReader())
+                        {
+                            while (reader.Read())
+                            {
+                                string code = reader["activity_code"].ToString();
+                                string name = reader["activity_name"].ToString();
+                                txtProjectInput4.Items.Add($"{code} - {name}");
+                            }
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error: " + ex.Message);
+                }
+            }
+            txtProjectInput4.SelectedIndex = 0;
         }
         private void getEndUsers()
         {
@@ -218,23 +501,6 @@ namespace bfar8_budget_registry2025
                         }
                     }
                 }
-            }
-        }
-        private void txtAmount_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (string.IsNullOrWhiteSpace(txtAmount.Text))
-            {
-                txtAmount.Text = "0.00";
-                return;
-            }
-
-            if (decimal.TryParse(txtAmount.Text, out decimal value))
-            {
-                txtAmount.Text = value.ToString("N2");
-            }
-            else
-            {
-                txtAmount.Text = "0.00";
             }
         }
     }

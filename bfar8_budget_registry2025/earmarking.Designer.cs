@@ -109,6 +109,7 @@
             this.txtProjectInput3.Name = "txtProjectInput3";
             this.txtProjectInput3.Size = new System.Drawing.Size(503, 36);
             this.txtProjectInput3.TabIndex = 27;
+            this.txtProjectInput3.SelectedIndexChanged += new System.EventHandler(this.txtProjectInput3_SelectedIndexChanged);
             // 
             // txtFundCluster
             // 
@@ -201,6 +202,7 @@
             this.btnSearch.Image = ((System.Drawing.Image)(resources.GetObject("btnSearch.Image")));
             this.btnSearch.Location = new System.Drawing.Point(350, 61);
             this.btnSearch.Name = "btnSearch";
+            this.btnSearch.PressedColor = System.Drawing.Color.Transparent;
             this.btnSearch.Size = new System.Drawing.Size(35, 30);
             this.btnSearch.TabIndex = 22;
             this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
@@ -402,6 +404,7 @@
             this.txtProjectInput1.Name = "txtProjectInput1";
             this.txtProjectInput1.Size = new System.Drawing.Size(503, 36);
             this.txtProjectInput1.TabIndex = 22;
+            this.txtProjectInput1.SelectedIndexChanged += new System.EventHandler(this.txtProjectInput1_SelectedIndexChanged);
             // 
             // txtProjectInput2
             // 
@@ -419,6 +422,7 @@
             this.txtProjectInput2.Name = "txtProjectInput2";
             this.txtProjectInput2.Size = new System.Drawing.Size(503, 36);
             this.txtProjectInput2.TabIndex = 24;
+            this.txtProjectInput2.SelectedIndexChanged += new System.EventHandler(this.txtProjectInput2_SelectedIndexChanged);
             // 
             // guna2Panel2
             // 
