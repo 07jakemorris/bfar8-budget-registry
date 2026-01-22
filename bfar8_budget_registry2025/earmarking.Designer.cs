@@ -35,13 +35,14 @@
             this.txtFundCluster = new Guna.UI2.WinForms.Guna2ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.txtPosition = new Guna.UI2.WinForms.Guna2ComboBox();
             this.btnSearch = new Guna.UI2.WinForms.Guna2Button();
             this.label11 = new System.Windows.Forms.Label();
             this.txtLotNo = new Guna.UI2.WinForms.Guna2ComboBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.txtPRNo = new Guna.UI2.WinForms.Guna2TextBox();
-            this.txtSignatory = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.txtEndUser = new Guna.UI2.WinForms.Guna2ComboBox();
             this.txtResponsibilityCenter = new Guna.UI2.WinForms.Guna2ComboBox();
             this.txtParticulars = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtQuarter = new Guna.UI2.WinForms.Guna2ComboBox();
@@ -69,7 +70,7 @@
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.DimGray;
-            this.label8.Location = new System.Drawing.Point(999, 366);
+            this.label8.Location = new System.Drawing.Point(1002, 364);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(172, 21);
             this.label8.TabIndex = 30;
@@ -136,7 +137,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.DimGray;
-            this.label1.Location = new System.Drawing.Point(1023, 65);
+            this.label1.Location = new System.Drawing.Point(1023, 63);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(121, 21);
             this.label1.TabIndex = 26;
@@ -147,13 +148,14 @@
             this.guna2Panel1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.guna2Panel1.BorderColor = System.Drawing.Color.DimGray;
             this.guna2Panel1.BorderThickness = 3;
+            this.guna2Panel1.Controls.Add(this.txtPosition);
             this.guna2Panel1.Controls.Add(this.btnSearch);
             this.guna2Panel1.Controls.Add(this.label11);
             this.guna2Panel1.Controls.Add(this.txtLotNo);
             this.guna2Panel1.Controls.Add(this.label7);
             this.guna2Panel1.Controls.Add(this.label3);
             this.guna2Panel1.Controls.Add(this.txtPRNo);
-            this.guna2Panel1.Controls.Add(this.txtSignatory);
+            this.guna2Panel1.Controls.Add(this.txtEndUser);
             this.guna2Panel1.Controls.Add(this.txtResponsibilityCenter);
             this.guna2Panel1.Controls.Add(this.txtParticulars);
             this.guna2Panel1.Controls.Add(this.txtQuarter);
@@ -163,6 +165,23 @@
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.Size = new System.Drawing.Size(785, 494);
             this.guna2Panel1.TabIndex = 25;
+            // 
+            // txtPosition
+            // 
+            this.txtPosition.BackColor = System.Drawing.Color.Transparent;
+            this.txtPosition.BorderColor = System.Drawing.Color.Silver;
+            this.txtPosition.BorderRadius = 3;
+            this.txtPosition.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.txtPosition.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.txtPosition.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtPosition.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtPosition.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.txtPosition.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.txtPosition.ItemHeight = 30;
+            this.txtPosition.Location = new System.Drawing.Point(404, 436);
+            this.txtPosition.Name = "txtPosition";
+            this.txtPosition.Size = new System.Drawing.Size(348, 36);
+            this.txtPosition.TabIndex = 23;
             // 
             // btnSearch
             // 
@@ -212,8 +231,9 @@
             this.txtLotNo.Location = new System.Drawing.Point(104, 116);
             this.txtLotNo.MaxDropDownItems = 5;
             this.txtLotNo.Name = "txtLotNo";
-            this.txtLotNo.Size = new System.Drawing.Size(163, 36);
+            this.txtLotNo.Size = new System.Drawing.Size(198, 36);
             this.txtLotNo.TabIndex = 20;
+            this.txtLotNo.SelectedIndexChanged += new System.EventHandler(this.txtLotNo_SelectedIndexChanged);
             // 
             // label7
             // 
@@ -259,23 +279,23 @@
             this.txtPRNo.Size = new System.Drawing.Size(285, 34);
             this.txtPRNo.TabIndex = 17;
             // 
-            // txtSignatory
+            // txtEndUser
             // 
-            this.txtSignatory.BackColor = System.Drawing.Color.Transparent;
-            this.txtSignatory.BorderColor = System.Drawing.Color.Silver;
-            this.txtSignatory.BorderRadius = 3;
-            this.txtSignatory.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.txtSignatory.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.txtSignatory.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtSignatory.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtSignatory.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.txtSignatory.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.txtSignatory.ItemHeight = 30;
-            this.txtSignatory.Location = new System.Drawing.Point(47, 375);
-            this.txtSignatory.MaxDropDownItems = 5;
-            this.txtSignatory.Name = "txtSignatory";
-            this.txtSignatory.Size = new System.Drawing.Size(331, 36);
-            this.txtSignatory.TabIndex = 16;
+            this.txtEndUser.BackColor = System.Drawing.Color.Transparent;
+            this.txtEndUser.BorderColor = System.Drawing.Color.Silver;
+            this.txtEndUser.BorderRadius = 3;
+            this.txtEndUser.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.txtEndUser.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.txtEndUser.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtEndUser.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtEndUser.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.txtEndUser.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.txtEndUser.ItemHeight = 30;
+            this.txtEndUser.Location = new System.Drawing.Point(47, 375);
+            this.txtEndUser.MaxDropDownItems = 5;
+            this.txtEndUser.Name = "txtEndUser";
+            this.txtEndUser.Size = new System.Drawing.Size(331, 36);
+            this.txtEndUser.TabIndex = 16;
             // 
             // txtResponsibilityCenter
             // 
@@ -489,6 +509,7 @@
             this.txtAmount.Size = new System.Drawing.Size(307, 35);
             this.txtAmount.TabIndex = 17;
             this.txtAmount.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtAmount.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtAmount_KeyDown);
             // 
             // label6
             // 
@@ -616,7 +637,7 @@
         private Guna.UI2.WinForms.Guna2ComboBox txtFundCluster;
         private System.Windows.Forms.Label label1;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
-        private Guna.UI2.WinForms.Guna2ComboBox txtSignatory;
+        private Guna.UI2.WinForms.Guna2ComboBox txtEndUser;
         private Guna.UI2.WinForms.Guna2ComboBox txtResponsibilityCenter;
         private Guna.UI2.WinForms.Guna2TextBox txtParticulars;
         private Guna.UI2.WinForms.Guna2ComboBox txtQuarter;
@@ -641,5 +662,6 @@
         private Guna.UI2.WinForms.Guna2ComboBox txtLotNo;
         private System.Windows.Forms.Label label11;
         private Guna.UI2.WinForms.Guna2Button btnSearch;
+        private Guna.UI2.WinForms.Guna2ComboBox txtPosition;
     }
 }

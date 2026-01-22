@@ -164,7 +164,7 @@
             this.btnEarmarks.Size = new System.Drawing.Size(224, 45);
             this.btnEarmarks.TabIndex = 2;
             this.btnEarmarks.Text = "Earmarking";
-            this.btnEarmarks.TextOffset = new System.Drawing.Point(-20, 0);
+            this.btnEarmarks.TextOffset = new System.Drawing.Point(-17, 0);
             this.btnEarmarks.Click += new System.EventHandler(this.btnEarmarks_Click);
             // 
             // panelMenu
