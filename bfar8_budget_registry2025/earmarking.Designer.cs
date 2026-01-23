@@ -51,6 +51,8 @@
             this.txtProjectInput1 = new Guna.UI2.WinForms.Guna2ComboBox();
             this.txtProjectInput2 = new Guna.UI2.WinForms.Guna2ComboBox();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
+            this.label12 = new System.Windows.Forms.Label();
+            this.txtSubAccountCode = new Guna.UI2.WinForms.Guna2ComboBox();
             this.label10 = new System.Windows.Forms.Label();
             this.btnInsert = new Guna.UI2.WinForms.Guna2Button();
             this.label9 = new System.Windows.Forms.Label();
@@ -132,6 +134,7 @@
             this.txtFundCluster.Name = "txtFundCluster";
             this.txtFundCluster.Size = new System.Drawing.Size(503, 36);
             this.txtFundCluster.TabIndex = 23;
+            this.txtFundCluster.SelectedIndexChanged += new System.EventHandler(this.txtFundCluster_SelectedIndexChanged);
             // 
             // label1
             // 
@@ -432,6 +435,8 @@
             this.guna2Panel2.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.guna2Panel2.BorderColor = System.Drawing.Color.DimGray;
             this.guna2Panel2.BorderThickness = 3;
+            this.guna2Panel2.Controls.Add(this.label12);
+            this.guna2Panel2.Controls.Add(this.txtSubAccountCode);
             this.guna2Panel2.Controls.Add(this.label10);
             this.guna2Panel2.Controls.Add(this.btnInsert);
             this.guna2Panel2.Controls.Add(this.label9);
@@ -447,13 +452,43 @@
             this.guna2Panel2.Size = new System.Drawing.Size(1413, 419);
             this.guna2Panel2.TabIndex = 29;
             // 
+            // label12
+            // 
+            this.label12.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.Color.DimGray;
+            this.label12.Location = new System.Drawing.Point(581, 167);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(153, 21);
+            this.label12.TabIndex = 31;
+            this.label12.Text = "Sub Account Code:";
+            // 
+            // txtSubAccountCode
+            // 
+            this.txtSubAccountCode.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtSubAccountCode.BackColor = System.Drawing.Color.Transparent;
+            this.txtSubAccountCode.BorderColor = System.Drawing.Color.Silver;
+            this.txtSubAccountCode.BorderRadius = 3;
+            this.txtSubAccountCode.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.txtSubAccountCode.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.txtSubAccountCode.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtSubAccountCode.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtSubAccountCode.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.txtSubAccountCode.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.txtSubAccountCode.ItemHeight = 30;
+            this.txtSubAccountCode.Location = new System.Drawing.Point(737, 159);
+            this.txtSubAccountCode.Name = "txtSubAccountCode";
+            this.txtSubAccountCode.Size = new System.Drawing.Size(608, 36);
+            this.txtSubAccountCode.TabIndex = 32;
+            // 
             // label10
             // 
             this.label10.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.DimGray;
-            this.label10.Location = new System.Drawing.Point(613, 30);
+            this.label10.Location = new System.Drawing.Point(580, 30);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(179, 25);
             this.label10.TabIndex = 30;
@@ -471,7 +506,7 @@
             this.btnInsert.FillColor = System.Drawing.Color.DarkGreen;
             this.btnInsert.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnInsert.ForeColor = System.Drawing.Color.White;
-            this.btnInsert.Location = new System.Drawing.Point(599, 262);
+            this.btnInsert.Location = new System.Drawing.Point(871, 281);
             this.btnInsert.Name = "btnInsert";
             this.btnInsert.Size = new System.Drawing.Size(216, 52);
             this.btnInsert.TabIndex = 29;
@@ -484,7 +519,7 @@
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.DimGray;
-            this.label9.Location = new System.Drawing.Point(706, 167);
+            this.label9.Location = new System.Drawing.Point(90, 238);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(76, 21);
             this.label9.TabIndex = 28;
@@ -504,7 +539,7 @@
             this.txtAmount.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtAmount.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.txtAmount.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtAmount.Location = new System.Drawing.Point(785, 161);
+            this.txtAmount.Location = new System.Drawing.Point(169, 232);
             this.txtAmount.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtAmount.Name = "txtAmount";
             this.txtAmount.PlaceholderForeColor = System.Drawing.Color.Black;
@@ -513,7 +548,8 @@
             this.txtAmount.Size = new System.Drawing.Size(307, 35);
             this.txtAmount.TabIndex = 17;
             this.txtAmount.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.txtAmount.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtAmount_KeyDown);
+            this.txtAmount.Enter += new System.EventHandler(this.txtAmount_Enter);
+            this.txtAmount.Leave += new System.EventHandler(this.txtAmount_Leave);
             // 
             // label6
             // 
@@ -521,7 +557,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.DimGray;
-            this.label6.Location = new System.Drawing.Point(662, 91);
+            this.label6.Location = new System.Drawing.Point(611, 92);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(120, 21);
             this.label6.TabIndex = 24;
@@ -540,10 +576,11 @@
             this.txtAccountCode.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.txtAccountCode.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.txtAccountCode.ItemHeight = 30;
-            this.txtAccountCode.Location = new System.Drawing.Point(785, 84);
+            this.txtAccountCode.Location = new System.Drawing.Point(734, 85);
             this.txtAccountCode.Name = "txtAccountCode";
-            this.txtAccountCode.Size = new System.Drawing.Size(560, 36);
+            this.txtAccountCode.Size = new System.Drawing.Size(611, 36);
             this.txtAccountCode.TabIndex = 25;
+            this.txtAccountCode.SelectedIndexChanged += new System.EventHandler(this.txtAccountCode_SelectedIndexChanged);
             // 
             // label5
             // 
@@ -572,8 +609,9 @@
             this.txtExpensesType.ItemHeight = 30;
             this.txtExpensesType.Location = new System.Drawing.Point(169, 159);
             this.txtExpensesType.Name = "txtExpensesType";
-            this.txtExpensesType.Size = new System.Drawing.Size(452, 36);
+            this.txtExpensesType.Size = new System.Drawing.Size(385, 36);
             this.txtExpensesType.TabIndex = 23;
+            this.txtExpensesType.SelectedIndexChanged += new System.EventHandler(this.txtExpensesType_SelectedIndexChanged);
             // 
             // label4
             // 
@@ -602,8 +640,9 @@
             this.txtExpensesClass.ItemHeight = 30;
             this.txtExpensesClass.Location = new System.Drawing.Point(169, 85);
             this.txtExpensesClass.Name = "txtExpensesClass";
-            this.txtExpensesClass.Size = new System.Drawing.Size(452, 36);
+            this.txtExpensesClass.Size = new System.Drawing.Size(385, 36);
             this.txtExpensesClass.TabIndex = 21;
+            this.txtExpensesClass.SelectedIndexChanged += new System.EventHandler(this.txtExpensesClass_SelectedIndexChanged);
             // 
             // earmarking
             // 
@@ -667,5 +706,7 @@
         private System.Windows.Forms.Label label11;
         private Guna.UI2.WinForms.Guna2Button btnSearch;
         private Guna.UI2.WinForms.Guna2ComboBox txtPosition;
+        private System.Windows.Forms.Label label12;
+        private Guna.UI2.WinForms.Guna2ComboBox txtSubAccountCode;
     }
 }

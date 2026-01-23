@@ -473,7 +473,7 @@
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.DimGray;
-            this.label10.Location = new System.Drawing.Point(297, 30);
+            this.label10.Location = new System.Drawing.Point(575, 32);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(179, 25);
             this.label10.TabIndex = 30;
@@ -488,10 +488,10 @@
             this.btnInsert.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnInsert.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnInsert.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnInsert.FillColor = System.Drawing.Color.Green;
+            this.btnInsert.FillColor = System.Drawing.Color.DarkGreen;
             this.btnInsert.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnInsert.ForeColor = System.Drawing.Color.White;
-            this.btnInsert.Location = new System.Drawing.Point(951, 293);
+            this.btnInsert.Location = new System.Drawing.Point(883, 280);
             this.btnInsert.Name = "btnInsert";
             this.btnInsert.Size = new System.Drawing.Size(216, 52);
             this.btnInsert.TabIndex = 29;

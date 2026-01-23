@@ -26,10 +26,10 @@ namespace bfar8_budget_registry2025
 
         public static string newOrsNo;
 
-        public static string department_code;
-        public static string agency_code;
-        public static string operating_unit;
-        public static string lower_operating_unit;
+        private string department_code;
+        private string agency_code;
+        private string operating_unit;
+        private string lower_operating_unit;
 
         //For Project Category and Sub Category -->
         public static string project_code;
@@ -51,8 +51,6 @@ namespace bfar8_budget_registry2025
         public static string expense_type_id;
         public static string selectedAccountID;
         public static string accountID;
-
-        private string payeeName;
 
         //List for Responsibility Center
         private List<(string Name, string Type)> allCenters = new List<(string, string)>();
@@ -122,7 +120,7 @@ namespace bfar8_budget_registry2025
             getProject();
             getProjectCategory(project_code);
             getFundCluster();
-            getExpensesType();
+            getExpenseClass();
             loadOrsNo(newOrsNo);     
         }
         
@@ -152,10 +150,6 @@ namespace bfar8_budget_registry2025
                 {
                     MessageBox.Show("Error: " + ex.Message);
                 }
-                finally
-                {
-                    conn.Close();
-                }
             }
         }
         private void getSignatory()
@@ -180,10 +174,6 @@ namespace bfar8_budget_registry2025
                 catch (Exception ex)
                 {
                     MessageBox.Show("Error: " + ex.Message);
-                }
-                finally
-                {
-                    conn.Close();
                 }
             }
             txtSignatory.SelectedIndex = 0;
@@ -210,10 +200,6 @@ namespace bfar8_budget_registry2025
                 catch (Exception ex)
                 {
                     MessageBox.Show("Error: " + ex.Message);
-                }
-                finally
-                {
-                    conn.Close();
                 }
             }
             txtResponsibilityCenter.SelectedIndex = 0;
@@ -261,10 +247,6 @@ namespace bfar8_budget_registry2025
                 {
                     MessageBox.Show("Error: " + ex.Message);
                 }
-                finally
-                {
-                    conn.Close();
-                }
             }
             txtProjectInput1.SelectedIndex = 0;
         }
@@ -300,10 +282,6 @@ namespace bfar8_budget_registry2025
                 {
                     MessageBox.Show("Error: " + ex.Message);
                 }
-                finally
-                {
-                    conn.Close();
-                }
             }   
         }
 
@@ -321,7 +299,10 @@ namespace bfar8_budget_registry2025
             string codePart = project.Split('-')[0].Trim();
             project_code = codePart;
 
-            string fetch = "SELECT code FROM tbl_program_projects WHERE code = @selectedCode AND hasProjectCategory = 1";
+            string fetch = @"
+                SELECT code 
+                FROM tbl_program_projects WHERE code = @selectedCode AND hasProjectCategory = 1
+                ";
 
             using (MySqlConnection conn = new MySqlConnection(connString))
             {
@@ -354,17 +335,16 @@ namespace bfar8_budget_registry2025
                 {
                     MessageBox.Show("Error: " + ex.Message);
                 }
-                finally
-                {
-                    conn.Close();
-                }
             }
         }
 
-        private void getSubCategory(string category_code)
+        private void getSubCategory(string project_code)
         {
             txtProjectInput3.Items.Clear();
-            string query = "SELECT subCategoryCode, subCategory FROM tbl_project_sub_categ WHERE project_code = @projectCode";  
+            string query = @"
+                SELECT subCategoryCode, subCategory 
+                FROM tbl_project_sub_categ WHERE project_code = @projectCode
+                ";  
             using (MySqlConnection conn = new MySqlConnection(connString))
             {
                 try
@@ -384,8 +364,7 @@ namespace bfar8_budget_registry2025
                                     string code = reader["subCategoryCode"].ToString();
                                     string name = reader["subCategory"].ToString();
                                     txtProjectInput3.Items.Add($"{code} - {name}");
-                                }
-                                txtProjectInput3.SelectedIndex = 0;
+                                }                              
                             }
                         }
                     }
@@ -394,7 +373,8 @@ namespace bfar8_budget_registry2025
                 {
                     MessageBox.Show("Error: " + ex.Message);
                 }
-            }                        
+            }
+            txtProjectInput3.SelectedIndex = 0;
         }
 
         private void txtProjectInput2_SelectedIndexChanged(object sender, EventArgs e)
@@ -425,7 +405,7 @@ namespace bfar8_budget_registry2025
                         {
                             if (reader.HasRows)
                             {
-                                getSubCategory(category_code);
+                                getSubCategory(project_code);
                             }
                         }
                     }
@@ -433,10 +413,6 @@ namespace bfar8_budget_registry2025
                 catch (Exception ex)
                 {
                     MessageBox.Show("Error: " + ex.Message);
-                }
-                finally
-                {
-                    conn.Close();
                 }
             }
         }
@@ -477,10 +453,6 @@ namespace bfar8_budget_registry2025
                 {
                     MessageBox.Show("Error: " + ex.Message);
                 }
-                finally
-                {
-                    conn.Close();
-                }
             }
         }
 
@@ -516,10 +488,6 @@ namespace bfar8_budget_registry2025
                 catch (Exception ex)
                 {
                     MessageBox.Show("Error: " + ex.Message);
-                }
-                finally
-                {
-                    conn.Close();
                 }
             }
         }
@@ -587,7 +555,7 @@ namespace bfar8_budget_registry2025
             }
         }
 
-        private void getExpensesType()
+        private void getExpenseClass()
         {
             txtExpensesClass.Items.Clear();
             txtExpensesClass.Items.Add("- Select Expense Class -");
@@ -764,7 +732,10 @@ namespace bfar8_budget_registry2025
 
             selectedAccountID = selectedAccountCode.Split(new string[] { " - " }, StringSplitOptions.None)[0];
 
-            string fetchAccountCode = "SELECT id FROM tbl_account_codes WHERE hasSubAccountCode = 1 AND codeNo = @selectedAccountID";
+            string fetchAccountCode = @"
+                SELECT id 
+                FROM tbl_account_codes WHERE hasSubAccountCode = 1 AND codeNo = @selectedAccountID
+                ";
             using (MySqlConnection conn = new MySqlConnection(connString))
             {
                 try
@@ -850,7 +821,7 @@ namespace bfar8_budget_registry2025
 
             if (decimal.TryParse(txtAmount.Text, out decimal value))
             {
-                txtAmount.Text = value.ToString("N2"); // e.g. 12,000.00
+                txtAmount.Text = value.ToString("N2");
             }
             else
             {
@@ -899,7 +870,8 @@ namespace bfar8_budget_registry2025
             `department_code`, `agency_code`, `operating_unit_classification`, `lower_level_unit`,
             `responsibility_center`, `signatory`, `position`, `program_project`, `project_category`,
             `project_sub_category`, `activity_level`, `expense_class`, `expense_type`, `account_code`, `obligations_incurred`)
-            VALUES (@month, @day, @year, @quarter, @orsNo, @payee, @creditorType, @particulars,
+            VALUES 
+            (@month, @day, @year, @quarter, @orsNo, @payee, @creditorType, @particulars,
             @fundCluster, @financingSource, @authorizationCode, @fundCategory, @fullFundingCode,
             @departmentCode, @agencyCode, @operatingUnit, @lowerUnit, @responsibilityCenter,
             @signatory, @position, @project, @projectCategory, @projectSubCategory, @activityLevel,
@@ -1234,7 +1206,6 @@ namespace bfar8_budget_registry2025
                 txtPayee.Text = match;
                 txtPayee.SelectionStart = typedText.Length;
                 txtPayee.SelectionLength = match.Length - typedText.Length;
-
                 suggestedText = match;
                 isAutoFilling = false;
             }
