@@ -202,6 +202,12 @@
     <Compile Include="insertRegistry.Designer.cs">
       <DependentUpon>insertRegistry.cs</DependentUpon>
     </Compile>
+    <Compile Include="login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="login.Designer.cs">
+      <DependentUpon>login.cs</DependentUpon>
+    </Compile>
     <Compile Include="ORSForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -247,6 +253,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="insertRegistry.resx">
       <DependentUpon>insertRegistry.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="login.resx">
+      <DependentUpon>login.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ORSForm.resx">
       <DependentUpon>ORSForm.cs</DependentUpon>

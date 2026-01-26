@@ -103,6 +103,8 @@
             // 
             // guna2Panel1
             // 
+            this.guna2Panel1.Controls.Add(this.projectLabel);
+            this.guna2Panel1.Controls.Add(this.projectHighlight);
             this.guna2Panel1.Controls.Add(this.lblPosition);
             this.guna2Panel1.Controls.Add(this.label11);
             this.guna2Panel1.Controls.Add(this.lblSignatory);
@@ -120,7 +122,7 @@
             this.guna2Panel1.Controls.Add(this.label2);
             this.guna2Panel1.Location = new System.Drawing.Point(0, 39);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(702, 300);
+            this.guna2Panel1.Size = new System.Drawing.Size(702, 277);
             this.guna2Panel1.TabIndex = 1;
             // 
             // lblPosition
@@ -128,7 +130,7 @@
             this.lblPosition.AutoSize = true;
             this.lblPosition.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPosition.ForeColor = System.Drawing.Color.DimGray;
-            this.lblPosition.Location = new System.Drawing.Point(192, 209);
+            this.lblPosition.Location = new System.Drawing.Point(162, 171);
             this.lblPosition.Name = "lblPosition";
             this.lblPosition.Size = new System.Drawing.Size(69, 17);
             this.lblPosition.TabIndex = 14;
@@ -139,7 +141,7 @@
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.DimGray;
-            this.label11.Location = new System.Drawing.Point(13, 209);
+            this.label11.Location = new System.Drawing.Point(93, 171);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(63, 17);
             this.label11.TabIndex = 13;
@@ -150,7 +152,7 @@
             this.lblSignatory.AutoSize = true;
             this.lblSignatory.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSignatory.ForeColor = System.Drawing.Color.DimGray;
-            this.lblSignatory.Location = new System.Drawing.Point(192, 172);
+            this.lblSignatory.Location = new System.Drawing.Point(162, 138);
             this.lblSignatory.Name = "lblSignatory";
             this.lblSignatory.Size = new System.Drawing.Size(122, 17);
             this.lblSignatory.TabIndex = 12;
@@ -161,7 +163,7 @@
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.DimGray;
-            this.label10.Location = new System.Drawing.Point(13, 172);
+            this.label10.Location = new System.Drawing.Point(84, 138);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(72, 17);
             this.label10.TabIndex = 11;
@@ -172,7 +174,7 @@
             this.lblResCenter.AutoSize = true;
             this.lblResCenter.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblResCenter.ForeColor = System.Drawing.Color.DimGray;
-            this.lblResCenter.Location = new System.Drawing.Point(191, 137);
+            this.lblResCenter.Location = new System.Drawing.Point(162, 105);
             this.lblResCenter.Name = "lblResCenter";
             this.lblResCenter.Size = new System.Drawing.Size(205, 17);
             this.lblResCenter.TabIndex = 10;
@@ -183,7 +185,7 @@
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.DimGray;
-            this.label8.Location = new System.Drawing.Point(13, 137);
+            this.label8.Location = new System.Drawing.Point(12, 105);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(144, 17);
             this.label8.TabIndex = 9;
@@ -194,7 +196,7 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.DimGray;
-            this.label7.Location = new System.Drawing.Point(191, 248);
+            this.label7.Location = new System.Drawing.Point(162, 201);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(32, 17);
             this.label7.TabIndex = 8;
@@ -205,7 +207,7 @@
             this.lblTotalAmount.AutoSize = true;
             this.lblTotalAmount.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTotalAmount.ForeColor = System.Drawing.Color.DimGray;
-            this.lblTotalAmount.Location = new System.Drawing.Point(228, 248);
+            this.lblTotalAmount.Location = new System.Drawing.Point(194, 201);
             this.lblTotalAmount.Name = "lblTotalAmount";
             this.lblTotalAmount.Size = new System.Drawing.Size(58, 17);
             this.lblTotalAmount.TabIndex = 7;
@@ -216,7 +218,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.DimGray;
-            this.label6.Location = new System.Drawing.Point(13, 248);
+            this.label6.Location = new System.Drawing.Point(23, 201);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(133, 17);
             this.label6.TabIndex = 6;
@@ -227,7 +229,7 @@
             this.lblCreditor.AutoSize = true;
             this.lblCreditor.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCreditor.ForeColor = System.Drawing.Color.DimGray;
-            this.lblCreditor.Location = new System.Drawing.Point(191, 99);
+            this.lblCreditor.Location = new System.Drawing.Point(162, 74);
             this.lblCreditor.Name = "lblCreditor";
             this.lblCreditor.Size = new System.Drawing.Size(110, 17);
             this.lblCreditor.TabIndex = 5;
@@ -238,7 +240,7 @@
             this.lblObligDate.AutoSize = true;
             this.lblObligDate.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblObligDate.ForeColor = System.Drawing.Color.DimGray;
-            this.lblObligDate.Location = new System.Drawing.Point(191, 60);
+            this.lblObligDate.Location = new System.Drawing.Point(162, 45);
             this.lblObligDate.Name = "lblObligDate";
             this.lblObligDate.Size = new System.Drawing.Size(124, 17);
             this.lblObligDate.TabIndex = 4;
@@ -249,7 +251,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.DimGray;
-            this.label4.Location = new System.Drawing.Point(13, 99);
+            this.label4.Location = new System.Drawing.Point(93, 74);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(63, 17);
             this.label4.TabIndex = 3;
@@ -260,7 +262,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.DimGray;
-            this.label3.Location = new System.Drawing.Point(13, 60);
+            this.label3.Location = new System.Drawing.Point(45, 45);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(111, 17);
             this.label3.TabIndex = 2;
@@ -271,7 +273,7 @@
             this.lblORSNo.AutoSize = true;
             this.lblORSNo.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblORSNo.ForeColor = System.Drawing.Color.DimGray;
-            this.lblORSNo.Location = new System.Drawing.Point(192, 26);
+            this.lblORSNo.Location = new System.Drawing.Point(162, 18);
             this.lblORSNo.Name = "lblORSNo";
             this.lblORSNo.Size = new System.Drawing.Size(74, 17);
             this.lblORSNo.TabIndex = 1;
@@ -282,7 +284,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.DimGray;
-            this.label2.Location = new System.Drawing.Point(13, 26);
+            this.label2.Location = new System.Drawing.Point(95, 18);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(61, 17);
             this.label2.TabIndex = 0;
@@ -300,18 +302,16 @@
             this.guna2Panel2.Controls.Add(this.label15);
             this.guna2Panel2.Controls.Add(this.lblProject);
             this.guna2Panel2.Controls.Add(this.label13);
-            this.guna2Panel2.Controls.Add(this.projectLabel);
-            this.guna2Panel2.Controls.Add(this.projectHighlight);
-            this.guna2Panel2.Location = new System.Drawing.Point(-3, 338);
+            this.guna2Panel2.Location = new System.Drawing.Point(-3, 314);
             this.guna2Panel2.Name = "guna2Panel2";
-            this.guna2Panel2.Size = new System.Drawing.Size(713, 252);
+            this.guna2Panel2.Size = new System.Drawing.Size(713, 220);
             this.guna2Panel2.TabIndex = 15;
             // 
             // lblActivity
             // 
             this.lblActivity.AutoSize = true;
             this.lblActivity.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblActivity.Location = new System.Drawing.Point(136, 202);
+            this.lblActivity.Location = new System.Drawing.Point(141, 157);
             this.lblActivity.MaximumSize = new System.Drawing.Size(500, 0);
             this.lblActivity.Name = "lblActivity";
             this.lblActivity.Size = new System.Drawing.Size(472, 17);
@@ -322,7 +322,7 @@
             // 
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(45, 202);
+            this.label18.Location = new System.Drawing.Point(43, 157);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(90, 17);
             this.label18.TabIndex = 21;
@@ -332,7 +332,7 @@
             // 
             this.lblSubCategory.AutoSize = true;
             this.lblSubCategory.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSubCategory.Location = new System.Drawing.Point(137, 151);
+            this.lblSubCategory.Location = new System.Drawing.Point(141, 108);
             this.lblSubCategory.MaximumSize = new System.Drawing.Size(500, 0);
             this.lblSubCategory.Name = "lblSubCategory";
             this.lblSubCategory.Size = new System.Drawing.Size(312, 17);
@@ -343,7 +343,7 @@
             // 
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(43, 151);
+            this.label16.Location = new System.Drawing.Point(39, 108);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(94, 17);
             this.label16.TabIndex = 19;
@@ -353,7 +353,7 @@
             // 
             this.lblCategory.AutoSize = true;
             this.lblCategory.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCategory.Location = new System.Drawing.Point(138, 101);
+            this.lblCategory.Location = new System.Drawing.Point(141, 60);
             this.lblCategory.MaximumSize = new System.Drawing.Size(500, 0);
             this.lblCategory.Name = "lblCategory";
             this.lblCategory.Size = new System.Drawing.Size(312, 17);
@@ -364,7 +364,7 @@
             // 
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(24, 101);
+            this.label15.Location = new System.Drawing.Point(22, 60);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(113, 17);
             this.label15.TabIndex = 17;
@@ -374,7 +374,7 @@
             // 
             this.lblProject.AutoSize = true;
             this.lblProject.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblProject.Location = new System.Drawing.Point(137, 53);
+            this.lblProject.Location = new System.Drawing.Point(138, 17);
             this.lblProject.MaximumSize = new System.Drawing.Size(500, 0);
             this.lblProject.Name = "lblProject";
             this.lblProject.Size = new System.Drawing.Size(418, 17);
@@ -385,7 +385,7 @@
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(20, 53);
+            this.label13.Location = new System.Drawing.Point(20, 17);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(117, 17);
             this.label13.TabIndex = 15;
@@ -397,7 +397,7 @@
             this.projectLabel.BackColor = System.Drawing.Color.Transparent;
             this.projectLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.projectLabel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.projectLabel.Location = new System.Drawing.Point(287, 9);
+            this.projectLabel.Location = new System.Drawing.Point(285, 247);
             this.projectLabel.Name = "projectLabel";
             this.projectLabel.Size = new System.Drawing.Size(121, 21);
             this.projectLabel.TabIndex = 2;
@@ -408,9 +408,9 @@
             this.projectHighlight.BackColor = System.Drawing.SystemColors.ButtonShadow;
             this.projectHighlight.FillColor = System.Drawing.SystemColors.ButtonShadow;
             this.projectHighlight.ImageRotate = 0F;
-            this.projectHighlight.Location = new System.Drawing.Point(-8, 0);
+            this.projectHighlight.Location = new System.Drawing.Point(-11, 238);
             this.projectHighlight.Name = "projectHighlight";
-            this.projectHighlight.Size = new System.Drawing.Size(721, 38);
+            this.projectHighlight.Size = new System.Drawing.Size(721, 39);
             this.projectHighlight.TabIndex = 23;
             this.projectHighlight.TabStop = false;
             // 
@@ -430,18 +430,16 @@
             this.bottomPanel.Controls.Add(this.label24);
             this.bottomPanel.Controls.Add(this.lblFundCluster);
             this.bottomPanel.Controls.Add(this.label26);
-            this.bottomPanel.Controls.Add(this.fundingLabel);
-            this.bottomPanel.Controls.Add(this.fundingHighlight);
-            this.bottomPanel.Location = new System.Drawing.Point(-13, 587);
+            this.bottomPanel.Location = new System.Drawing.Point(-13, 559);
             this.bottomPanel.Name = "bottomPanel";
-            this.bottomPanel.Size = new System.Drawing.Size(743, 277);
+            this.bottomPanel.Size = new System.Drawing.Size(732, 249);
             this.bottomPanel.TabIndex = 23;
             // 
             // lblAccountCode
             // 
             this.lblAccountCode.AutoSize = true;
             this.lblAccountCode.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAccountCode.Location = new System.Drawing.Point(151, 238);
+            this.lblAccountCode.Location = new System.Drawing.Point(151, 196);
             this.lblAccountCode.MaximumSize = new System.Drawing.Size(500, 0);
             this.lblAccountCode.Name = "lblAccountCode";
             this.lblAccountCode.Size = new System.Drawing.Size(252, 17);
@@ -452,7 +450,7 @@
             // 
             this.label19.AutoSize = true;
             this.label19.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.Location = new System.Drawing.Point(49, 238);
+            this.label19.Location = new System.Drawing.Point(49, 196);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(96, 17);
             this.label19.TabIndex = 25;
@@ -462,7 +460,7 @@
             // 
             this.lblExpenseClass.AutoSize = true;
             this.lblExpenseClass.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblExpenseClass.Location = new System.Drawing.Point(151, 199);
+            this.lblExpenseClass.Location = new System.Drawing.Point(151, 161);
             this.lblExpenseClass.MaximumSize = new System.Drawing.Size(500, 0);
             this.lblExpenseClass.Name = "lblExpenseClass";
             this.lblExpenseClass.Size = new System.Drawing.Size(297, 17);
@@ -473,7 +471,7 @@
             // 
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(52, 199);
+            this.label17.Location = new System.Drawing.Point(52, 161);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(95, 17);
             this.label17.TabIndex = 23;
@@ -483,7 +481,7 @@
             // 
             this.lblFundCategory.AutoSize = true;
             this.lblFundCategory.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFundCategory.Location = new System.Drawing.Point(151, 162);
+            this.lblFundCategory.Location = new System.Drawing.Point(151, 126);
             this.lblFundCategory.MaximumSize = new System.Drawing.Size(500, 0);
             this.lblFundCategory.Name = "lblFundCategory";
             this.lblFundCategory.Size = new System.Drawing.Size(306, 17);
@@ -494,7 +492,7 @@
             // 
             this.label20.AutoSize = true;
             this.label20.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.Location = new System.Drawing.Point(45, 162);
+            this.label20.Location = new System.Drawing.Point(45, 126);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(102, 17);
             this.label20.TabIndex = 21;
@@ -504,7 +502,7 @@
             // 
             this.lblAuthCode.AutoSize = true;
             this.lblAuthCode.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAuthCode.Location = new System.Drawing.Point(151, 125);
+            this.lblAuthCode.Location = new System.Drawing.Point(151, 91);
             this.lblAuthCode.MaximumSize = new System.Drawing.Size(500, 0);
             this.lblAuthCode.Name = "lblAuthCode";
             this.lblAuthCode.Size = new System.Drawing.Size(235, 17);
@@ -515,7 +513,7 @@
             // 
             this.label22.AutoSize = true;
             this.label22.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label22.Location = new System.Drawing.Point(26, 125);
+            this.label22.Location = new System.Drawing.Point(26, 91);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(121, 17);
             this.label22.TabIndex = 19;
@@ -525,7 +523,7 @@
             // 
             this.lblFinancingSource.AutoSize = true;
             this.lblFinancingSource.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFinancingSource.Location = new System.Drawing.Point(151, 88);
+            this.lblFinancingSource.Location = new System.Drawing.Point(151, 56);
             this.lblFinancingSource.MaximumSize = new System.Drawing.Size(500, 0);
             this.lblFinancingSource.Name = "lblFinancingSource";
             this.lblFinancingSource.Size = new System.Drawing.Size(154, 17);
@@ -536,7 +534,7 @@
             // 
             this.label24.AutoSize = true;
             this.label24.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label24.Location = new System.Drawing.Point(33, 88);
+            this.label24.Location = new System.Drawing.Point(33, 56);
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(114, 17);
             this.label24.TabIndex = 17;
@@ -546,7 +544,7 @@
             // 
             this.lblFundCluster.AutoSize = true;
             this.lblFundCluster.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFundCluster.Location = new System.Drawing.Point(151, 52);
+            this.lblFundCluster.Location = new System.Drawing.Point(151, 25);
             this.lblFundCluster.MaximumSize = new System.Drawing.Size(500, 0);
             this.lblFundCluster.Name = "lblFundCluster";
             this.lblFundCluster.Size = new System.Drawing.Size(205, 17);
@@ -557,7 +555,7 @@
             // 
             this.label26.AutoSize = true;
             this.label26.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label26.Location = new System.Drawing.Point(39, 52);
+            this.label26.Location = new System.Drawing.Point(39, 25);
             this.label26.Name = "label26";
             this.label26.Size = new System.Drawing.Size(108, 17);
             this.label26.TabIndex = 15;
@@ -568,7 +566,7 @@
             this.fundingLabel.AutoSize = true;
             this.fundingLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.fundingLabel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.fundingLabel.Location = new System.Drawing.Point(291, 9);
+            this.fundingLabel.Location = new System.Drawing.Point(281, 540);
             this.fundingLabel.Name = "fundingLabel";
             this.fundingLabel.Size = new System.Drawing.Size(130, 21);
             this.fundingLabel.TabIndex = 2;
@@ -579,7 +577,7 @@
             this.fundingHighlight.BackColor = System.Drawing.SystemColors.ButtonShadow;
             this.fundingHighlight.FillColor = System.Drawing.SystemColors.ButtonShadow;
             this.fundingHighlight.ImageRotate = 0F;
-            this.fundingHighlight.Location = new System.Drawing.Point(-6, 0);
+            this.fundingHighlight.Location = new System.Drawing.Point(-13, 531);
             this.fundingHighlight.Name = "fundingHighlight";
             this.fundingHighlight.Size = new System.Drawing.Size(721, 38);
             this.fundingHighlight.TabIndex = 24;
@@ -589,10 +587,12 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(702, 862);
+            this.ClientSize = new System.Drawing.Size(702, 797);
+            this.Controls.Add(this.fundingLabel);
+            this.Controls.Add(this.guna2Panel1);
+            this.Controls.Add(this.fundingHighlight);
             this.Controls.Add(this.bottomPanel);
             this.Controls.Add(this.guna2Panel2);
-            this.Controls.Add(this.guna2Panel1);
             this.Controls.Add(this.topPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
@@ -612,6 +612,7 @@
             this.bottomPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.fundingHighlight)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 

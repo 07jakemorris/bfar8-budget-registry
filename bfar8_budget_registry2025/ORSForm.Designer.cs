@@ -213,7 +213,7 @@
             // 
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("Segoe UI", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(43, 49);
+            this.label18.Location = new System.Drawing.Point(43, 53);
             this.label18.MaximumSize = new System.Drawing.Size(340, 0);
             this.label18.Name = "label18";
             this.label18.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -226,7 +226,7 @@
             // 
             this.guna2PictureBox12.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.guna2PictureBox12.ImageRotate = 0F;
-            this.guna2PictureBox12.Location = new System.Drawing.Point(30, 52);
+            this.guna2PictureBox12.Location = new System.Drawing.Point(30, 56);
             this.guna2PictureBox12.Name = "guna2PictureBox12";
             this.guna2PictureBox12.Size = new System.Drawing.Size(8, 8);
             this.guna2PictureBox12.TabIndex = 7;
@@ -236,20 +236,21 @@
             // 
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Segoe UI", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(43, 26);
+            this.label17.Location = new System.Drawing.Point(43, 22);
             this.label17.MaximumSize = new System.Drawing.Size(340, 0);
             this.label17.Name = "label17";
             this.label17.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label17.Size = new System.Drawing.Size(323, 12);
+            this.label17.Size = new System.Drawing.Size(298, 24);
             this.label17.TabIndex = 6;
-            this.label17.Text = "Charges to appropriation/allotment necessary, lawful under my direct supervision";
+            this.label17.Text = " Charges to appropriation/allotment necessary, lawful and under my direct supervi" +
+    "sion";
             this.label17.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // guna2PictureBox11
             // 
             this.guna2PictureBox11.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.guna2PictureBox11.ImageRotate = 0F;
-            this.guna2PictureBox11.Location = new System.Drawing.Point(30, 29);
+            this.guna2PictureBox11.Location = new System.Drawing.Point(30, 24);
             this.guna2PictureBox11.Name = "guna2PictureBox11";
             this.guna2PictureBox11.Size = new System.Drawing.Size(8, 8);
             this.guna2PictureBox11.TabIndex = 5;
@@ -440,7 +441,7 @@
             // 
             this.label19.AutoSize = true;
             this.label19.Font = new System.Drawing.Font("Segoe UI", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.Location = new System.Drawing.Point(44, 26);
+            this.label19.Location = new System.Drawing.Point(44, 23);
             this.label19.MaximumSize = new System.Drawing.Size(340, 0);
             this.label19.Name = "label19";
             this.label19.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -453,7 +454,7 @@
             // 
             this.guna2PictureBox13.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.guna2PictureBox13.ImageRotate = 0F;
-            this.guna2PictureBox13.Location = new System.Drawing.Point(31, 29);
+            this.guna2PictureBox13.Location = new System.Drawing.Point(31, 26);
             this.guna2PictureBox13.Name = "guna2PictureBox13";
             this.guna2PictureBox13.Size = new System.Drawing.Size(8, 8);
             this.guna2PictureBox13.TabIndex = 10;
@@ -953,7 +954,7 @@
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(93, 38);
+            this.label2.Location = new System.Drawing.Point(93, 40);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(120, 12);
             this.label2.TabIndex = 1;

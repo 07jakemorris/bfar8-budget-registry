@@ -186,7 +186,7 @@ namespace bfar8_budget_registry2025
                     conn.Open();
                     string query = @"
                         SELECT subCategoryCode
-                        FROM tbl_project_sub_categ WHERE subCategoryCode = @SubCategoryCode
+                        FROM tbl_project_sub_categ WHERE subCategoryCode = @SubCategoryCode AND hasActivity = 1
                         ";
                     using (MySqlCommand cmd = new MySqlCommand(query, conn))
                     {
@@ -196,6 +196,11 @@ namespace bfar8_budget_registry2025
                             if (reader.HasRows)
                             {
                                 getActivity(sub_category_code);
+                            }
+                            else
+                            {
+                                txtProjectInput4.Items.Add("- Blank -");
+                                txtProjectInput4.SelectedIndex = 0;
                             }
                         }
                     }
@@ -333,7 +338,10 @@ namespace bfar8_budget_registry2025
 
         private void txtAmount_Enter(object sender, EventArgs e)
         {
-            txtAmount.Text = "";
+            if (txtAmount.Text == "0.00")
+            {
+                txtAmount.Text = "";
+            }            
         }
 
         private void txtAmount_Leave(object sender, EventArgs e)
@@ -1032,7 +1040,6 @@ namespace bfar8_budget_registry2025
 
             txtAmount.Text = "0.00";
         }
-
         private void txtFundCluster_SelectedIndexChanged(object sender, EventArgs e)
         {
             string getFund = "SELECT fund_cluster, financing_source, authorization_code, full_funding_code FROM tbl_fund_cluster WHERE fund_category = @selectedFundCategory";

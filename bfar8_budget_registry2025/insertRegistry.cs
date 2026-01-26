@@ -429,7 +429,7 @@ namespace bfar8_budget_registry2025
             string fetchedSubCategoryCode = subCategoryCode.Split('-')[0].Trim();
             sub_category_code = fetchedSubCategoryCode;
 
-            string fetch = "SELECT subCategoryCode FROM tbl_project_sub_categ WHERE project_code = @selectedCode";
+            string fetch = "SELECT subCategoryCode FROM tbl_project_sub_categ WHERE subCategoryCode = @selectedSubCategoryCode AND hasActivity = 1";
 
             using (MySqlConnection conn = new MySqlConnection(connString))
             {
@@ -438,13 +438,18 @@ namespace bfar8_budget_registry2025
                     conn.Open();
                     using (MySqlCommand cmd = new MySqlCommand(fetch, conn))
                     {
-                        cmd.Parameters.AddWithValue("@selectedCode", project_code);
+                        cmd.Parameters.AddWithValue("@selectedSubCategoryCode", sub_category_code);
 
                         using (MySqlDataReader reader = cmd.ExecuteReader())
                         {
                             if (reader.HasRows)
                             {
                                 getActivity(sub_category_code);
+                            }
+                            else
+                            {
+                                txtProjectInput4.Items.Add("- Blank -");
+                                txtProjectInput4.SelectedIndex = 0;
                             }
                         }
                     }
@@ -455,7 +460,6 @@ namespace bfar8_budget_registry2025
                 }
             }
         }
-
         private void getActivity(string sub_category_code)
         {
             txtProjectInput4.Items.Clear();
@@ -479,8 +483,7 @@ namespace bfar8_budget_registry2025
                                     string code = reader["activity_code"].ToString();
                                     string name = reader["activity_name"].ToString();
                                     txtProjectInput4.Items.Add($"{code} - {name}");
-                                }
-                                txtProjectInput4.SelectedIndex = 0;
+                                }                               
                             }
                         }
                     }
@@ -490,6 +493,7 @@ namespace bfar8_budget_registry2025
                     MessageBox.Show("Error: " + ex.Message);
                 }
             }
+            txtProjectInput4.SelectedIndex = 0;
         }
 
         private void getFundCluster()
