@@ -18,7 +18,7 @@ namespace bfar8_budget_registry2025
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new dashboard());
+            Application.Run(new login());
         }
     }
 }

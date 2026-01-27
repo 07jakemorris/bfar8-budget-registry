@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 21, 2026 at 06:49 AM
+-- Generation Time: Jan 27, 2026 at 04:28 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -352,6 +352,50 @@ INSERT INTO `tbl_document_type` (`id`, `doc_name`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `tbl_earmarks`
+--
+
+CREATE TABLE `tbl_earmarks` (
+  `id` int(11) NOT NULL,
+  `month` varchar(10) NOT NULL,
+  `day` varchar(10) NOT NULL,
+  `year` varchar(5) NOT NULL,
+  `quarter` varchar(15) NOT NULL,
+  `pr_no` varchar(10) NOT NULL,
+  `particulars` text NOT NULL,
+  `fund_cluster` varchar(100) NOT NULL,
+  `financing_source` varchar(100) NOT NULL,
+  `authorization_code` varchar(100) NOT NULL,
+  `fund_category` varchar(100) NOT NULL,
+  `full_funding_code` varchar(100) NOT NULL,
+  `department_code` varchar(100) NOT NULL,
+  `agency_code` varchar(100) NOT NULL,
+  `operating_unit_classification` varchar(100) NOT NULL,
+  `lower_level_unit` varchar(100) NOT NULL,
+  `responsibility_center` varchar(10) NOT NULL,
+  `signatory` varchar(50) NOT NULL,
+  `position` varchar(50) NOT NULL,
+  `program_project` varchar(100) NOT NULL,
+  `project_category` varchar(100) NOT NULL,
+  `project_sub_category` varchar(100) NOT NULL,
+  `activity_level` varchar(100) NOT NULL,
+  `expense_class` varchar(50) NOT NULL,
+  `expense_type` varchar(100) NOT NULL,
+  `account_code` varchar(100) NOT NULL,
+  `amount_earmarked` double(17,2) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `tbl_earmarks`
+--
+
+INSERT INTO `tbl_earmarks` (`id`, `month`, `day`, `year`, `quarter`, `pr_no`, `particulars`, `fund_cluster`, `financing_source`, `authorization_code`, `fund_category`, `full_funding_code`, `department_code`, `agency_code`, `operating_unit_classification`, `lower_level_unit`, `responsibility_center`, `signatory`, `position`, `program_project`, `project_category`, `project_sub_category`, `activity_level`, `expense_class`, `expense_type`, `account_code`, `amount_earmarked`) VALUES
+(1, 'January', '23', '2026', '1st Quarter', '25-12-1043', 'Procurement of Labor and Materials for Pond Improvements for use in Grouper Broodstock Maintenance at GMFDC Station', '01000000 - Regular Agency Fund', '01100000 - General Fund', '01101000 - New General Approriations', '01101101 - Specific Budget of the Agency (Current)', '01101101', '05-000-00-00000 - Department of Agriculture', '05-003-00-00000 - BUREAU OF FISHERIES AND AQUATIC RESOURCES', '05-003-03-00000 - Regional Offices', '05-003-03-00008 - Region VIII', 'SAAD-Leyte', 'LOREGINIA P. BRIONES', 'PFO, Leyte', '310100000000 - Fisheries Development Program', '310105200000 - Locally-Funded Sub-Program', '310105200001 - Special Areas for Agricultural Development (SAAD) Program', '3-1-01-05-2-00001-000-01 - Number of Livelihood Projects distributed', '2 - Maintenance and Other Operating Expenses', '17 - Repairs and Maintenance', '50213020-01 - Land Improvements - Aquaculture Structures', 229215.00),
+(2, 'January', '23', '2026', '1st Quarter', '25-11-1023', 'Procurement of Tilapia Finisher (Floater), atleast 30% CP, 25kg/bag, Tilapia Fry mash and other supplies for Tilapia Grow out production in Brackishwater Fishpen for use in Grouper Broodstock Maintenance at GMFDC Station', '01000000 - Regular Agency Fund', '01100000 - General Fund', '01101000 - New General Approriations', '01101101 - Specific Budget of the Agency (Current)', '01101101', '05-000-00-00000 - Department of Agriculture', '05-003-00-00000 - BUREAU OF FISHERIES AND AQUATIC RESOURCES', '05-003-03-00000 - Regional Offices', '05-003-03-00008 - Region VIII', 'TOS-SRAPC(', 'JACKIE L. LIM', 'OIC, SRAPC', '310100000000 - Fisheries Development Program', '310105200000 - Locally-Funded Sub-Program', '310105200001 - Special Areas for Agricultural Development (SAAD) Program', '3-1-01-05-2-00001-000-01 - Program Management', '2 - Maintenance and Other Operating Expenses', '7 - Supplies and Materials', '50203100-00 - Agricultural and Marine Supplies Expenses', 161548.00);
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `tbl_end_user`
 --
 
@@ -526,7 +570,8 @@ CREATE TABLE `tbl_obligations` (
 --
 
 INSERT INTO `tbl_obligations` (`id`, `month`, `day`, `year`, `quarter`, `orsNo`, `payee`, `creditorType`, `particulars`, `fund_cluster`, `financing_source`, `authorization_code`, `fund_category`, `full_funding_code`, `department_code`, `agency_code`, `operating_unit_classification`, `lower_level_unit`, `responsibility_center`, `signatory`, `position`, `program_project`, `project_category`, `project_sub_category`, `activity_level`, `expense_class`, `expense_type`, `account_code`, `obligations_incurred`) VALUES
-(1, 'January', '12', '2026', '1st Quarter', '26-01-0001', 'EDV Trading', 'External Creditor', 'Lot 1 procurement of tires for the repair and maintenance of BFAR RO 8 vehicle', '01000000 - Regular Agency Fund', '01100000 - General Fund', '01101000 - New General Approriations', '01101101 - Specific Budget of the Agency (Current)', '01101101', '05-000-00-00000 - Department of Agriculture', '05-003-00-00000 - BUREAU OF FISHERIES AND AQUATIC RESOURCES', '05-003-03-00000 - Regional Offices', '05-003-03-00008 - Region VIII', 'RO', 'JENNIFER G. CHAN', 'OIC, GSU', '310300000000 - Fisheries Extension Program', '310300100000 - Extension, Support, Education and Training Services (ESETS)', '310300100001 - Extension, Support, Education and Training Services (ESETS)', '- Select Activity -', '2 - Maintenance and Other Operating Expenses', '17 - Repairs and Maintenance', '50213060-01 - Transportation Equipment - Motor Vehicle', 423750.00);
+(1, 'January', '12', '2026', '1st Quarter', '26-01-0001', 'EDV Trading', 'External Creditor', 'Lot 1 procurement of tires for the repair and maintenance of BFAR RO 8 vehicle', '01000000 - Regular Agency Fund', '01100000 - General Fund', '01101000 - New General Approriations', '01101101 - Specific Budget of the Agency (Current)', '01101101', '05-000-00-00000 - Department of Agriculture', '05-003-00-00000 - BUREAU OF FISHERIES AND AQUATIC RESOURCES', '05-003-03-00000 - Regional Offices', '05-003-03-00008 - Region VIII', 'RO', 'JENNIFER G. CHAN', 'OIC, GSU', '310300000000 - Fisheries Extension Program', '310300100000 - Extension, Support, Education and Training Services (ESETS)', '310300100001 - Extension, Support, Education and Training Services (ESETS)', '- Select Activity -', '2 - Maintenance and Other Operating Expenses', '17 - Repairs and Maintenance', '50213060-01 - Transportation Equipment - Motor Vehicle', 423750.00),
+(2, 'January', '23', '2026', '1st Quarter', '26-01-0070', 'Dan A. De San Miguel', 'Internal Creditor', 'To payment of communication allowance for the month of January 2026', '01000000 - Regular Agency Fund', '01100000 - General Fund', '01101000 - New General Approriations', '01101101 - Specific Budget of the Agency (Current)', '01101101', '05-000-00-00000 - Department of Agriculture', '05-003-00-00000 - BUREAU OF FISHERIES AND AQUATIC RESOURCES', '05-003-03-00000 - Regional Offices', '05-003-03-00008 - Region VIII', 'PFO-E.Samar', 'CYLET SALVACION C. LLUZ', 'Chief, Aquaculturist', '1000000000 - General Administration and Support (GAS)', 'No Project Category', '100000100001 - General Management and Supervision', '1-0-00-00-1-00001-002 - Operation of BFAR Provincial/City Fishery Offices', '2 - Maintenance and Other Operating Expenses', '9 - Communication Expenses', '50205020-01 - Telephone Expenses - Mobile', 599.97);
 
 -- --------------------------------------------------------
 
@@ -544,7 +589,8 @@ CREATE TABLE `tbl_payee` (
 --
 
 INSERT INTO `tbl_payee` (`id`, `name`) VALUES
-(1, 'EDV Trading');
+(1, 'EDV Trading'),
+(2, 'Dan A. De San Miguel');
 
 -- --------------------------------------------------------
 
@@ -613,33 +659,34 @@ CREATE TABLE `tbl_project_sub_categ` (
   `subCategoryCode` varchar(50) NOT NULL,
   `subCategory` varchar(150) NOT NULL,
   `categoryCode` varchar(50) NOT NULL,
-  `project_code` varchar(50) NOT NULL
+  `project_code` varchar(50) NOT NULL,
+  `hasActivity` int(10) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `tbl_project_sub_categ`
 --
 
-INSERT INTO `tbl_project_sub_categ` (`id`, `subCategoryCode`, `subCategory`, `categoryCode`, `project_code`) VALUES
-(1, '100000100001', 'General Management and Supervision', '0', '1000000000'),
-(2, '100000100002', 'Administration of Personnel Benefits', '0', '1000000000'),
-(3, '200000100001', 'Development of Organizational Policies, Plans & Procedures', '0', '2000000000'),
-(4, '200000100003', 'Legal and Advisory Services', '0', '2000000000'),
-(5, '310101100001', 'Fishing Gear/Paraphernalia Distribution', '310101000000', '310100000000'),
-(6, '310102100001', 'Fisheries Production and Distribution', '310102000000', '310100000000'),
-(7, '310102100002', 'Operation and management of production facilities', '310102000000', '310100000000'),
-(8, '310103100001', 'Provision of Fishery On-Farm Equipements & Post-Harvest Facilities', '310103000000', '310100000000'),
-(9, '310104100001', 'Market Development Services', '310104000000', '310100000000'),
-(10, '310105200001', 'Special Areas for Agricultural Development (SAAD) Program', '310105200000', '310100000000'),
-(11, '310105200013', 'Aquaculture and Mariculture Expansion and Invigoration Project', '310105200000', '310100000000'),
-(12, '310105200013', 'Fuel Assistance to the Fisherfolk', '310105200000', '310100000000'),
-(13, '310200100001', 'Monitoring, Control and Surveillance', '310200100000', '310200000000'),
-(14, '310200100002 ', 'Quality Control and Inspection', '310200100000', '310200000000'),
-(15, '310200100003', 'Quarantine, Registration & Licensing', '310200100000', '310200000000'),
-(16, '310200100004', 'Coastal and Inland Fisheries Resource Management', '310200100000', '310200000000'),
-(17, '310200300001', 'Philippine Fisheries and Coastal Resiliency Project', '310200300000', '310200000000'),
-(18, '310300100001', 'Extension, Support, Education and Training Services (ESETS)', '310300100000', '310300000000'),
-(19, '310400100001', 'Formulation, Monitoring and Evaluation of Policies, Plans and Programs', '310400100001', '310400000000');
+INSERT INTO `tbl_project_sub_categ` (`id`, `subCategoryCode`, `subCategory`, `categoryCode`, `project_code`, `hasActivity`) VALUES
+(1, '100000100001', 'General Management and Supervision', '0', '1000000000', 1),
+(2, '100000100002', 'Administration of Personnel Benefits', '0', '1000000000', 0),
+(3, '200000100001', 'Development of Organizational Policies, Plans & Procedures', '0', '2000000000', 1),
+(4, '200000100003', 'Legal and Advisory Services', '0', '2000000000', 1),
+(5, '310101100001', 'Fishing Gear/Paraphernalia Distribution', '310101000000', '310100000000', 1),
+(6, '310102100001', 'Fisheries Production and Distribution', '310102000000', '310100000000', 1),
+(7, '310102100002', 'Operation and management of production facilities', '310102000000', '310100000000', 1),
+(8, '310103100001', 'Provision of Fishery On-Farm Equipements & Post-Harvest Facilities', '310103000000', '310100000000', 1),
+(9, '310104100001', 'Market Development Services', '310104000000', '310100000000', 1),
+(10, '310105200001', 'Special Areas for Agricultural Development (SAAD) Program', '310105200000', '310100000000', 1),
+(11, '310105200013', 'Aquaculture and Mariculture Expansion and Invigoration Project', '310105200000', '310100000000', 1),
+(12, '310105200013', 'Fuel Assistance to the Fisherfolk', '310105200000', '310100000000', 1),
+(13, '310200100001', 'Monitoring, Control and Surveillance', '310200100000', '310200000000', 1),
+(14, '310200100002 ', 'Quality Control and Inspection', '310200100000', '310200000000', 1),
+(15, '310200100003', 'Quarantine, Registration & Licensing', '310200100000', '310200000000', 1),
+(16, '310200100004', 'Coastal and Inland Fisheries Resource Management', '310200100000', '310200000000', 1),
+(17, '310200300001', 'Philippine Fisheries and Coastal Resiliency Project', '310200300000', '310200000000', 1),
+(18, '310300100001', 'Extension, Support, Education and Training Services (ESETS)', '310300100000', '310300000000', 1),
+(19, '310400100001', 'Formulation, Monitoring and Evaluation of Policies, Plans and Programs', '310400100001', '310400000000', 1);
 
 -- --------------------------------------------------------
 
@@ -652,6 +699,7 @@ CREATE TABLE `tbl_prs` (
   `index_no` varchar(10) NOT NULL,
   `pr_no` varchar(20) NOT NULL,
   `particulars` text NOT NULL,
+  `purpose` text NOT NULL,
   `lot_no` int(10) NOT NULL,
   `responsibility_center` varchar(50) NOT NULL,
   `end_user` varchar(150) NOT NULL,
@@ -663,15 +711,15 @@ CREATE TABLE `tbl_prs` (
 -- Dumping data for table `tbl_prs`
 --
 
-INSERT INTO `tbl_prs` (`id`, `index_no`, `pr_no`, `particulars`, `lot_no`, `responsibility_center`, `end_user`, `position`, `amount`) VALUES
-(1, '2601001600', '26-01-0149', 'Printer (3-in-1 Functions: Print/Scan/Copy), Multifunction Color Inkjet Printer with ADF up to Legal Size Capability and with individual Tanks; Printing resolution: 600 DPI x 1,200 DPI (Horizontal x Vertical), wifi duplex.', 1, 'Legal', 'Atty. Duke Lester B. Chua', 'Legal Officer', 16000.00),
-(2, '2601001600', '26-01-0149', 'Mobile Phone with Processor - 2.2GHz, 2GHz, CPU Type - Octa-Core Size (Main Display)-169.1mm (6.7\" full rectangle) / 164.5mm (6.5\" rounded corners - Resolution (Main Display) - 1080 x 2340 (FHD+), Technology (Main Display) - Super AMOLED, Color Depth (Main Display) 16M', 2, 'Legal', 'Atty. Duke Lester B. Chua', 'Legal Officer', 10000.00),
-(3, '2512004700', '25-12-1043', 'Labor and Materials for Pond Improvements', 1, 'PFO-LY-SAAD', 'Loreginia P. Briones', 'PFO Leyte', 229215.00),
-(4, '2509009700', '25-09-0822', '6mm Mirror Glass Installation, Frosted Tint for Fixed Divider Glass and other supplies and materials for Repair of BFAR RO 8 Comfort Room; Installation of Lightings at BFAR 8, CRMC, Diit and additional Network Storage for\r\nENGAS.', 1, 'Finance Administrative Division', 'Karleen R. Destura', 'Chief, FAS', 63700.00),
-(5, '2509009700', '25-09-0822 ', 'Procurement of circuit breaker box, plug and other supplies for Repair of BFAR RO 8 Comfort Room; Installation of Lightings at BFAR 8, CRMC, Diit and additional Network Storage for ENGAS.\r\n', 2, 'Finance Administrative Division', 'Karleen R. Destura', 'Chief, FAS', 66425.00),
-(6, '2509009700', '25-09-0822', 'Procurement of Network attached storage for Repair of BFAR RO 8 Comfort Room; Installation of Lightings at BFAR 8, CRMC, Diit and additional Network Storage for ENGAS.', 3, 'Finance Administrative Division', 'Karleen R. Destura', 'Chief, FAS', 49000.00),
-(7, '2511004700', '25-12-1036 ', 'Procurement of Diesel and Gasoline for maintenance and operations at the Legislated Hatchery in San Jose, Northern Samar.', 1, 'LH - N. Samar', 'Maida G. Dela Cruz', 'PFO N. Samar', 15750.00),
-(8, '2511011500', '25-11-1023 ', 'Procurement of Tilapia Finisher (Floater), atleast 30% CP, 25kg/bag, Tilapia Fry mash and other supplies for Tilapia Grow out production in Brackishwater Fishpen', 1, 'TOS SRAPC-Operation', 'Jackie L. Lim', 'OIC, SRAPC', 161548.00);
+INSERT INTO `tbl_prs` (`id`, `index_no`, `pr_no`, `particulars`, `purpose`, `lot_no`, `responsibility_center`, `end_user`, `position`, `amount`) VALUES
+(1, '2601001600', '26-01-0149', 'Printer (3-in-1 Functions: Print/Scan/Copy), Multifunction Color Inkjet Printer with ADF up to Legal Size Capability and with individual Tanks; Printing resolution: 600 DPI x 1,200 DPI (Horizontal x Vertical), wifi duplex.', 'use in Grouper Broodstock Maintenance at GMFDC Station', 1, 'Legal', 'Atty. Duke Lester B. Chua', 'Legal Officer', 16000.00),
+(2, '2601001600', '26-01-0149', 'Mobile Phone with Processor - 2.2GHz, 2GHz, CPU Type - Octa-Core Size (Main Display)-169.1mm (6.7\" full rectangle) / 164.5mm (6.5\" rounded corners - Resolution (Main Display) - 1080 x 2340 (FHD+), Technology (Main Display) - Super AMOLED, Color Depth (Main Display) 16M', 'use in Grouper Broodstock Maintenance at GMFDC Station', 2, 'Legal', 'Atty. Duke Lester B. Chua', 'Legal Officer', 10000.00),
+(3, '2512004700', '25-12-1043', 'Labor and Materials for Pond Improvements', 'use in Grouper Broodstock Maintenance at GMFDC Station', 1, 'SAAD-Leyte', 'LOREGINIA P. BRIONES', 'PFO, Leyte', 229215.00),
+(4, '2509009700', '25-09-0822', '6mm Mirror Glass Installation, Frosted Tint for Fixed Divider Glass and other supplies and materials for Repair of BFAR RO 8 Comfort Room; Installation of Lightings at BFAR 8, CRMC, Diit and additional Network Storage for\r\nENGAS.', 'use in Grouper Broodstock Maintenance at GMFDC Station', 1, 'Finance Administrative Division', 'Karleen R. Destura', 'Chief, FAS', 63700.00),
+(5, '2509009700', '25-09-0822', 'Circuit breaker box, plug and other supplies for Repair of BFAR RO 8 Comfort Room; Installation of Lightings at BFAR 8, CRMC, Diit and additional Network Storage for ENGAS.\r\n', 'use in Grouper Broodstock Maintenance at GMFDC Station', 2, 'Finance Administrative Division', 'Karleen R. Destura', 'Chief, FAS', 66425.00),
+(6, '2509009700', '25-09-0822', 'Network attached storage for Repair of BFAR RO 8 Comfort Room; Installation of Lightings at BFAR 8, CRMC, Diit and additional Network Storage for ENGAS.', 'use in Grouper Broodstock Maintenance at GMFDC Station', 3, 'Finance Administrative Division', 'Karleen R. Destura', 'Chief, FAS', 49000.00),
+(7, '2511004700', '25-12-1036 ', 'Diesel and Gasoline for maintenance and operations at the Legislated Hatchery in San Jose, Northern Samar.', 'use in Grouper Broodstock Maintenance at GMFDC Station', 1, 'LH - N. Samar', 'Maida G. Dela Cruz', 'PFO N. Samar', 15750.00),
+(8, '2511011500', '25-11-1023 ', 'Tilapia Finisher (Floater), atleast 30% CP, 25kg/bag, Tilapia Fry mash and other supplies for Tilapia Grow out production in Brackishwater Fishpen', 'use in Grouper Broodstock Maintenance at GMFDC Station', 1, 'TOS-SRAPC(Operation)', 'JACKIE L. LIM', 'OIC, SRAPC', 161548.00);
 
 -- --------------------------------------------------------
 
@@ -1007,6 +1055,26 @@ INSERT INTO `tbl_sub_account_codes` (`id`, `subAccountCode`, `subAccountName`, `
 (185, '50605020-04', 'Aquaculture', 133),
 (186, '50605020-99', 'Other Consumable Assets', 133);
 
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_user_admin`
+--
+
+CREATE TABLE `tbl_user_admin` (
+  `id` int(11) NOT NULL,
+  `user_id` varchar(150) NOT NULL,
+  `hashed_password` varchar(255) NOT NULL,
+  `salt_password` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `tbl_user_admin`
+--
+
+INSERT INTO `tbl_user_admin` (`id`, `user_id`, `hashed_password`, `salt_password`) VALUES
+(1, 'bfar8budget@admin', 'VgApNhs3k+qSyIYbFsR0uzShOd+bgrqwhHG1ZqMBnQs=', 'gSlBwnQTfFoCkBjaCLozJw==');
+
 --
 -- Indexes for dumped tables
 --
@@ -1033,6 +1101,12 @@ ALTER TABLE `tbl_department_code`
 -- Indexes for table `tbl_document_type`
 --
 ALTER TABLE `tbl_document_type`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `tbl_earmarks`
+--
+ALTER TABLE `tbl_earmarks`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -1102,6 +1176,12 @@ ALTER TABLE `tbl_sub_account_codes`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `tbl_user_admin`
+--
+ALTER TABLE `tbl_user_admin`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -1130,6 +1210,12 @@ ALTER TABLE `tbl_document_type`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
+-- AUTO_INCREMENT for table `tbl_earmarks`
+--
+ALTER TABLE `tbl_earmarks`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
 -- AUTO_INCREMENT for table `tbl_end_user`
 --
 ALTER TABLE `tbl_end_user`
@@ -1151,13 +1237,13 @@ ALTER TABLE `tbl_fund_cluster`
 -- AUTO_INCREMENT for table `tbl_obligations`
 --
 ALTER TABLE `tbl_obligations`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `tbl_payee`
 --
 ALTER TABLE `tbl_payee`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `tbl_program_projects`
@@ -1194,6 +1280,12 @@ ALTER TABLE `tbl_responsibility_center`
 --
 ALTER TABLE `tbl_sub_account_codes`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=187;
+
+--
+-- AUTO_INCREMENT for table `tbl_user_admin`
+--
+ALTER TABLE `tbl_user_admin`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
