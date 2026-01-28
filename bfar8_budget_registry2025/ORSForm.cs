@@ -47,46 +47,19 @@ namespace bfar8_budget_registry2025
         [DllImport("user32.dll")]
         static extern bool PrintWindow(IntPtr hwnd, IntPtr hdcBlt, int nFlags);
 
-        private void btnPrint_Click(object sender, EventArgs e)
-        {
-            // Take screenshot of your panel
-            panelBitmap = CaptureControl(ORSDocs);
-
-            PrintDocument printDoc = new PrintDocument();
-
-            // Use actual long bond size
-            printDoc.DefaultPageSettings.PaperSize = new PaperSize("LongBond", 850, 1300);
-            printDoc.DefaultPageSettings.Landscape = false;
-            printDoc.DefaultPageSettings.Margins = new Margins(0, 0, 0, 0);
-            printDoc.OriginAtMargins = false;
-
-            printDoc.PrintPage += PrintDoc_PrintPage;
-
-            PrintPreviewDialog preview = new PrintPreviewDialog();
-            preview.Document = printDoc;
-            preview.ShowDialog();
-        }
         private void PrintDoc_PrintPage(object sender, PrintPageEventArgs e)
         {
             if (panelBitmap != null)
             {
-                // Calculate scaling to fit printable area
-                Rectangle m = e.MarginBounds;
+                // Use the full page size
+                int pageWidth = e.PageBounds.Width;
+                int pageHeight = e.PageBounds.Height;
 
-                float scaleX = (float)m.Width / panelBitmap.Width;
-                float scaleY = (float)m.Height / panelBitmap.Height;
-                float scale = Math.Min(scaleX, scaleY); // keep aspect ratio
-
-                int width = (int)(panelBitmap.Width * scale);
-                int height = (int)(panelBitmap.Height * scale);
-
-                int left = m.Left + (m.Width - width) / 2;   // center horizontally
-                int top = m.Top + (m.Height - height) / 2;  // center vertically
-
-                e.Graphics.DrawImage(panelBitmap, left, top, width, height);
+                // Scale the panel bitmap to completely fill the page (stretch if necessary)
+                e.Graphics.DrawImage(panelBitmap, 0, 0, pageWidth, pageHeight);
             }
-            e.HasMorePages = false;
 
+            e.HasMorePages = false;
         }
 
         private void ORSForm_Load(object sender, EventArgs e)
@@ -252,6 +225,26 @@ namespace bfar8_budget_registry2025
                     comboPanel.Visible = false;
                 }
             }
+        }
+
+        private void btnPrint_Click_1(object sender, EventArgs e)
+        {
+            // Take screenshot of your panel
+            panelBitmap = CaptureControl(ORSDocs);
+
+            PrintDocument printDoc = new PrintDocument();
+
+            // Use actual long bond size
+            printDoc.DefaultPageSettings.PaperSize = new PaperSize("A4", 827, 1169);
+            printDoc.DefaultPageSettings.Landscape = false;
+            printDoc.DefaultPageSettings.Margins = new Margins(0, 0, 0, 0);
+            printDoc.OriginAtMargins = false;
+
+            printDoc.PrintPage += PrintDoc_PrintPage;
+
+            PrintPreviewDialog preview = new PrintPreviewDialog();
+            preview.Document = printDoc;
+            preview.ShowDialog();
         }
     }
 }

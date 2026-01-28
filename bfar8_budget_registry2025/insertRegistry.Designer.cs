@@ -60,8 +60,11 @@
             this.label4 = new System.Windows.Forms.Label();
             this.txtExpensesClass = new Guna.UI2.WinForms.Guna2ComboBox();
             this.label8 = new System.Windows.Forms.Label();
+            this.searchResultDGV = new System.Windows.Forms.DataGridView();
+            this.payee = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.guna2Panel1.SuspendLayout();
             this.guna2Panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.searchResultDGV)).BeginInit();
             this.SuspendLayout();
             // 
             // txtPayee
@@ -267,6 +270,7 @@
             this.guna2Panel1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.guna2Panel1.BorderColor = System.Drawing.Color.DimGray;
             this.guna2Panel1.BorderThickness = 3;
+            this.guna2Panel1.Controls.Add(this.searchResultDGV);
             this.guna2Panel1.Controls.Add(this.txtORSNo);
             this.guna2Panel1.Controls.Add(this.editORS);
             this.guna2Panel1.Controls.Add(this.txtSignatory);
@@ -641,6 +645,34 @@
             this.label8.TabIndex = 21;
             this.label8.Text = "Funding Source Code";
             // 
+            // searchResultDGV
+            // 
+            this.searchResultDGV.AllowUserToAddRows = false;
+            this.searchResultDGV.AllowUserToDeleteRows = false;
+            this.searchResultDGV.AllowUserToResizeColumns = false;
+            this.searchResultDGV.AllowUserToResizeRows = false;
+            this.searchResultDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.searchResultDGV.ColumnHeadersVisible = false;
+            this.searchResultDGV.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.payee});
+            this.searchResultDGV.Location = new System.Drawing.Point(46, 146);
+            this.searchResultDGV.Name = "searchResultDGV";
+            this.searchResultDGV.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.searchResultDGV.RowHeadersVisible = false;
+            this.searchResultDGV.RowTemplate.Height = 30;
+            this.searchResultDGV.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.searchResultDGV.Size = new System.Drawing.Size(343, 0);
+            this.searchResultDGV.TabIndex = 32;
+            this.searchResultDGV.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.searchResultDGV_CellClick);
+            // 
+            // payee
+            // 
+            this.payee.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.payee.DataPropertyName = "payee";
+            this.payee.HeaderText = "Name";
+            this.payee.Name = "payee";
+            this.payee.ReadOnly = true;
+            // 
             // insertRegistry
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -665,6 +697,7 @@
             this.guna2Panel1.PerformLayout();
             this.guna2Panel2.ResumeLayout(false);
             this.guna2Panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.searchResultDGV)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -704,5 +737,7 @@
         private Guna.UI2.WinForms.Guna2TextBox txtORSNo;
         private System.Windows.Forms.Label label3;
         private Guna.UI2.WinForms.Guna2ComboBox txtSubAccountCode;
+        private System.Windows.Forms.DataGridView searchResultDGV;
+        private System.Windows.Forms.DataGridViewTextBoxColumn payee;
     }
 }

@@ -1003,7 +1003,7 @@
             this.btnPrint.Size = new System.Drawing.Size(124, 33);
             this.btnPrint.TabIndex = 2;
             this.btnPrint.Text = "Print";
-            this.btnPrint.Click += new System.EventHandler(this.btnPrint_Click);
+            this.btnPrint.Click += new System.EventHandler(this.btnPrint_Click_1);
             // 
             // btnEdit
             // 

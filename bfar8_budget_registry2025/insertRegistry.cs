@@ -123,7 +123,6 @@ namespace bfar8_budget_registry2025
             getExpenseClass();
             loadOrsNo(newOrsNo);     
         }
-        
         private void getDepartmentCode()
         {
             
@@ -151,7 +150,7 @@ namespace bfar8_budget_registry2025
                     MessageBox.Show("Error: " + ex.Message);
                 }
             }
-        }
+        }       
         private void getSignatory()
         {
             txtSignatory.Items.Add("- Select Signatory -");
@@ -1163,56 +1162,55 @@ namespace bfar8_budget_registry2025
                 e.SuppressKeyPress = true;
             }
         }
-        //This function checks the payee and auto complete if exist -->
-        string GetSuggestedName(string input)
-        {
-            string result = null;
-
-            using (MySqlConnection con = new MySqlConnection(connString))
-            {
-                con.Open();
-
-                string query = @"SELECT name 
-                         FROM tbl_payee
-                         WHERE name LIKE @Name
-                         ORDER BY name
-                         LIMIT 1";
-
-                using (MySqlCommand cmd = new MySqlCommand(query, con))
-                {
-                    cmd.Parameters.AddWithValue("@Name", input + "%");
-
-                    object value = cmd.ExecuteScalar();
-                    if (value != null)
-                        result = value.ToString();
-                }
-            }
-
-            return result;
-        }
 
         private void txtPayee_TextChanged(object sender, EventArgs e)
         {
-            if (isAutoFilling) return;
-            int cursorPos = txtPayee.SelectionStart;
-            string typedText = txtPayee.Text;
-
-            if (string.IsNullOrWhiteSpace(typedText))
-                return;
-
-            string match = GetSuggestedName(typedText);
-
-            if (!string.IsNullOrEmpty(match) &&
-                match.StartsWith(typedText, StringComparison.OrdinalIgnoreCase))
+            if (txtPayee.TextLength >= 1)
             {
-                isAutoFilling = true;
-
-                txtPayee.Text = match;
-                txtPayee.SelectionStart = typedText.Length;
-                txtPayee.SelectionLength = match.Length - typedText.Length;
-                suggestedText = match;
-                isAutoFilling = false;
+                using (MySqlConnection conn = new MySqlConnection(connString))
+                {
+                    try
+                    {
+                        conn.Open();
+                        string query = @"SELECT payee
+                            FROM tbl_obligations WHERE payee LIKE ?
+                            ";
+                        using (MySqlCommand cmd = new MySqlCommand(query, conn))
+                        {
+                            cmd.Parameters.AddWithValue("payee", txtPayee.Text + "%");
+                            DataTable dt = new DataTable();
+                            MySqlDataAdapter da = new MySqlDataAdapter(cmd);
+                            da.Fill(dt);
+                            if (da != null && dt.Rows.Count > 0)
+                            {
+                                searchResultDGV.DataSource = dt;
+                                searchResultDGV.Height = searchResultDGV.Rows.Count * 30;
+                            }
+                            else
+                            {
+                                searchResultDGV.Height = 0;
+                            }
+                            cmd.Dispose();
+                            da.Dispose();
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Error: " + ex.Message);
+                    }
+                }
             }
+            else if (txtPayee.TextLength <= 0)
+            {
+                searchResultDGV.Height = 0;
+            }
+        }
+
+        private void searchResultDGV_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            DataGridViewRow row = this.searchResultDGV.Rows[e.RowIndex];
+            txtPayee.Text = row.Cells["payee"].Value.ToString();
+            searchResultDGV.Height = 0;
         }
     }
 }
