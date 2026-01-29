@@ -65,7 +65,7 @@
             this.fundingPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.lblFunding = new System.Windows.Forms.Label();
             this.lblProject = new System.Windows.Forms.Label();
-            this.lblSubProject = new System.Windows.Forms.Label();
+            this.lblProjectCategory = new System.Windows.Forms.Label();
             this.lblActivity = new System.Windows.Forms.Label();
             this.lblExpenseClass = new System.Windows.Forms.Label();
             this.lblAccountCode = new System.Windows.Forms.Label();
@@ -613,7 +613,7 @@
             this.fundingPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.fundingPanel.Controls.Add(this.lblFunding);
             this.fundingPanel.Controls.Add(this.lblProject);
-            this.fundingPanel.Controls.Add(this.lblSubProject);
+            this.fundingPanel.Controls.Add(this.lblProjectCategory);
             this.fundingPanel.Controls.Add(this.lblActivity);
             this.fundingPanel.Controls.Add(this.lblExpenseClass);
             this.fundingPanel.Controls.Add(this.lblAccountCode);
@@ -651,18 +651,18 @@
             this.lblProject.TabIndex = 4;
             this.lblProject.Text = "310100000000 - Fisheries Development Program";
             // 
-            // lblSubProject
+            // lblProjectCategory
             // 
-            this.lblSubProject.AutoSize = true;
-            this.lblSubProject.Font = new System.Drawing.Font("Segoe UI", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSubProject.Location = new System.Drawing.Point(3, 209);
-            this.lblSubProject.MaximumSize = new System.Drawing.Size(248, 0);
-            this.lblSubProject.Name = "lblSubProject";
-            this.lblSubProject.Padding = new System.Windows.Forms.Padding(55, 0, 0, 0);
-            this.lblSubProject.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblSubProject.Size = new System.Drawing.Size(241, 12);
-            this.lblSubProject.TabIndex = 5;
-            this.lblSubProject.Text = "310102000000 - Aquaculture Sub-Program";
+            this.lblProjectCategory.AutoSize = true;
+            this.lblProjectCategory.Font = new System.Drawing.Font("Segoe UI", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblProjectCategory.Location = new System.Drawing.Point(3, 209);
+            this.lblProjectCategory.MaximumSize = new System.Drawing.Size(248, 0);
+            this.lblProjectCategory.Name = "lblProjectCategory";
+            this.lblProjectCategory.Padding = new System.Windows.Forms.Padding(55, 0, 0, 0);
+            this.lblProjectCategory.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lblProjectCategory.Size = new System.Drawing.Size(241, 12);
+            this.lblProjectCategory.TabIndex = 5;
+            this.lblProjectCategory.Text = "310102000000 - Aquaculture Sub-Program";
             // 
             // lblActivity
             // 
@@ -1153,7 +1153,7 @@
         private System.Windows.Forms.FlowLayoutPanel fundingPanel;
         private System.Windows.Forms.Label lblFunding;
         private System.Windows.Forms.Label lblProject;
-        private System.Windows.Forms.Label lblSubProject;
+        private System.Windows.Forms.Label lblProjectCategory;
         private System.Windows.Forms.Label lblActivity;
         private System.Windows.Forms.Label lblExpenseClass;
         private System.Windows.Forms.Label lblAccountCode;

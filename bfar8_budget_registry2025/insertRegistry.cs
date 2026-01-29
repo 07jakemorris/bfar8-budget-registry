@@ -21,12 +21,13 @@ namespace bfar8_budget_registry2025
     public partial class insertRegistry : Form
     {
         //Database configuration
-        public static string connString = "server=localhost;port=3306;user id=root;password=;database=db_bfar8;";
+        //public static string connString = "server=localhost;port=3306;user id=root;password=;database=db_bfar8;";
+        public static string connString = "Server=10.8.2.7;Port=3306;Database=db_bfar8;Uid=myuser;Pwd=10OBmc4S)oi[Jd*5;SslMode=Required;";
 
 
         public static string newOrsNo;
 
-        private string department_code;
+        private string department_code; 
         private string agency_code;
         private string operating_unit;
         private string lower_operating_unit;
@@ -323,7 +324,7 @@ namespace bfar8_budget_registry2025
                             else
                             {
                                 txtProjectInput2.Items.Clear();
-                                txtProjectInput2.Items.Add("No Project Category");
+                                txtProjectInput2.Items.Add("- No Project Category -");
                                 txtProjectInput2.SelectedIndex = 0;
                                 getSubCategory(project_code);
                             }
@@ -839,11 +840,20 @@ namespace bfar8_budget_registry2025
         private void insertObligation(string fund_cluster, string financing_source, string authorization_code, 
             string funding_code, string department_code, string agency_code, string operating_unit, string lower_operating_unit, string position)
         {
+            string projectCategory;
             //Check for creditor type -->
             string creditorType = "";
             string month = "";
             string day = "";
             string year = "";
+            if (txtProjectInput2.Text == "- No Project Category -")
+            {
+                projectCategory = "(Blank)";
+            }
+            else
+            {
+                projectCategory = txtProjectInput2.Text;
+            }
             if (btnExternalCred.Checked == true)
             {
                 creditorType = "External Creditor";

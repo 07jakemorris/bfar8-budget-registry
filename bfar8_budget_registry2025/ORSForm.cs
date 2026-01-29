@@ -75,7 +75,7 @@ namespace bfar8_budget_registry2025
         private void getObligationToPrint(string obligationIDToPrint)
         {
             string query = "SELECT orsNo, payee, particulars, fund_category, responsibility_center, signatory, position, " +
-                "program_project, project_sub_category, activity_level, expense_class, account_code, obligations_incurred FROM " +
+                "program_project, project_category, activity_level, expense_class, account_code, obligations_incurred FROM " +
                 "tbl_obligations WHERE id = @obligationIDToPrint";
 
             using (MySqlConnection conn = new MySqlConnection(connString))
@@ -97,7 +97,7 @@ namespace bfar8_budget_registry2025
                                 lblParticulars.Text = reader["particulars"].ToString();
                                 lblFunding.Text = reader["fund_category"].ToString();
                                 lblProject.Text = reader["program_project"].ToString();
-                                lblSubProject.Text = reader["project_sub_category"].ToString();
+                                lblProjectCategory.Text = reader["project_category"].ToString();
                                 lblActivity.Text = reader["activity_level"].ToString();
                                 lblExpenseClass.Text = reader["expense_class"].ToString();
                                 lblAccountCode.Text = reader["account_code"].ToString();

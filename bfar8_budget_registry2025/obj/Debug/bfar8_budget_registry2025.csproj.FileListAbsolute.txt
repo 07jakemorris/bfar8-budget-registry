@@ -441,3 +441,7 @@ C:\Users\Lehana\OneDrive\Documents\BFAR8Budget-Registry-Project\bfar8_budget_reg
 C:\Users\Lehana\OneDrive\Documents\BFAR8Budget-Registry-Project\bfar8_budget_registry2025\obj\Debug\bfar8_budget_registry2025.exe
 C:\Users\Lehana\OneDrive\Documents\BFAR8Budget-Registry-Project\bfar8_budget_registry2025\obj\Debug\bfar8_budget_registry2025.pdb
 C:\Users\Lehana\OneDrive\Documents\BFAR8Budget-Registry-Project\bfar8_budget_registry2025\obj\Debug\bfar8_budget_registry2025.login.resources
+C:\Users\Lehana\OneDrive\Documents\BFAR8Budget-Registry-Project\bfar8_budget_registry2025\bin\Debug\bfar8_budget_registry2025.exe.manifest
+C:\Users\Lehana\OneDrive\Documents\BFAR8Budget-Registry-Project\bfar8_budget_registry2025\bin\Debug\bfar8_budget_registry2025.application
+C:\Users\Lehana\OneDrive\Documents\BFAR8Budget-Registry-Project\bfar8_budget_registry2025\obj\Debug\bfar8_budget_registry2025.exe.manifest
+C:\Users\Lehana\OneDrive\Documents\BFAR8Budget-Registry-Project\bfar8_budget_registry2025\obj\Debug\bfar8_budget_registry2025.application
