@@ -64,7 +64,7 @@
             // 
             // guna2Panel1
             // 
-            this.guna2Panel1.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.guna2Panel1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.guna2Panel1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.guna2Panel1.BorderThickness = 3;
             this.guna2Panel1.Controls.Add(this.txtORSNo);
@@ -86,7 +86,7 @@
             // txtORSNo
             // 
             this.txtORSNo.BorderColor = System.Drawing.Color.Black;
-            this.txtORSNo.BorderRadius = 5;
+            this.txtORSNo.BorderRadius = 3;
             this.txtORSNo.BorderThickness = 0;
             this.txtORSNo.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtORSNo.DefaultText = "25-11-3014";
@@ -94,26 +94,27 @@
             this.txtORSNo.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.txtORSNo.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtORSNo.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtORSNo.FillColor = System.Drawing.SystemColors.ButtonFace;
+            this.txtORSNo.FillColor = System.Drawing.Color.SteelBlue;
             this.txtORSNo.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtORSNo.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtORSNo.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.txtORSNo.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtORSNo.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.txtORSNo.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtORSNo.Location = new System.Drawing.Point(132, 61);
-            this.txtORSNo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtORSNo.Location = new System.Drawing.Point(121, 60);
+            this.txtORSNo.Margin = new System.Windows.Forms.Padding(4);
             this.txtORSNo.Name = "txtORSNo";
             this.txtORSNo.PlaceholderForeColor = System.Drawing.Color.Black;
             this.txtORSNo.PlaceholderText = "";
             this.txtORSNo.ReadOnly = true;
             this.txtORSNo.SelectedText = "";
-            this.txtORSNo.Size = new System.Drawing.Size(115, 31);
+            this.txtORSNo.Size = new System.Drawing.Size(104, 31);
             this.txtORSNo.TabIndex = 31;
+            this.txtORSNo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // editORS
             // 
-            this.editORS.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.editORS.BorderColor = System.Drawing.Color.Silver;
             this.editORS.BorderRadius = 3;
-            this.editORS.BorderThickness = 2;
+            this.editORS.BorderThickness = 1;
             this.editORS.Cursor = System.Windows.Forms.Cursors.Hand;
             this.editORS.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.editORS.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
@@ -121,25 +122,25 @@
             this.editORS.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.editORS.FillColor = System.Drawing.SystemColors.ButtonHighlight;
             this.editORS.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.editORS.ForeColor = System.Drawing.Color.Black;
-            this.editORS.Location = new System.Drawing.Point(251, 62);
+            this.editORS.ForeColor = System.Drawing.Color.DimGray;
+            this.editORS.Location = new System.Drawing.Point(232, 61);
             this.editORS.Name = "editORS";
-            this.editORS.Size = new System.Drawing.Size(89, 28);
+            this.editORS.Size = new System.Drawing.Size(157, 31);
             this.editORS.TabIndex = 30;
-            this.editORS.Text = "Edit ORS";
+            this.editORS.Text = "Edit ORS No.";
+            this.editORS.Click += new System.EventHandler(this.editORS_Click);
             // 
             // txtSignatory
             // 
             this.txtSignatory.BackColor = System.Drawing.Color.Transparent;
-            this.txtSignatory.BorderColor = System.Drawing.Color.Black;
-            this.txtSignatory.BorderRadius = 5;
-            this.txtSignatory.BorderThickness = 2;
+            this.txtSignatory.BorderColor = System.Drawing.Color.Silver;
+            this.txtSignatory.BorderRadius = 3;
             this.txtSignatory.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.txtSignatory.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.txtSignatory.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtSignatory.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtSignatory.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.txtSignatory.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.txtSignatory.ForeColor = System.Drawing.Color.Black;
             this.txtSignatory.ItemHeight = 30;
             this.txtSignatory.Location = new System.Drawing.Point(47, 421);
             this.txtSignatory.MaxDropDownItems = 5;
@@ -150,15 +151,14 @@
             // txtResponsibilityCenter
             // 
             this.txtResponsibilityCenter.BackColor = System.Drawing.Color.Transparent;
-            this.txtResponsibilityCenter.BorderColor = System.Drawing.Color.Black;
-            this.txtResponsibilityCenter.BorderRadius = 5;
-            this.txtResponsibilityCenter.BorderThickness = 2;
+            this.txtResponsibilityCenter.BorderColor = System.Drawing.Color.Silver;
+            this.txtResponsibilityCenter.BorderRadius = 3;
             this.txtResponsibilityCenter.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.txtResponsibilityCenter.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.txtResponsibilityCenter.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtResponsibilityCenter.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtResponsibilityCenter.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.txtResponsibilityCenter.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.txtResponsibilityCenter.ForeColor = System.Drawing.Color.Black;
             this.txtResponsibilityCenter.ItemHeight = 30;
             this.txtResponsibilityCenter.Location = new System.Drawing.Point(404, 421);
             this.txtResponsibilityCenter.Name = "txtResponsibilityCenter";
@@ -167,9 +167,8 @@
             // 
             // txtParticulars
             // 
-            this.txtParticulars.BorderColor = System.Drawing.Color.Black;
-            this.txtParticulars.BorderRadius = 5;
-            this.txtParticulars.BorderThickness = 2;
+            this.txtParticulars.BorderColor = System.Drawing.Color.Silver;
+            this.txtParticulars.BorderRadius = 3;
             this.txtParticulars.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtParticulars.DefaultText = "";
             this.txtParticulars.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -192,15 +191,14 @@
             // txtQuarter
             // 
             this.txtQuarter.BackColor = System.Drawing.Color.Transparent;
-            this.txtQuarter.BorderColor = System.Drawing.Color.Black;
-            this.txtQuarter.BorderRadius = 5;
-            this.txtQuarter.BorderThickness = 2;
+            this.txtQuarter.BorderColor = System.Drawing.Color.Silver;
+            this.txtQuarter.BorderRadius = 3;
             this.txtQuarter.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.txtQuarter.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.txtQuarter.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtQuarter.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtQuarter.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.txtQuarter.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.txtQuarter.ForeColor = System.Drawing.Color.Black;
             this.txtQuarter.ItemHeight = 30;
             this.txtQuarter.Items.AddRange(new object[] {
             "1st Quarter",
@@ -216,7 +214,7 @@
             // 
             this.txtDate.BorderRadius = 5;
             this.txtDate.Checked = true;
-            this.txtDate.FillColor = System.Drawing.SystemColors.Highlight;
+            this.txtDate.FillColor = System.Drawing.Color.SteelBlue;
             this.txtDate.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDate.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.txtDate.Format = System.Windows.Forms.DateTimePickerFormat.Long;
@@ -237,6 +235,7 @@
             this.btnExternalCred.CheckedState.InnerColor = System.Drawing.Color.White;
             this.btnExternalCred.CheckedState.InnerOffset = -2;
             this.btnExternalCred.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExternalCred.ForeColor = System.Drawing.Color.DimGray;
             this.btnExternalCred.Location = new System.Drawing.Point(601, 113);
             this.btnExternalCred.Name = "btnExternalCred";
             this.btnExternalCred.Size = new System.Drawing.Size(151, 25);
@@ -257,6 +256,7 @@
             this.btnInternalCred.CheckedState.InnerColor = System.Drawing.Color.White;
             this.btnInternalCred.CheckedState.InnerOffset = -2;
             this.btnInternalCred.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnInternalCred.ForeColor = System.Drawing.Color.DimGray;
             this.btnInternalCred.Location = new System.Drawing.Point(430, 114);
             this.btnInternalCred.Name = "btnInternalCred";
             this.btnInternalCred.Size = new System.Drawing.Size(149, 25);
@@ -271,18 +271,18 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(42, 63);
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.DimGray;
+            this.label2.Location = new System.Drawing.Point(43, 63);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(91, 25);
+            this.label2.Size = new System.Drawing.Size(76, 21);
             this.label2.TabIndex = 3;
             this.label2.Text = "ORS No.:";
             // 
             // txtPayee
             // 
-            this.txtPayee.BorderColor = System.Drawing.Color.Black;
-            this.txtPayee.BorderRadius = 5;
-            this.txtPayee.BorderThickness = 2;
+            this.txtPayee.BorderColor = System.Drawing.Color.Silver;
+            this.txtPayee.BorderRadius = 3;
             this.txtPayee.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtPayee.DefaultText = "";
             this.txtPayee.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -306,7 +306,7 @@
             this.guna2Panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.guna2Panel2.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.guna2Panel2.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.guna2Panel2.BorderColor = System.Drawing.Color.Black;
             this.guna2Panel2.BorderThickness = 3;
             this.guna2Panel2.Controls.Add(this.label10);
@@ -329,6 +329,7 @@
             this.label10.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.DimGray;
             this.label10.Location = new System.Drawing.Point(625, 27);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(179, 25);
@@ -358,18 +359,18 @@
             // 
             this.label9.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(997, 103);
+            this.label9.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.DimGray;
+            this.label9.Location = new System.Drawing.Point(1006, 113);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(90, 25);
+            this.label9.Size = new System.Drawing.Size(76, 21);
             this.label9.TabIndex = 28;
             this.label9.Text = "Amount:";
             // 
             // txtAmount
             // 
-            this.txtAmount.BorderColor = System.Drawing.Color.Black;
-            this.txtAmount.BorderRadius = 5;
-            this.txtAmount.BorderThickness = 2;
+            this.txtAmount.BorderColor = System.Drawing.Color.Silver;
+            this.txtAmount.BorderRadius = 3;
             this.txtAmount.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtAmount.DefaultText = "0.00";
             this.txtAmount.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -397,6 +398,7 @@
             this.label6.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.DimGray;
             this.label6.Location = new System.Drawing.Point(659, 73);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(116, 21);
@@ -407,15 +409,14 @@
             // 
             this.txtAccountCode.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtAccountCode.BackColor = System.Drawing.Color.Transparent;
-            this.txtAccountCode.BorderColor = System.Drawing.Color.Black;
-            this.txtAccountCode.BorderRadius = 5;
-            this.txtAccountCode.BorderThickness = 2;
+            this.txtAccountCode.BorderColor = System.Drawing.Color.Silver;
+            this.txtAccountCode.BorderRadius = 3;
             this.txtAccountCode.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.txtAccountCode.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.txtAccountCode.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtAccountCode.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtAccountCode.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.txtAccountCode.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.txtAccountCode.ForeColor = System.Drawing.Color.Black;
             this.txtAccountCode.ItemHeight = 30;
             this.txtAccountCode.Location = new System.Drawing.Point(490, 98);
             this.txtAccountCode.Name = "txtAccountCode";
@@ -427,6 +428,7 @@
             this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.DimGray;
             this.label5.Location = new System.Drawing.Point(187, 154);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(113, 21);
@@ -437,15 +439,14 @@
             // 
             this.txtExpensesType.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtExpensesType.BackColor = System.Drawing.Color.Transparent;
-            this.txtExpensesType.BorderColor = System.Drawing.Color.Black;
-            this.txtExpensesType.BorderRadius = 5;
-            this.txtExpensesType.BorderThickness = 2;
+            this.txtExpensesType.BorderColor = System.Drawing.Color.Silver;
+            this.txtExpensesType.BorderRadius = 3;
             this.txtExpensesType.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.txtExpensesType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.txtExpensesType.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtExpensesType.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtExpensesType.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.txtExpensesType.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.txtExpensesType.ForeColor = System.Drawing.Color.Black;
             this.txtExpensesType.ItemHeight = 30;
             this.txtExpensesType.Location = new System.Drawing.Point(53, 179);
             this.txtExpensesType.Name = "txtExpensesType";
@@ -457,6 +458,7 @@
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.DimGray;
             this.label4.Location = new System.Drawing.Point(187, 73);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(115, 21);
@@ -467,15 +469,14 @@
             // 
             this.txtExpensesClass.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtExpensesClass.BackColor = System.Drawing.Color.Transparent;
-            this.txtExpensesClass.BorderColor = System.Drawing.Color.Black;
-            this.txtExpensesClass.BorderRadius = 5;
-            this.txtExpensesClass.BorderThickness = 2;
+            this.txtExpensesClass.BorderColor = System.Drawing.Color.Silver;
+            this.txtExpensesClass.BorderRadius = 3;
             this.txtExpensesClass.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.txtExpensesClass.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.txtExpensesClass.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtExpensesClass.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtExpensesClass.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.txtExpensesClass.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.txtExpensesClass.ForeColor = System.Drawing.Color.Black;
             this.txtExpensesClass.ItemHeight = 30;
             this.txtExpensesClass.Location = new System.Drawing.Point(53, 98);
             this.txtExpensesClass.Name = "txtExpensesClass";
@@ -485,25 +486,25 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.DimGray;
             this.label8.Location = new System.Drawing.Point(988, 376);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(205, 25);
+            this.label8.Size = new System.Drawing.Size(172, 21);
             this.label8.TabIndex = 28;
             this.label8.Text = "Funding Source Code";
             // 
             // txtProjectInput4
             // 
             this.txtProjectInput4.BackColor = System.Drawing.Color.Transparent;
-            this.txtProjectInput4.BorderColor = System.Drawing.Color.Black;
-            this.txtProjectInput4.BorderRadius = 5;
-            this.txtProjectInput4.BorderThickness = 2;
+            this.txtProjectInput4.BorderColor = System.Drawing.Color.Silver;
+            this.txtProjectInput4.BorderRadius = 3;
             this.txtProjectInput4.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.txtProjectInput4.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.txtProjectInput4.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtProjectInput4.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtProjectInput4.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.txtProjectInput4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.txtProjectInput4.ForeColor = System.Drawing.Color.Black;
             this.txtProjectInput4.ItemHeight = 30;
             this.txtProjectInput4.Location = new System.Drawing.Point(838, 295);
             this.txtProjectInput4.Name = "txtProjectInput4";
@@ -513,15 +514,14 @@
             // txtProjectInput3
             // 
             this.txtProjectInput3.BackColor = System.Drawing.Color.Transparent;
-            this.txtProjectInput3.BorderColor = System.Drawing.Color.Black;
-            this.txtProjectInput3.BorderRadius = 5;
-            this.txtProjectInput3.BorderThickness = 2;
+            this.txtProjectInput3.BorderColor = System.Drawing.Color.Silver;
+            this.txtProjectInput3.BorderRadius = 3;
             this.txtProjectInput3.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.txtProjectInput3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.txtProjectInput3.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtProjectInput3.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtProjectInput3.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.txtProjectInput3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.txtProjectInput3.ForeColor = System.Drawing.Color.Black;
             this.txtProjectInput3.ItemHeight = 30;
             this.txtProjectInput3.Location = new System.Drawing.Point(838, 231);
             this.txtProjectInput3.Name = "txtProjectInput3";
@@ -532,15 +532,14 @@
             // txtFundCluster
             // 
             this.txtFundCluster.BackColor = System.Drawing.Color.Transparent;
-            this.txtFundCluster.BorderColor = System.Drawing.Color.Black;
-            this.txtFundCluster.BorderRadius = 5;
-            this.txtFundCluster.BorderThickness = 2;
+            this.txtFundCluster.BorderColor = System.Drawing.Color.Silver;
+            this.txtFundCluster.BorderRadius = 3;
             this.txtFundCluster.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.txtFundCluster.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.txtFundCluster.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtFundCluster.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtFundCluster.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.txtFundCluster.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.txtFundCluster.ForeColor = System.Drawing.Color.Black;
             this.txtFundCluster.ItemHeight = 30;
             this.txtFundCluster.Location = new System.Drawing.Point(838, 419);
             this.txtFundCluster.Name = "txtFundCluster";
@@ -550,25 +549,25 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.DimGray;
             this.label1.Location = new System.Drawing.Point(1021, 61);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(139, 25);
+            this.label1.Size = new System.Drawing.Size(121, 21);
             this.label1.TabIndex = 25;
             this.label1.Text = "Project Details";
             // 
             // txtProjectInput1
             // 
             this.txtProjectInput1.BackColor = System.Drawing.Color.Transparent;
-            this.txtProjectInput1.BorderColor = System.Drawing.Color.Black;
-            this.txtProjectInput1.BorderRadius = 5;
-            this.txtProjectInput1.BorderThickness = 2;
+            this.txtProjectInput1.BorderColor = System.Drawing.Color.Silver;
+            this.txtProjectInput1.BorderRadius = 3;
             this.txtProjectInput1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.txtProjectInput1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.txtProjectInput1.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtProjectInput1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtProjectInput1.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.txtProjectInput1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.txtProjectInput1.ForeColor = System.Drawing.Color.Black;
             this.txtProjectInput1.ItemHeight = 30;
             this.txtProjectInput1.Location = new System.Drawing.Point(838, 101);
             this.txtProjectInput1.Name = "txtProjectInput1";
@@ -579,15 +578,14 @@
             // txtProjectInput2
             // 
             this.txtProjectInput2.BackColor = System.Drawing.Color.Transparent;
-            this.txtProjectInput2.BorderColor = System.Drawing.Color.Black;
-            this.txtProjectInput2.BorderRadius = 5;
-            this.txtProjectInput2.BorderThickness = 2;
+            this.txtProjectInput2.BorderColor = System.Drawing.Color.Silver;
+            this.txtProjectInput2.BorderRadius = 3;
             this.txtProjectInput2.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.txtProjectInput2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.txtProjectInput2.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtProjectInput2.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtProjectInput2.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.txtProjectInput2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.txtProjectInput2.ForeColor = System.Drawing.Color.Black;
             this.txtProjectInput2.ItemHeight = 30;
             this.txtProjectInput2.Location = new System.Drawing.Point(838, 166);
             this.txtProjectInput2.Name = "txtProjectInput2";
@@ -599,7 +597,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(1400, 900);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.txtProjectInput4);

@@ -827,5 +827,19 @@ namespace bfar8_budget_registry2025
             txtAccountCode.Items.Clear();
             txtAmount.Text = "0.00";
         }
+
+        private void editORS_Click(object sender, EventArgs e)
+        {
+            if (txtORSNo.ReadOnly && editORS.Text == "Edit ORS No.")
+            {
+                editORS.Text = "Save";
+                txtORSNo.ReadOnly = false;
+            }
+            else if (!txtORSNo.ReadOnly && editORS.Text == "Save")
+            {
+                editORS.Text = "Edit ORS No.";
+                txtORSNo.ReadOnly = true;
+            }
+        }
     }
 }

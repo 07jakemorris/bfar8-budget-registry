@@ -32,6 +32,7 @@ namespace bfar8_budget_registry2025
 
         private void viewRegistry_Load(object sender, EventArgs e)
         {
+            obligationsTable.ReadOnly = true;
             SetupGridColumns();
             getObligations();
             obligationsTable.Paint += obligationsTable_Paint;

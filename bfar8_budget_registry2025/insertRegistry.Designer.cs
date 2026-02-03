@@ -39,6 +39,8 @@
             this.txtFundCluster = new Guna.UI2.WinForms.Guna2ComboBox();
             this.txtProjectInput2 = new Guna.UI2.WinForms.Guna2ComboBox();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.searchResultDGV = new System.Windows.Forms.DataGridView();
+            this.payee = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtORSNo = new Guna.UI2.WinForms.Guna2TextBox();
             this.editORS = new Guna.UI2.WinForms.Guna2Button();
             this.txtSignatory = new Guna.UI2.WinForms.Guna2ComboBox();
@@ -60,11 +62,9 @@
             this.label4 = new System.Windows.Forms.Label();
             this.txtExpensesClass = new Guna.UI2.WinForms.Guna2ComboBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.searchResultDGV = new System.Windows.Forms.DataGridView();
-            this.payee = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.guna2Panel1.SuspendLayout();
-            this.guna2Panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.searchResultDGV)).BeginInit();
+            this.guna2Panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // txtPayee
@@ -96,7 +96,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.DimGray;
-            this.label2.Location = new System.Drawing.Point(52, 66);
+            this.label2.Location = new System.Drawing.Point(43, 65);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(76, 21);
             this.label2.TabIndex = 3;
@@ -287,6 +287,34 @@
             this.guna2Panel1.Size = new System.Drawing.Size(785, 494);
             this.guna2Panel1.TabIndex = 14;
             // 
+            // searchResultDGV
+            // 
+            this.searchResultDGV.AllowUserToAddRows = false;
+            this.searchResultDGV.AllowUserToDeleteRows = false;
+            this.searchResultDGV.AllowUserToResizeColumns = false;
+            this.searchResultDGV.AllowUserToResizeRows = false;
+            this.searchResultDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.searchResultDGV.ColumnHeadersVisible = false;
+            this.searchResultDGV.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.payee});
+            this.searchResultDGV.Location = new System.Drawing.Point(46, 146);
+            this.searchResultDGV.Name = "searchResultDGV";
+            this.searchResultDGV.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.searchResultDGV.RowHeadersVisible = false;
+            this.searchResultDGV.RowTemplate.Height = 30;
+            this.searchResultDGV.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.searchResultDGV.Size = new System.Drawing.Size(343, 0);
+            this.searchResultDGV.TabIndex = 32;
+            this.searchResultDGV.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.searchResultDGV_CellClick);
+            // 
+            // payee
+            // 
+            this.payee.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.payee.DataPropertyName = "payee";
+            this.payee.HeaderText = "Name";
+            this.payee.Name = "payee";
+            this.payee.ReadOnly = true;
+            // 
             // txtORSNo
             // 
             this.txtORSNo.BackColor = System.Drawing.Color.Transparent;
@@ -303,14 +331,14 @@
             this.txtORSNo.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtORSNo.ForeColor = System.Drawing.Color.White;
             this.txtORSNo.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtORSNo.Location = new System.Drawing.Point(127, 61);
+            this.txtORSNo.Location = new System.Drawing.Point(119, 61);
             this.txtORSNo.Margin = new System.Windows.Forms.Padding(4);
             this.txtORSNo.Name = "txtORSNo";
             this.txtORSNo.PlaceholderForeColor = System.Drawing.Color.Black;
             this.txtORSNo.PlaceholderText = "";
             this.txtORSNo.ReadOnly = true;
             this.txtORSNo.SelectedText = "";
-            this.txtORSNo.Size = new System.Drawing.Size(106, 31);
+            this.txtORSNo.Size = new System.Drawing.Size(113, 31);
             this.txtORSNo.TabIndex = 31;
             this.txtORSNo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -327,9 +355,9 @@
             this.editORS.FillColor = System.Drawing.SystemColors.ButtonHighlight;
             this.editORS.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.editORS.ForeColor = System.Drawing.Color.DimGray;
-            this.editORS.Location = new System.Drawing.Point(239, 61);
+            this.editORS.Location = new System.Drawing.Point(240, 61);
             this.editORS.Name = "editORS";
-            this.editORS.Size = new System.Drawing.Size(114, 31);
+            this.editORS.Size = new System.Drawing.Size(149, 31);
             this.editORS.TabIndex = 30;
             this.editORS.Text = "Edit ORS No.";
             this.editORS.Click += new System.EventHandler(this.editORS_Click);
@@ -645,34 +673,6 @@
             this.label8.TabIndex = 21;
             this.label8.Text = "Funding Source Code";
             // 
-            // searchResultDGV
-            // 
-            this.searchResultDGV.AllowUserToAddRows = false;
-            this.searchResultDGV.AllowUserToDeleteRows = false;
-            this.searchResultDGV.AllowUserToResizeColumns = false;
-            this.searchResultDGV.AllowUserToResizeRows = false;
-            this.searchResultDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.searchResultDGV.ColumnHeadersVisible = false;
-            this.searchResultDGV.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.payee});
-            this.searchResultDGV.Location = new System.Drawing.Point(46, 146);
-            this.searchResultDGV.Name = "searchResultDGV";
-            this.searchResultDGV.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.searchResultDGV.RowHeadersVisible = false;
-            this.searchResultDGV.RowTemplate.Height = 30;
-            this.searchResultDGV.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.searchResultDGV.Size = new System.Drawing.Size(343, 0);
-            this.searchResultDGV.TabIndex = 32;
-            this.searchResultDGV.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.searchResultDGV_CellClick);
-            // 
-            // payee
-            // 
-            this.payee.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.payee.DataPropertyName = "payee";
-            this.payee.HeaderText = "Name";
-            this.payee.Name = "payee";
-            this.payee.ReadOnly = true;
-            // 
             // insertRegistry
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -695,9 +695,9 @@
             this.Load += new System.EventHandler(this.insertRegistry_Load);
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.searchResultDGV)).EndInit();
             this.guna2Panel2.ResumeLayout(false);
             this.guna2Panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.searchResultDGV)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

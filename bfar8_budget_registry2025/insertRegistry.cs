@@ -1,5 +1,4 @@
-﻿using iTextSharp.text.pdf.security;
-using MySql.Data.MySqlClient;
+﻿using MySql.Data.MySqlClient;
 using Mysqlx.Crud;
 using Mysqlx.Resultset;
 using System;

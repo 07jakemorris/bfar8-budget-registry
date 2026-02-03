@@ -87,9 +87,8 @@
             // 
             // txtRespCenter
             // 
-            this.txtRespCenter.BorderColor = System.Drawing.Color.Black;
-            this.txtRespCenter.BorderRadius = 5;
-            this.txtRespCenter.BorderThickness = 2;
+            this.txtRespCenter.BorderColor = System.Drawing.Color.DarkGray;
+            this.txtRespCenter.BorderRadius = 3;
             this.txtRespCenter.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtRespCenter.DefaultText = "";
             this.txtRespCenter.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -98,10 +97,11 @@
             this.txtRespCenter.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtRespCenter.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtRespCenter.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtRespCenter.ForeColor = System.Drawing.Color.Black;
             this.txtRespCenter.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtRespCenter.Location = new System.Drawing.Point(579, 120);
             this.txtRespCenter.Name = "txtRespCenter";
-            this.txtRespCenter.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtRespCenter.PlaceholderForeColor = System.Drawing.Color.DimGray;
             this.txtRespCenter.PlaceholderText = "Responsibility Center";
             this.txtRespCenter.SelectedText = "";
             this.txtRespCenter.Size = new System.Drawing.Size(273, 33);
@@ -109,9 +109,8 @@
             // 
             // txtORSNo
             // 
-            this.txtORSNo.BorderColor = System.Drawing.Color.Black;
-            this.txtORSNo.BorderRadius = 5;
-            this.txtORSNo.BorderThickness = 2;
+            this.txtORSNo.BorderColor = System.Drawing.Color.DarkGray;
+            this.txtORSNo.BorderRadius = 3;
             this.txtORSNo.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtORSNo.DefaultText = "";
             this.txtORSNo.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -120,10 +119,11 @@
             this.txtORSNo.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtORSNo.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtORSNo.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtORSNo.ForeColor = System.Drawing.Color.Black;
             this.txtORSNo.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtORSNo.Location = new System.Drawing.Point(39, 120);
             this.txtORSNo.Name = "txtORSNo";
-            this.txtORSNo.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtORSNo.PlaceholderForeColor = System.Drawing.Color.DimGray;
             this.txtORSNo.PlaceholderText = "ORS No.";
             this.txtORSNo.SelectedText = "";
             this.txtORSNo.Size = new System.Drawing.Size(165, 33);
@@ -141,9 +141,8 @@
             // 
             // txtPayee
             // 
-            this.txtPayee.BorderColor = System.Drawing.Color.Black;
-            this.txtPayee.BorderRadius = 5;
-            this.txtPayee.BorderThickness = 2;
+            this.txtPayee.BorderColor = System.Drawing.Color.DarkGray;
+            this.txtPayee.BorderRadius = 3;
             this.txtPayee.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtPayee.DefaultText = "";
             this.txtPayee.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -152,10 +151,11 @@
             this.txtPayee.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtPayee.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtPayee.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPayee.ForeColor = System.Drawing.Color.Black;
             this.txtPayee.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtPayee.Location = new System.Drawing.Point(252, 120);
             this.txtPayee.Name = "txtPayee";
-            this.txtPayee.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtPayee.PlaceholderForeColor = System.Drawing.Color.DimGray;
             this.txtPayee.PlaceholderText = "Payee";
             this.txtPayee.SelectedText = "";
             this.txtPayee.Size = new System.Drawing.Size(278, 33);
@@ -203,6 +203,7 @@
             this.obligationsTable.GridColor = System.Drawing.Color.Gray;
             this.obligationsTable.Location = new System.Drawing.Point(17, 208);
             this.obligationsTable.Name = "obligationsTable";
+            this.obligationsTable.ReadOnly = true;
             this.obligationsTable.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
@@ -231,7 +232,7 @@
             this.obligationsTable.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
             this.obligationsTable.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.obligationsTable.ThemeStyle.HeaderStyle.Height = 32;
-            this.obligationsTable.ThemeStyle.ReadOnly = false;
+            this.obligationsTable.ThemeStyle.ReadOnly = true;
             this.obligationsTable.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
             this.obligationsTable.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.obligationsTable.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -245,36 +246,42 @@
             // 
             this.id.HeaderText = "ID";
             this.id.Name = "id";
+            this.id.ReadOnly = true;
             this.id.Visible = false;
             // 
             // month
             // 
             this.month.HeaderText = "Month";
             this.month.Name = "month";
+            this.month.ReadOnly = true;
             this.month.Width = 70;
             // 
             // day
             // 
             this.day.HeaderText = "Day";
             this.day.Name = "day";
+            this.day.ReadOnly = true;
             this.day.Width = 50;
             // 
             // year
             // 
             this.year.HeaderText = "Year";
             this.year.Name = "year";
+            this.year.ReadOnly = true;
             this.year.Width = 65;
             // 
             // orsNo
             // 
             this.orsNo.HeaderText = "ORS No.";
             this.orsNo.Name = "orsNo";
+            this.orsNo.ReadOnly = true;
             this.orsNo.Width = 90;
             // 
             // payee
             // 
             this.payee.HeaderText = "Payee";
             this.payee.Name = "payee";
+            this.payee.ReadOnly = true;
             this.payee.Width = 180;
             // 
             // particulars
@@ -282,23 +289,27 @@
             this.particulars.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.particulars.HeaderText = "Particulars";
             this.particulars.Name = "particulars";
+            this.particulars.ReadOnly = true;
             // 
             // responsibility_center
             // 
             this.responsibility_center.HeaderText = "Responsibility Center";
             this.responsibility_center.Name = "responsibility_center";
+            this.responsibility_center.ReadOnly = true;
             this.responsibility_center.Width = 170;
             // 
             // signatory
             // 
             this.signatory.HeaderText = "Signatory";
             this.signatory.Name = "signatory";
+            this.signatory.ReadOnly = true;
             this.signatory.Width = 180;
             // 
             // position
             // 
             this.position.HeaderText = "Position";
             this.position.Name = "position";
+            this.position.ReadOnly = true;
             this.position.Visible = false;
             this.position.Width = 150;
             // 
@@ -306,6 +317,7 @@
             // 
             this.obligations_incurred.HeaderText = "Obligations Incurred";
             this.obligations_incurred.Name = "obligations_incurred";
+            this.obligations_incurred.ReadOnly = true;
             this.obligations_incurred.Width = 120;
             // 
             // viewRegistry

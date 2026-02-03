@@ -5,6 +5,8 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static Guna.UI2.WinForms.Helpers.GraphicsHelper;
+using System.Text;
+
 
 namespace bfar8_budget_registry2025
 {
@@ -16,6 +18,8 @@ namespace bfar8_budget_registry2025
         [STAThread]
         static void Main()
         {
+            // ✅ ADD THIS LINE (VERY IMPORTANT FOR EXCEL)
+            Encoding.RegisterProvider(CodePagesEncodingProvider.Instance);
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new dashboard());

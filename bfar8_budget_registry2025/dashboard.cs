@@ -80,6 +80,7 @@ namespace bfar8_budget_registry2025
         {
             hideHighlight();
             manageHighlight.Visible = true;
+            LoadForm(new manage());
         }
         private void btnEarmarks_Click(object sender, EventArgs e)
         {

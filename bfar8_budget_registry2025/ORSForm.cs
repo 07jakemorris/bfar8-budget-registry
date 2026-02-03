@@ -5,8 +5,6 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Drawing.Printing;
-using PdfSharp.Pdf;
-using PdfSharp.Drawing;
 using PdfiumViewer;
 using System.Linq;
 using System.Runtime.InteropServices;
