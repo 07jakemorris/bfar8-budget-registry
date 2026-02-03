@@ -55,9 +55,6 @@ namespace bfar8_budget_registry2025
         //List for Responsibility Center
         private List<(string Name, string Type)> allCenters = new List<(string, string)>();
 
-        private bool isAutoFilling = false;
-        private string suggestedText = "";
-
         public insertRegistry()
         {
             InitializeComponent();

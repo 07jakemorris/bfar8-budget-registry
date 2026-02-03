@@ -17,8 +17,6 @@ namespace bfar8_budget_registry2025
         //Database configuration
         public static string connString = "server=localhost;port=3306;user id=root;password=;database=db_bfar8;";
 
-        private string userID;
-
         public login()
         {
             InitializeComponent();
