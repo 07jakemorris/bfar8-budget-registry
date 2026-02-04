@@ -19,10 +19,6 @@ namespace bfar8_budget_registry2025
 {
     public partial class insertRegistry : Form
     {
-        //Database configuration
-        public static string connString = "server=localhost;port=3306;user id=root;password=;database=db_bfar8;";
-
-
         public static string newOrsNo;
 
         private string department_code;
@@ -123,7 +119,7 @@ namespace bfar8_budget_registry2025
         {
             
             string query = "SELECT department_code, agency_code, operating_unit, lower_operating_unit FROM tbl_department_code";
-            using (MySqlConnection conn = new MySqlConnection(connString))
+            using (MySqlConnection conn = dbconn.GetConnection())
             {
                 try
                 {
@@ -151,7 +147,7 @@ namespace bfar8_budget_registry2025
         {
             txtSignatory.Items.Add("- Select Signatory -");
             string query = "SELECT signatory FROM tbl_end_user";
-            using (MySqlConnection conn = new MySqlConnection(connString))
+            using (MySqlConnection conn = dbconn.GetConnection())
             {
                 try
                 {
@@ -177,7 +173,7 @@ namespace bfar8_budget_registry2025
         {
             txtResponsibilityCenter.Items.Add("- Select Responsibility Center -");
             string query = "SELECT name FROM tbl_responsibility_center";
-            using (MySqlConnection conn = new MySqlConnection(connString))
+            using (MySqlConnection conn = dbconn.GetConnection())
             {
                 try
                 {
@@ -220,7 +216,7 @@ namespace bfar8_budget_registry2025
         {
             txtProjectInput1.Items.Add("- Select Program / Project -");
             string query = "SELECT code, programs_projects FROM tbl_program_projects";
-            using (MySqlConnection conn = new MySqlConnection(connString))
+            using (MySqlConnection conn = dbconn.GetConnection())
             {
                 try
                 {
@@ -250,7 +246,7 @@ namespace bfar8_budget_registry2025
             txtProjectInput2.Items.Clear();
             string query = "SELECT categoryCode, projectCategory FROM tbl_project_categ WHERE project_code = @projectCode";
 
-            using (MySqlConnection conn = new MySqlConnection(connString))
+            using (MySqlConnection conn = dbconn.GetConnection())
             {
                 try
                 {
@@ -299,7 +295,7 @@ namespace bfar8_budget_registry2025
                 FROM tbl_program_projects WHERE code = @selectedCode AND hasProjectCategory = 1
                 ";
 
-            using (MySqlConnection conn = new MySqlConnection(connString))
+            using (MySqlConnection conn = dbconn.GetConnection())
             {
                 try
                 {
@@ -340,7 +336,7 @@ namespace bfar8_budget_registry2025
                 SELECT subCategoryCode, subCategory 
                 FROM tbl_project_sub_categ WHERE project_code = @projectCode
                 ";  
-            using (MySqlConnection conn = new MySqlConnection(connString))
+            using (MySqlConnection conn = dbconn.GetConnection())
             {
                 try
                 {
@@ -387,7 +383,7 @@ namespace bfar8_budget_registry2025
 
             string fetch = "SELECT categoryCode FROM tbl_project_categ WHERE categoryCode = @selectedCode";
 
-            using (MySqlConnection conn = new MySqlConnection(connString))
+            using (MySqlConnection conn = dbconn.GetConnection())
             {
                 try
                 {
@@ -426,7 +422,7 @@ namespace bfar8_budget_registry2025
 
             string fetch = "SELECT subCategoryCode FROM tbl_project_sub_categ WHERE subCategoryCode = @selectedSubCategoryCode AND hasActivity = 1";
 
-            using (MySqlConnection conn = new MySqlConnection(connString))
+            using (MySqlConnection conn = dbconn.GetConnection())
             {
                 try
                 {
@@ -459,7 +455,7 @@ namespace bfar8_budget_registry2025
         {
             txtProjectInput4.Items.Clear();
             string query = "SELECT activity_code, activity_name FROM tbl_activity WHERE project_sub_category_code = @projectSubCategory";
-            using (MySqlConnection conn = new MySqlConnection(connString))
+            using (MySqlConnection conn = dbconn.GetConnection())
             {
                 try
                 {
@@ -496,7 +492,7 @@ namespace bfar8_budget_registry2025
             txtFundCluster.Items.Clear();
             string fetch = "SELECT fund_category FROM tbl_fund_cluster";
             
-            using (MySqlConnection conn = new MySqlConnection(connString))
+            using (MySqlConnection conn = dbconn.GetConnection())
             {
                 try
                 {
@@ -527,7 +523,7 @@ namespace bfar8_budget_registry2025
         private void txtFundCluster_SelectedIndexChanged(object sender, EventArgs e)
         {
             string getFund = "SELECT fund_cluster, financing_source, authorization_code, full_funding_code FROM tbl_fund_cluster WHERE fund_category = @selectedFundCategory";
-            using (MySqlConnection conn = new MySqlConnection(connString))
+            using (MySqlConnection conn = dbconn.GetConnection())
             {
                 try
                 {
@@ -559,7 +555,7 @@ namespace bfar8_budget_registry2025
             txtExpensesClass.Items.Clear();
             txtExpensesClass.Items.Add("- Select Expense Class -");
             string fetch = "SELECT id, name FROM tbl_class_expenses";
-            using (MySqlConnection conn = new MySqlConnection(connString))
+            using (MySqlConnection conn = dbconn.GetConnection())
             {
                 try
                 {
@@ -598,7 +594,7 @@ namespace bfar8_budget_registry2025
             expense_class_id = selectedExpenseClass.Split('-')[0].Trim();
 
             string fetchExpenseType = "SELECT id FROM tbl_class_expenses WHERE id = @selectedExpenseClass";
-            using (MySqlConnection conn = new MySqlConnection(connString))
+            using (MySqlConnection conn = dbconn.GetConnection())
             {
                 try
                 {
@@ -626,7 +622,7 @@ namespace bfar8_budget_registry2025
             txtExpensesType.Items.Clear();
             txtExpensesType.Items.Add("- Select Expenses Type -");
             string fetchExpenseType = "SELECT id, expenses_category FROM tbl_expenses_category WHERE expenses_class_id = @selectedExpensesClass";
-            using (MySqlConnection conn = new MySqlConnection(connString))
+            using (MySqlConnection conn = dbconn.GetConnection())
             {
                 try
                 {
@@ -665,7 +661,7 @@ namespace bfar8_budget_registry2025
             expense_type_id = selectedExpenseType.Split('-')[0].Trim();
 
             string fetchExpenseType = "SELECT id FROM tbl_expenses_category WHERE id = @selectedExpenseType";
-            using (MySqlConnection conn = new MySqlConnection(connString))
+            using (MySqlConnection conn = dbconn.GetConnection())
             {
                 try
                 {
@@ -694,7 +690,7 @@ namespace bfar8_budget_registry2025
             txtAccountCode.Items.Clear();          
             txtAccountCode.Items.Add("- Select Account Code -");        
             string fetchAccountCode = "SELECT codeNo, accountName FROM tbl_account_codes WHERE expensesCategoryID = @selectedExpensesType";
-            using (MySqlConnection conn = new MySqlConnection(connString))
+            using (MySqlConnection conn = dbconn.GetConnection())
             {
                 try
                 {
@@ -735,7 +731,7 @@ namespace bfar8_budget_registry2025
                 SELECT id 
                 FROM tbl_account_codes WHERE hasSubAccountCode = 1 AND codeNo = @selectedAccountID
                 ";
-            using (MySqlConnection conn = new MySqlConnection(connString))
+            using (MySqlConnection conn = dbconn.GetConnection())
             {
                 try
                 {
@@ -769,7 +765,7 @@ namespace bfar8_budget_registry2025
             txtSubAccountCode.Items.Clear();
             txtSubAccountCode.Items.Add("- Select Sub Account Code -");        
             string fetchSubAccountCode = "SELECT subAccountCode, subAccountName FROM tbl_sub_account_codes WHERE accountCodeID = @selectedAccountID";
-            using (MySqlConnection conn = new MySqlConnection(connString))
+            using (MySqlConnection conn = dbconn.GetConnection())
             {
                 try
                 {
@@ -877,7 +873,7 @@ namespace bfar8_budget_registry2025
             @expenseClass, @expenseType, @accountCode, @obligationsIncurred)";
 
 
-            using (MySqlConnection conn = new MySqlConnection(connString))
+            using (MySqlConnection conn = dbconn.GetConnection())
             {
                 try
                 {
@@ -969,7 +965,7 @@ namespace bfar8_budget_registry2025
             if (string.IsNullOrWhiteSpace(payeeName))
                 return false;
 
-            using (MySqlConnection con = new MySqlConnection(connString))
+            using (MySqlConnection con = dbconn.GetConnection())
             {
                 con.Open();
 
@@ -989,7 +985,7 @@ namespace bfar8_budget_registry2025
         }
         void InsertPayee(string payeeName)
         {
-            using (MySqlConnection con = new MySqlConnection(connString))
+            using (MySqlConnection con = dbconn.GetConnection())
             {
                 con.Open();
 
@@ -1036,7 +1032,7 @@ namespace bfar8_budget_registry2025
         private void txtSignatory_SelectedIndexChanged(object sender, EventArgs e)
         {
             string getSignatoryPosition = "SELECT position FROM tbl_end_user WHERE signatory = @name";
-            using (MySqlConnection conn = new MySqlConnection(connString))
+            using (MySqlConnection conn = dbconn.GetConnection())
             {
                 try
                 {
@@ -1066,7 +1062,7 @@ namespace bfar8_budget_registry2025
             string latestOrsNo = "";
             string newOrsNo = "";
 
-            using (MySqlConnection conn = new MySqlConnection(connString))
+            using (MySqlConnection conn = dbconn.GetConnection())
             {
                 conn.Open();
 
@@ -1163,7 +1159,7 @@ namespace bfar8_budget_registry2025
         {
             if (txtPayee.TextLength >= 1)
             {
-                using (MySqlConnection conn = new MySqlConnection(connString))
+                using (MySqlConnection conn = dbconn.GetConnection())
                 {
                     try
                     {

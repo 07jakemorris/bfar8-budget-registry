@@ -23,15 +23,17 @@ namespace bfar8_budget_registry2025
         }
         private void login_Load(object sender, EventArgs e)
         {
-            initializePropertyComponent();
-            
+            initializePropertyComponent();          
         }
         private void initializePropertyComponent()
         {
             Color darkBlue = ColorTranslator.FromHtml("#2A3F55");
 
             btnLogin.FillColor = darkBlue;
-            lblTitle.ForeColor = darkBlue; 
+            lblTitle1.ForeColor = darkBlue;
+            lblTitle2.ForeColor = darkBlue;
+            lblDA.ForeColor = darkBlue;
+            lblRO.ForeColor = darkBlue;
         }
         public bool VerifyLogin(string userID, string password)
         {
@@ -119,8 +121,5 @@ namespace bfar8_budget_registry2025
                 txtShowHidePass.Text = "Show password";
             }
         }
-
-        
-
     }
 }

@@ -14,10 +14,6 @@ namespace bfar8_budget_registry2025
 {
     public partial class viewRegistry : Form
     {
-        //Database configuration
-        public static string connString = "server=localhost;port=3306;user id=root;password=;database=db_bfar8;";
-
-
         public viewRegistry()
         {
             InitializeComponent();
@@ -140,7 +136,7 @@ namespace bfar8_budget_registry2025
         {
             string query = "SELECT * FROM tbl_obligations";
 
-            using (MySqlConnection conn = new MySqlConnection(connString))
+            using (MySqlConnection conn = dbconn.GetConnection())
             {              
                 try
                 {

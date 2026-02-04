@@ -146,7 +146,7 @@
             // 
             // txtDate
             // 
-            this.txtDate.BorderRadius = 5;
+            this.txtDate.BorderRadius = 3;
             this.txtDate.Checked = true;
             this.txtDate.FillColor = System.Drawing.Color.SteelBlue;
             this.txtDate.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -298,12 +298,13 @@
             this.searchResultDGV.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.payee});
             this.searchResultDGV.Location = new System.Drawing.Point(46, 146);
+            this.searchResultDGV.MaximumSize = new System.Drawing.Size(341, 250);
             this.searchResultDGV.Name = "searchResultDGV";
             this.searchResultDGV.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.searchResultDGV.RowHeadersVisible = false;
             this.searchResultDGV.RowTemplate.Height = 30;
             this.searchResultDGV.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.searchResultDGV.Size = new System.Drawing.Size(343, 0);
+            this.searchResultDGV.Size = new System.Drawing.Size(341, 0);
             this.searchResultDGV.TabIndex = 32;
             this.searchResultDGV.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.searchResultDGV_CellClick);
             // 
@@ -505,7 +506,7 @@
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.DimGray;
-            this.label10.Location = new System.Drawing.Point(575, 32);
+            this.label10.Location = new System.Drawing.Point(622, 28);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(179, 25);
             this.label10.TabIndex = 30;
@@ -521,9 +522,9 @@
             this.btnInsert.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnInsert.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnInsert.FillColor = System.Drawing.Color.DarkGreen;
-            this.btnInsert.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnInsert.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnInsert.ForeColor = System.Drawing.Color.White;
-            this.btnInsert.Location = new System.Drawing.Point(883, 280);
+            this.btnInsert.Location = new System.Drawing.Point(874, 303);
             this.btnInsert.Name = "btnInsert";
             this.btnInsert.Size = new System.Drawing.Size(216, 52);
             this.btnInsert.TabIndex = 29;

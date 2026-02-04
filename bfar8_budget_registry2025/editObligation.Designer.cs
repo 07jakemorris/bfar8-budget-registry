@@ -58,6 +58,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.txtProjectInput1 = new Guna.UI2.WinForms.Guna2ComboBox();
             this.txtProjectInput2 = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.guna2ComboBox1 = new Guna.UI2.WinForms.Guna2ComboBox();
             this.guna2Panel1.SuspendLayout();
             this.guna2Panel2.SuspendLayout();
             this.SuspendLayout();
@@ -212,7 +214,7 @@
             // 
             // txtDate
             // 
-            this.txtDate.BorderRadius = 5;
+            this.txtDate.BorderRadius = 3;
             this.txtDate.Checked = true;
             this.txtDate.FillColor = System.Drawing.Color.SteelBlue;
             this.txtDate.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -309,6 +311,8 @@
             this.guna2Panel2.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.guna2Panel2.BorderColor = System.Drawing.Color.Black;
             this.guna2Panel2.BorderThickness = 3;
+            this.guna2Panel2.Controls.Add(this.label3);
+            this.guna2Panel2.Controls.Add(this.guna2ComboBox1);
             this.guna2Panel2.Controls.Add(this.label10);
             this.guna2Panel2.Controls.Add(this.btnSave);
             this.guna2Panel2.Controls.Add(this.label9);
@@ -345,10 +349,10 @@
             this.btnSave.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnSave.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnSave.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnSave.FillColor = System.Drawing.Color.Green;
-            this.btnSave.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSave.FillColor = System.Drawing.Color.DarkGreen;
+            this.btnSave.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSave.ForeColor = System.Drawing.Color.White;
-            this.btnSave.Location = new System.Drawing.Point(597, 271);
+            this.btnSave.Location = new System.Drawing.Point(874, 303);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(216, 52);
             this.btnSave.TabIndex = 29;
@@ -361,7 +365,7 @@
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.DimGray;
-            this.label9.Location = new System.Drawing.Point(1006, 113);
+            this.label9.Location = new System.Drawing.Point(86, 243);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(76, 21);
             this.label9.TabIndex = 28;
@@ -378,16 +382,16 @@
             this.txtAmount.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtAmount.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtAmount.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtAmount.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAmount.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtAmount.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.txtAmount.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtAmount.Location = new System.Drawing.Point(1089, 100);
+            this.txtAmount.Location = new System.Drawing.Point(165, 236);
             this.txtAmount.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtAmount.Name = "txtAmount";
             this.txtAmount.PlaceholderForeColor = System.Drawing.Color.Black;
             this.txtAmount.PlaceholderText = "";
             this.txtAmount.SelectedText = "";
-            this.txtAmount.Size = new System.Drawing.Size(224, 35);
+            this.txtAmount.Size = new System.Drawing.Size(414, 35);
             this.txtAmount.TabIndex = 17;
             this.txtAmount.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.txtAmount.Enter += new System.EventHandler(this.txtAmount_Enter);
@@ -399,11 +403,11 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.DimGray;
-            this.label6.Location = new System.Drawing.Point(659, 73);
+            this.label6.Location = new System.Drawing.Point(627, 91);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(116, 21);
+            this.label6.Size = new System.Drawing.Size(120, 21);
             this.label6.TabIndex = 24;
-            this.label6.Text = "Account Code";
+            this.label6.Text = "Account Code:";
             // 
             // txtAccountCode
             // 
@@ -418,9 +422,9 @@
             this.txtAccountCode.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.txtAccountCode.ForeColor = System.Drawing.Color.Black;
             this.txtAccountCode.ItemHeight = 30;
-            this.txtAccountCode.Location = new System.Drawing.Point(490, 98);
+            this.txtAccountCode.Location = new System.Drawing.Point(750, 84);
             this.txtAccountCode.Name = "txtAccountCode";
-            this.txtAccountCode.Size = new System.Drawing.Size(465, 36);
+            this.txtAccountCode.Size = new System.Drawing.Size(622, 36);
             this.txtAccountCode.TabIndex = 25;
             // 
             // label5
@@ -429,11 +433,11 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.DimGray;
-            this.label5.Location = new System.Drawing.Point(187, 154);
+            this.label5.Location = new System.Drawing.Point(45, 166);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(113, 21);
+            this.label5.Size = new System.Drawing.Size(117, 21);
             this.label5.TabIndex = 22;
-            this.label5.Text = "Expense Type";
+            this.label5.Text = "Expense Type:";
             // 
             // txtExpensesType
             // 
@@ -448,9 +452,9 @@
             this.txtExpensesType.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.txtExpensesType.ForeColor = System.Drawing.Color.Black;
             this.txtExpensesType.ItemHeight = 30;
-            this.txtExpensesType.Location = new System.Drawing.Point(53, 179);
+            this.txtExpensesType.Location = new System.Drawing.Point(165, 160);
             this.txtExpensesType.Name = "txtExpensesType";
-            this.txtExpensesType.Size = new System.Drawing.Size(381, 36);
+            this.txtExpensesType.Size = new System.Drawing.Size(414, 36);
             this.txtExpensesType.TabIndex = 23;
             // 
             // label4
@@ -459,11 +463,11 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.DimGray;
-            this.label4.Location = new System.Drawing.Point(187, 73);
+            this.label4.Location = new System.Drawing.Point(46, 99);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(115, 21);
+            this.label4.Size = new System.Drawing.Size(119, 21);
             this.label4.TabIndex = 17;
-            this.label4.Text = "Expense Class";
+            this.label4.Text = "Expense Class:";
             // 
             // txtExpensesClass
             // 
@@ -478,9 +482,9 @@
             this.txtExpensesClass.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.txtExpensesClass.ForeColor = System.Drawing.Color.Black;
             this.txtExpensesClass.ItemHeight = 30;
-            this.txtExpensesClass.Location = new System.Drawing.Point(53, 98);
+            this.txtExpensesClass.Location = new System.Drawing.Point(168, 93);
             this.txtExpensesClass.Name = "txtExpensesClass";
-            this.txtExpensesClass.Size = new System.Drawing.Size(381, 36);
+            this.txtExpensesClass.Size = new System.Drawing.Size(411, 36);
             this.txtExpensesClass.TabIndex = 21;
             // 
             // label8
@@ -488,7 +492,7 @@
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.DimGray;
-            this.label8.Location = new System.Drawing.Point(988, 376);
+            this.label8.Location = new System.Drawing.Point(1001, 386);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(172, 21);
             this.label8.TabIndex = 28;
@@ -551,7 +555,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.DimGray;
-            this.label1.Location = new System.Drawing.Point(1021, 61);
+            this.label1.Location = new System.Drawing.Point(1024, 66);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(121, 21);
             this.label1.TabIndex = 25;
@@ -592,6 +596,36 @@
             this.txtProjectInput2.Size = new System.Drawing.Size(503, 36);
             this.txtProjectInput2.TabIndex = 24;
             this.txtProjectInput2.SelectedIndexChanged += new System.EventHandler(this.txtProjectInput2_SelectedIndexChanged);
+            // 
+            // label3
+            // 
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.DimGray;
+            this.label3.Location = new System.Drawing.Point(594, 166);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(153, 21);
+            this.label3.TabIndex = 31;
+            this.label3.Text = "Sub Account Code:";
+            // 
+            // guna2ComboBox1
+            // 
+            this.guna2ComboBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.guna2ComboBox1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2ComboBox1.BorderColor = System.Drawing.Color.Silver;
+            this.guna2ComboBox1.BorderRadius = 3;
+            this.guna2ComboBox1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.guna2ComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.guna2ComboBox1.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2ComboBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2ComboBox1.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.guna2ComboBox1.ForeColor = System.Drawing.Color.Black;
+            this.guna2ComboBox1.ItemHeight = 30;
+            this.guna2ComboBox1.Location = new System.Drawing.Point(750, 159);
+            this.guna2ComboBox1.Name = "guna2ComboBox1";
+            this.guna2ComboBox1.Size = new System.Drawing.Size(622, 36);
+            this.guna2ComboBox1.TabIndex = 32;
             // 
             // editObligation
             // 
@@ -653,5 +687,7 @@
         private System.Windows.Forms.Label label1;
         private Guna.UI2.WinForms.Guna2ComboBox txtProjectInput1;
         private Guna.UI2.WinForms.Guna2ComboBox txtProjectInput2;
+        private System.Windows.Forms.Label label3;
+        private Guna.UI2.WinForms.Guna2ComboBox guna2ComboBox1;
     }
 }

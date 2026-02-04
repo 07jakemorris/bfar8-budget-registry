@@ -15,9 +15,6 @@ namespace bfar8_budget_registry2025
 {
     public partial class viewDetails : Form
     {
-        //Database configuration
-        public static string connString = "server=localhost;port=3306;user id=root;password=;database=db_bfar8;";
-
         private string viewObligationID;
 
         public viewDetails()
@@ -41,7 +38,7 @@ namespace bfar8_budget_registry2025
         private void getData(string viewObligationID)
         {
             string getData = "SELECT * FROM tbl_obligations WHERE id = @selectedID";
-            using (MySqlConnection conn = new MySqlConnection(connString))
+            using (MySqlConnection conn = dbconn.GetConnection())
             {
                 try
                 {

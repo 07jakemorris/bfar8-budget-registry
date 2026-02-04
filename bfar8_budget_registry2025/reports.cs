@@ -19,7 +19,16 @@ namespace bfar8_budget_registry2025
 
         private void reports_Load(object sender, EventArgs e)
         {
+            initializePropertyComponents();
+        }
+        private void initializePropertyComponents()
+        {
+            Color darkBlue = ColorTranslator.FromHtml("#2A3F55");
 
+            lblReportTitle.ForeColor = darkBlue;
+            label3.ForeColor = darkBlue;
+            label4.ForeColor = darkBlue;
+            label6.ForeColor = darkBlue;    
         }
     }
 }

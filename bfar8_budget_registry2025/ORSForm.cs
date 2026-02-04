@@ -76,7 +76,7 @@ namespace bfar8_budget_registry2025
                 "program_project, project_sub_category, activity_level, expense_class, account_code, obligations_incurred FROM " +
                 "tbl_obligations WHERE id = @obligationIDToPrint";
 
-            using (MySqlConnection conn = new MySqlConnection(connString))
+            using (MySqlConnection conn = dbconn.GetConnection())
             {
                 try
                 {
@@ -126,7 +126,7 @@ namespace bfar8_budget_registry2025
             txtSignatory.Items.Clear();
             txtSignatory.Items.Add("- Select Signatory -");
             string query = "SELECT signatory FROM tbl_end_user";
-            using (MySqlConnection conn = new MySqlConnection(connString))
+            using (MySqlConnection conn = dbconn.GetConnection())
             {
                 try
                 {
@@ -177,7 +177,7 @@ namespace bfar8_budget_registry2025
         private void assignSignatory()
         {
             string query = "SELECT signatory, position FROM tbl_end_user WHERE signatory = @Signatory";
-            using (MySqlConnection conn = new MySqlConnection(connString))
+            using (MySqlConnection conn = dbconn.GetConnection())
             {
                 try
                 {
