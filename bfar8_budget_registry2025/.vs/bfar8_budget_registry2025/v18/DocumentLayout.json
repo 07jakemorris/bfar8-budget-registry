@@ -3,7 +3,11 @@
   "WorkspaceRootPath": "C:\\Users\\Lehana\\OneDrive\\Documents\\BFAR8Budget-Registry-Project\\bfar8_budget_registry2025\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{5AE05EC2-4864-48E6-8CEE-B6B7A298679A}|bfar8_budget_registry2025.csproj|C:\\Users\\Lehana\\OneDrive\\Documents\\BFAR8Budget-Registry-Project\\bfar8_budget_registry2025\\manage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{5AE05EC2-4864-48E6-8CEE-B6B7A298679A}|bfar8_budget_registry2025.csproj|C:\\Users\\Lehana\\OneDrive\\Documents\\BFAR8Budget-Registry-Project\\bfar8_budget_registry2025\\reports.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{5AE05EC2-4864-48E6-8CEE-B6B7A298679A}|bfar8_budget_registry2025.csproj|solutionrelative:reports.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5AE05EC2-4864-48E6-8CEE-B6B7A298679A}|bfar8_budget_registry2025.csproj|c:\\users\\lehana\\onedrive\\documents\\bfar8budget-registry-project\\bfar8_budget_registry2025\\manage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{5AE05EC2-4864-48E6-8CEE-B6B7A298679A}|bfar8_budget_registry2025.csproj|solutionrelative:manage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
@@ -13,10 +17,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{5AE05EC2-4864-48E6-8CEE-B6B7A298679A}|bfar8_budget_registry2025.csproj|C:\\Users\\Lehana\\OneDrive\\Documents\\BFAR8Budget-Registry-Project\\bfar8_budget_registry2025\\dashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{5AE05EC2-4864-48E6-8CEE-B6B7A298679A}|bfar8_budget_registry2025.csproj|solutionrelative:dashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5AE05EC2-4864-48E6-8CEE-B6B7A298679A}|bfar8_budget_registry2025.csproj|C:\\Users\\Lehana\\OneDrive\\Documents\\BFAR8Budget-Registry-Project\\bfar8_budget_registry2025\\reports.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{5AE05EC2-4864-48E6-8CEE-B6B7A298679A}|bfar8_budget_registry2025.csproj|solutionrelative:reports.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{5AE05EC2-4864-48E6-8CEE-B6B7A298679A}|bfar8_budget_registry2025.csproj|C:\\Users\\Lehana\\OneDrive\\Documents\\BFAR8Budget-Registry-Project\\bfar8_budget_registry2025\\reports.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -43,7 +43,7 @@
       "RelativeMoniker": "D:0:0:{5AE05EC2-4864-48E6-8CEE-B6B7A298679A}|bfar8_budget_registry2025.csproj|solutionrelative:insertregistry.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5AE05EC2-4864-48E6-8CEE-B6B7A298679A}|bfar8_budget_registry2025.csproj|c:\\users\\lehana\\onedrive\\documents\\bfar8budget-registry-project\\bfar8_budget_registry2025\\login.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{5AE05EC2-4864-48E6-8CEE-B6B7A298679A}|bfar8_budget_registry2025.csproj|C:\\Users\\Lehana\\OneDrive\\Documents\\BFAR8Budget-Registry-Project\\bfar8_budget_registry2025\\login.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5AE05EC2-4864-48E6-8CEE-B6B7A298679A}|bfar8_budget_registry2025.csproj|solutionrelative:login.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -71,7 +71,7 @@
       "RelativeMoniker": "D:0:0:{5AE05EC2-4864-48E6-8CEE-B6B7A298679A}|bfar8_budget_registry2025.csproj|solutionrelative:orsform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5AE05EC2-4864-48E6-8CEE-B6B7A298679A}|bfar8_budget_registry2025.csproj|c:\\users\\lehana\\onedrive\\documents\\bfar8budget-registry-project\\bfar8_budget_registry2025\\insertregistry.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{5AE05EC2-4864-48E6-8CEE-B6B7A298679A}|bfar8_budget_registry2025.csproj|C:\\Users\\Lehana\\OneDrive\\Documents\\BFAR8Budget-Registry-Project\\bfar8_budget_registry2025\\insertregistry.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{5AE05EC2-4864-48E6-8CEE-B6B7A298679A}|bfar8_budget_registry2025.csproj|solutionrelative:insertregistry.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
@@ -102,11 +102,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "dashboard.cs [Design]",
               "DocumentMoniker": "C:\\Users\\Lehana\\OneDrive\\Documents\\BFAR8Budget-Registry-Project\\bfar8_budget_registry2025\\dashboard.cs",
               "RelativeDocumentMoniker": "dashboard.cs",
@@ -114,8 +114,7 @@
               "RelativeToolTip": "dashboard.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-01-09T05:24:22.309Z",
-              "IsPinned": true,
-              "EditorCaption": " [Design]"
+              "IsPinned": true
             },
             {
               "$type": "Bookmark",
@@ -131,19 +130,18 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "editObligation.cs [Design]",
               "DocumentMoniker": "C:\\Users\\Lehana\\OneDrive\\Documents\\BFAR8Budget-Registry-Project\\bfar8_budget_registry2025\\editObligation.cs",
               "RelativeDocumentMoniker": "editObligation.cs",
               "ToolTip": "C:\\Users\\Lehana\\OneDrive\\Documents\\BFAR8Budget-Registry-Project\\bfar8_budget_registry2025\\editObligation.cs [Design]",
               "RelativeToolTip": "editObligation.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-25T07:01:15.771Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2025-11-25T07:01:15.771Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "manage.cs [Design]",
               "DocumentMoniker": "C:\\Users\\Lehana\\OneDrive\\Documents\\BFAR8Budget-Registry-Project\\bfar8_budget_registry2025\\manage.cs",
               "RelativeDocumentMoniker": "manage.cs",
@@ -155,7 +153,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
               "Title": "reports.cs [Design]",
               "DocumentMoniker": "C:\\Users\\Lehana\\OneDrive\\Documents\\BFAR8Budget-Registry-Project\\bfar8_budget_registry2025\\reports.cs",
               "RelativeDocumentMoniker": "reports.cs",
@@ -188,8 +186,7 @@
               "RelativeToolTip": "Program.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-03T01:16:58.792Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-03T01:16:58.792Z"
             },
             {
               "$type": "Document",
@@ -200,8 +197,7 @@
               "ToolTip": "C:\\Users\\Lehana\\OneDrive\\Documents\\BFAR8Budget-Registry-Project\\bfar8_budget_registry2025\\login.cs [Design]",
               "RelativeToolTip": "login.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-26T04:22:39.118Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2026-01-26T04:22:39.118Z"
             },
             {
               "$type": "Document",
@@ -213,8 +209,7 @@
               "RelativeToolTip": "login.cs",
               "ViewState": "AgIAAAcAAAAAAAAAAAAIwBkAAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-27T01:10:53.001Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-27T01:10:53.001Z"
             },
             {
               "$type": "Document",
@@ -226,8 +221,7 @@
               "RelativeToolTip": "insertRegistry.cs",
               "ViewState": "AgIAAB8EAAAAAAAAAAAiwIkEAABFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-17T02:16:08.72Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-17T02:16:08.72Z"
             },
             {
               "$type": "Document",
@@ -239,8 +233,7 @@
               "RelativeToolTip": "viewDetails.cs",
               "ViewState": "AgIAADYAAAAAAAAAAAAuwF4AAABgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-04T05:12:48.788Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-04T05:12:48.788Z"
             },
             {
               "$type": "Document",
@@ -251,8 +244,7 @@
               "ToolTip": "C:\\Users\\Lehana\\OneDrive\\Documents\\BFAR8Budget-Registry-Project\\bfar8_budget_registry2025\\viewDetails.cs [Design]",
               "RelativeToolTip": "viewDetails.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-04T05:04:37.569Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2025-12-04T05:04:37.569Z"
             },
             {
               "$type": "Document",
@@ -264,8 +256,7 @@
               "RelativeToolTip": "ORSForm.cs",
               "ViewState": "AgIAAM0AAAAAAAAAAAAcwMAAAABRAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-25T00:24:23.986Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-25T00:24:23.986Z"
             },
             {
               "$type": "Document",
@@ -277,8 +268,7 @@
               "RelativeToolTip": "login.Designer.cs",
               "ViewState": "AgIAAGkAAAAAAAAAAAAkwIIAAAAyAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-04T01:36:21.36Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-04T01:36:21.36Z"
             },
             {
               "$type": "Document",
@@ -290,8 +280,7 @@
               "RelativeToolTip": "viewRegistry.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-24T05:55:59.09Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-24T05:55:59.09Z"
             },
             {
               "$type": "Document",
@@ -302,8 +291,7 @@
               "ToolTip": "C:\\Users\\Lehana\\OneDrive\\Documents\\BFAR8Budget-Registry-Project\\bfar8_budget_registry2025\\viewRegistry.cs [Design]",
               "RelativeToolTip": "viewRegistry.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-17T00:18:28.45Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2025-10-17T00:18:28.45Z"
             },
             {
               "$type": "Document",
@@ -315,8 +303,7 @@
               "RelativeToolTip": "dbconn.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-03T02:38:17.834Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-03T02:38:17.834Z"
             },
             {
               "$type": "Document",
@@ -327,8 +314,7 @@
               "ToolTip": "C:\\Users\\Lehana\\OneDrive\\Documents\\BFAR8Budget-Registry-Project\\bfar8_budget_registry2025\\ORSForm.cs [Design]",
               "RelativeToolTip": "ORSForm.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-03T02:15:15.087Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2026-02-03T02:15:15.087Z"
             },
             {
               "$type": "Document",
@@ -339,8 +325,7 @@
               "ToolTip": "C:\\Users\\Lehana\\OneDrive\\Documents\\BFAR8Budget-Registry-Project\\bfar8_budget_registry2025\\insertRegistry.cs [Design]",
               "RelativeToolTip": "insertRegistry.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-04T00:32:41.241Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2026-02-04T00:32:41.241Z"
             },
             {
               "$type": "Document",
@@ -352,8 +337,7 @@
               "RelativeToolTip": "dashboard.cs",
               "ViewState": "AgIAAC4AAAAAAAAAAAAswFIAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-27T01:13:16.689Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-27T01:13:16.689Z"
             },
             {
               "$type": "Document",
@@ -365,8 +349,7 @@
               "RelativeToolTip": "editObligation.cs",
               "ViewState": "AgIAACQDAAAAAAAAAAAAAEkDAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-02T08:37:54.858Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-02T08:37:54.858Z"
             },
             {
               "$type": "Document",
@@ -378,8 +361,7 @@
               "RelativeToolTip": "ORSForm.Designer.cs",
               "ViewState": "AgIAANMDAAAAAAAAAAAtwOwDAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-28T07:28:44.029Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-28T07:28:44.029Z"
             },
             {
               "$type": "Document",
