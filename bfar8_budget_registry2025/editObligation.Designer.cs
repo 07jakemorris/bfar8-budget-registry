@@ -41,6 +41,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txtPayee = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
+            this.label3 = new System.Windows.Forms.Label();
+            this.guna2ComboBox1 = new Guna.UI2.WinForms.Guna2ComboBox();
             this.label10 = new System.Windows.Forms.Label();
             this.btnSave = new Guna.UI2.WinForms.Guna2Button();
             this.label9 = new System.Windows.Forms.Label();
@@ -58,8 +60,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.txtProjectInput1 = new Guna.UI2.WinForms.Guna2ComboBox();
             this.txtProjectInput2 = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.guna2ComboBox1 = new Guna.UI2.WinForms.Guna2ComboBox();
             this.guna2Panel1.SuspendLayout();
             this.guna2Panel2.SuspendLayout();
             this.SuspendLayout();
@@ -328,6 +328,36 @@
             this.guna2Panel2.Size = new System.Drawing.Size(1413, 419);
             this.guna2Panel2.TabIndex = 21;
             // 
+            // label3
+            // 
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.DimGray;
+            this.label3.Location = new System.Drawing.Point(594, 166);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(153, 21);
+            this.label3.TabIndex = 31;
+            this.label3.Text = "Sub Account Code:";
+            // 
+            // guna2ComboBox1
+            // 
+            this.guna2ComboBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.guna2ComboBox1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2ComboBox1.BorderColor = System.Drawing.Color.Silver;
+            this.guna2ComboBox1.BorderRadius = 3;
+            this.guna2ComboBox1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.guna2ComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.guna2ComboBox1.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2ComboBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2ComboBox1.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.guna2ComboBox1.ForeColor = System.Drawing.Color.Black;
+            this.guna2ComboBox1.ItemHeight = 30;
+            this.guna2ComboBox1.Location = new System.Drawing.Point(750, 159);
+            this.guna2ComboBox1.Name = "guna2ComboBox1";
+            this.guna2ComboBox1.Size = new System.Drawing.Size(622, 36);
+            this.guna2ComboBox1.TabIndex = 32;
+            // 
             // label10
             // 
             this.label10.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -373,6 +403,7 @@
             // 
             // txtAmount
             // 
+            this.txtAmount.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtAmount.BorderColor = System.Drawing.Color.Silver;
             this.txtAmount.BorderRadius = 3;
             this.txtAmount.Cursor = System.Windows.Forms.Cursors.IBeam;
@@ -386,7 +417,7 @@
             this.txtAmount.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.txtAmount.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtAmount.Location = new System.Drawing.Point(165, 236);
-            this.txtAmount.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtAmount.Margin = new System.Windows.Forms.Padding(4);
             this.txtAmount.Name = "txtAmount";
             this.txtAmount.PlaceholderForeColor = System.Drawing.Color.Black;
             this.txtAmount.PlaceholderText = "";
@@ -596,36 +627,6 @@
             this.txtProjectInput2.Size = new System.Drawing.Size(503, 36);
             this.txtProjectInput2.TabIndex = 24;
             this.txtProjectInput2.SelectedIndexChanged += new System.EventHandler(this.txtProjectInput2_SelectedIndexChanged);
-            // 
-            // label3
-            // 
-            this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.DimGray;
-            this.label3.Location = new System.Drawing.Point(594, 166);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(153, 21);
-            this.label3.TabIndex = 31;
-            this.label3.Text = "Sub Account Code:";
-            // 
-            // guna2ComboBox1
-            // 
-            this.guna2ComboBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.guna2ComboBox1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2ComboBox1.BorderColor = System.Drawing.Color.Silver;
-            this.guna2ComboBox1.BorderRadius = 3;
-            this.guna2ComboBox1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.guna2ComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.guna2ComboBox1.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2ComboBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2ComboBox1.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.guna2ComboBox1.ForeColor = System.Drawing.Color.Black;
-            this.guna2ComboBox1.ItemHeight = 30;
-            this.guna2ComboBox1.Location = new System.Drawing.Point(750, 159);
-            this.guna2ComboBox1.Name = "guna2ComboBox1";
-            this.guna2ComboBox1.Size = new System.Drawing.Size(622, 36);
-            this.guna2ComboBox1.TabIndex = 32;
             // 
             // editObligation
             // 

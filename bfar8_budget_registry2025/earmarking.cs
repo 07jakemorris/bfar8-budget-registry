@@ -19,9 +19,6 @@ namespace bfar8_budget_registry2025
 {
     public partial class earmarking : Form
     {
-        //Database configuration
-        public static string connString = "server=localhost;port=3306;user id=root;password=;database=db_bfar8;";
-
         //To be used to automatically generate a Particulars for earmark -->
         public static string purpose;
         public static string initialParticular;
@@ -94,7 +91,7 @@ namespace bfar8_budget_registry2025
             string codePart = project.Split('-')[0].Trim();
             project_code = codePart;
 
-            using (MySqlConnection conn = new MySqlConnection(connString))
+            using (MySqlConnection conn = dbconn.GetConnection())
             {
                 try
                 {
@@ -140,7 +137,7 @@ namespace bfar8_budget_registry2025
             string codePart = projectCategory.Split('-')[0].Trim();
             category_code = codePart;
 
-            using (MySqlConnection conn = new MySqlConnection(connString))
+            using (MySqlConnection conn = dbconn.GetConnection())
             {
                 try
                 {
@@ -179,7 +176,7 @@ namespace bfar8_budget_registry2025
             string codePart = projectSubCategory.Split('-')[0].Trim();
             sub_category_code = codePart;
 
-            using (MySqlConnection conn = new MySqlConnection(connString))
+            using (MySqlConnection conn = dbconn.GetConnection())
             {
                 try
                 {
@@ -224,7 +221,7 @@ namespace bfar8_budget_registry2025
             string codePart = expenseClass.Split('-')[0].Trim();
             expense_class_id = codePart;
 
-            using (MySqlConnection conn = new MySqlConnection(connString))
+            using (MySqlConnection conn = dbconn.GetConnection())
             {
                 try
                 {
@@ -263,7 +260,7 @@ namespace bfar8_budget_registry2025
             string codePart = expenseCategory.Split('-')[0].Trim();
             expense_category_id = codePart;
 
-            using (MySqlConnection conn = new MySqlConnection(connString))
+            using (MySqlConnection conn = dbconn.GetConnection())
             {
                 try
                 {
@@ -302,7 +299,7 @@ namespace bfar8_budget_registry2025
             string codePart = selectedAccount.Split(new string[] { " - " }, StringSplitOptions.None)[0];
             selectedAccountCode = codePart;
 
-            using (MySqlConnection conn = new MySqlConnection(connString))
+            using (MySqlConnection conn = dbconn.GetConnection())
             {
                 try
                 {
@@ -415,7 +412,7 @@ namespace bfar8_budget_registry2025
         {
             txtEndUser.Items.Clear();
             txtPosition.Items.Clear();
-            using (MySqlConnection conn = new MySqlConnection(connString))
+            using (MySqlConnection conn = dbconn.GetConnection())
             {
                 try
                 {
@@ -445,7 +442,7 @@ namespace bfar8_budget_registry2025
         private void getResponsibilityCenter()
         {
             txtResponsibilityCenter.Items.Clear();
-            using (MySqlConnection conn = new MySqlConnection(connString))
+            using (MySqlConnection conn = dbconn.GetConnection())
             {
                 try
                 {
@@ -474,7 +471,7 @@ namespace bfar8_budget_registry2025
         private void getPRNo()
         {
             //Fetching if PR No. Exist -->
-            using (MySqlConnection conn = new MySqlConnection(connString))
+            using (MySqlConnection conn = dbconn.GetConnection())
             {
                 conn.Open();
                 string keyword = txtPRNo.Text;
@@ -505,7 +502,7 @@ namespace bfar8_budget_registry2025
         {
             txtLotNo.Items.Clear();
             //Fetch PRs total lot -->
-            using (MySqlConnection conn = new MySqlConnection(connString))
+            using (MySqlConnection conn = dbconn.GetConnection())
             {
                 conn.Open();
                 string query = @"
@@ -530,7 +527,7 @@ namespace bfar8_budget_registry2025
         private void getPRDetails(string purpose)
         {
             //Fetch PR details and assign it in each input for earmarking -->
-            using (MySqlConnection conn = new MySqlConnection(connString))
+            using (MySqlConnection conn = dbconn.GetConnection())
             {
                 conn.Open();
                 string query = @"
@@ -564,7 +561,7 @@ namespace bfar8_budget_registry2025
         {
             txtProjectInput1.Items.Clear();
             txtProjectInput1.Items.Add("- Select Program / Project -");
-            using (MySqlConnection conn = new MySqlConnection(connString))
+            using (MySqlConnection conn = dbconn.GetConnection())
             {
                 try
                 {
@@ -597,7 +594,7 @@ namespace bfar8_budget_registry2025
         {
             txtProjectInput2.Items.Clear();
             txtProjectInput2.Items.Add("- Select Project Category -");
-            using (MySqlConnection conn = new MySqlConnection(connString))
+            using (MySqlConnection conn = dbconn.GetConnection())
             {
                 try
                 {
@@ -631,7 +628,7 @@ namespace bfar8_budget_registry2025
         {
             txtProjectInput3.Items.Clear();
             
-            using (MySqlConnection conn = new MySqlConnection(connString))
+            using (MySqlConnection conn = dbconn.GetConnection())
             {
                 try
                 {
@@ -669,7 +666,7 @@ namespace bfar8_budget_registry2025
         {
             txtProjectInput4.Items.Clear();
             txtProjectInput4.Items.Add("- Select Activity -");
-            using (MySqlConnection conn = new MySqlConnection(connString))
+            using (MySqlConnection conn = dbconn.GetConnection())
             {
                 try
                 {
@@ -703,7 +700,7 @@ namespace bfar8_budget_registry2025
         {
             txtFundCluster.Items.Clear();
             txtFundCluster.Items.Add("- Select Funding Category -");
-            using (MySqlConnection conn = new MySqlConnection(connString))
+            using (MySqlConnection conn = dbconn.GetConnection())
             {
                 try
                 {
@@ -734,7 +731,7 @@ namespace bfar8_budget_registry2025
         {
             txtExpensesClass.Items.Clear();
             txtExpensesClass.Items.Add("- Select Class Expense -");
-            using (MySqlConnection conn = new MySqlConnection(connString))
+            using (MySqlConnection conn = dbconn.GetConnection())
             {
                 try
                 {
@@ -767,7 +764,7 @@ namespace bfar8_budget_registry2025
         {
             txtExpensesType.Items.Clear();
             txtExpensesType.Items.Add("- Select Expense Category -");
-            using (MySqlConnection conn = new MySqlConnection(connString))
+            using (MySqlConnection conn = dbconn.GetConnection())
             {
                 try
                 {
@@ -801,7 +798,7 @@ namespace bfar8_budget_registry2025
         {
             txtAccountCode.Items.Clear();
             txtAccountCode.Items.Add("- Select Account Code -");
-            using (MySqlConnection conn = new MySqlConnection(connString))
+            using (MySqlConnection conn = dbconn.GetConnection())
             {
                 try
                 {
@@ -835,7 +832,7 @@ namespace bfar8_budget_registry2025
         {
             txtSubAccountCode.Items.Clear();
             txtSubAccountCode.Items.Add("- Select Sub Account Code -");
-            using (MySqlConnection conn = new MySqlConnection(connString))
+            using (MySqlConnection conn = dbconn.GetConnection())
             {
                 try
                 {
@@ -869,7 +866,7 @@ namespace bfar8_budget_registry2025
         {
 
             string query = "SELECT department_code, agency_code, operating_unit, lower_operating_unit FROM tbl_department_code";
-            using (MySqlConnection conn = new MySqlConnection(connString))
+            using (MySqlConnection conn = dbconn.GetConnection())
             {
                 try
                 {
@@ -901,7 +898,7 @@ namespace bfar8_budget_registry2025
                             string funding_code, string department_code, string agency_code, 
                             string operating_unit, string lower_operating_unit)
         {
-            using (MySqlConnection conn = new MySqlConnection(connString))
+            using (MySqlConnection conn = dbconn.GetConnection())
             {
                 try
                 {
@@ -1043,7 +1040,7 @@ namespace bfar8_budget_registry2025
         private void txtFundCluster_SelectedIndexChanged(object sender, EventArgs e)
         {
             string getFund = "SELECT fund_cluster, financing_source, authorization_code, full_funding_code FROM tbl_fund_cluster WHERE fund_category = @selectedFundCategory";
-            using (MySqlConnection conn = new MySqlConnection(connString))
+            using (MySqlConnection conn = dbconn.GetConnection())
             {
                 try
                 {

@@ -545,6 +545,7 @@
             // 
             // txtAmount
             // 
+            this.txtAmount.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtAmount.BorderColor = System.Drawing.Color.Silver;
             this.txtAmount.BorderRadius = 3;
             this.txtAmount.Cursor = System.Windows.Forms.Cursors.IBeam;

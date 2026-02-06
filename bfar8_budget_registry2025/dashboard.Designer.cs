@@ -62,7 +62,7 @@
             this.panelMain.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelMain.Location = new System.Drawing.Point(224, 0);
             this.panelMain.Name = "panelMain";
-            this.panelMain.Size = new System.Drawing.Size(1400, 900);
+            this.panelMain.Size = new System.Drawing.Size(1457, 951);
             this.panelMain.TabIndex = 2;
             // 
             // panelTop
@@ -71,7 +71,7 @@
             this.panelTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelTop.Location = new System.Drawing.Point(224, 0);
             this.panelTop.Name = "panelTop";
-            this.panelTop.Size = new System.Drawing.Size(1400, 38);
+            this.panelTop.Size = new System.Drawing.Size(1457, 38);
             this.panelTop.TabIndex = 0;
             // 
             // lblDateTime
@@ -186,7 +186,7 @@
             this.panelMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelMenu.Location = new System.Drawing.Point(0, 0);
             this.panelMenu.Name = "panelMenu";
-            this.panelMenu.Size = new System.Drawing.Size(224, 900);
+            this.panelMenu.Size = new System.Drawing.Size(224, 951);
             this.panelMenu.TabIndex = 0;
             // 
             // reportHighlight
@@ -395,7 +395,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1624, 900);
+            this.ClientSize = new System.Drawing.Size(1681, 951);
             this.Controls.Add(this.panelTop);
             this.Controls.Add(this.panelMain);
             this.Controls.Add(this.panelMenu);

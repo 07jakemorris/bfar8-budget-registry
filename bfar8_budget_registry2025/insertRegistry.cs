@@ -71,32 +71,22 @@ namespace bfar8_budget_registry2025
 
             txtQuarter.SelectedItem = quarter;
         }
-
+        private void ConfigureComboBox(
+        System.Windows.Forms.ComboBox combo,
+        int dropDownHeight,
+        int maxItems)
+            {
+                combo.DropDownStyle = ComboBoxStyle.DropDownList;
+                combo.IntegralHeight = false;
+                combo.DropDownHeight = dropDownHeight;
+                combo.MaxDropDownItems = maxItems;
+            }
         private void comboboxSetting()
         {
-            //For signatory combo box
-            txtSignatory.DropDownStyle = ComboBoxStyle.DropDownList;
-            txtSignatory.IntegralHeight = false;
-            txtSignatory.DropDownHeight = 250;
-            txtSignatory.MaxDropDownItems = 10;
-
-            //For responsibility center combo box
-            txtResponsibilityCenter.DropDownStyle = ComboBoxStyle.DropDownList;
-            txtResponsibilityCenter.IntegralHeight = false;
-            txtResponsibilityCenter.DropDownHeight = 250;
-            txtResponsibilityCenter.MaxDropDownItems = 10;
-
-            //For expenses type combo box
-            txtExpensesType.DropDownStyle = ComboBoxStyle.DropDownList;
-            txtExpensesType.IntegralHeight = false;
-            txtExpensesType.DropDownHeight = 180;
-            txtExpensesType.MaxDropDownItems = 8;
-
-            //For account code combo box
-            txtAccountCode.DropDownStyle = ComboBoxStyle.DropDownList;
-            txtAccountCode.IntegralHeight = false;
-            txtAccountCode.DropDownHeight = 250;
-            txtAccountCode.MaxDropDownItems = 10;
+            ConfigureComboBox(txtSignatory, 250, 10);
+            ConfigureComboBox(txtResponsibilityCenter, 250, 10);
+            ConfigureComboBox(txtExpensesType, 250, 10);
+            ConfigureComboBox(txtExpensesClass, 250, 10);
         }
 
         private void insertRegistry_Load(object sender, EventArgs e)
