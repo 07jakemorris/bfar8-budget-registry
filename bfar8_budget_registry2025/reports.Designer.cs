@@ -32,13 +32,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -62,6 +55,13 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle30 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle31 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(reports));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lblReportTitle = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -82,13 +82,6 @@
             this.lblTotalAllotmentPerRC = new Guna.UI2.WinForms.Guna2TextBox();
             this.lblExpenseClass1 = new Guna.UI2.WinForms.Guna2TextBox();
             this.table1 = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lblTotalUnobligatedPerEC1 = new Guna.UI2.WinForms.Guna2TextBox();
             this.lblTotalEarmarkPerEC1 = new Guna.UI2.WinForms.Guna2TextBox();
             this.lblTotalUnpaidPerEC1 = new Guna.UI2.WinForms.Guna2TextBox();
@@ -132,38 +125,45 @@
             this.bottomPanel = new Guna.UI2.WinForms.Guna2Panel();
             this.lblAllotmentGrandTotal = new Guna.UI2.WinForms.Guna2TextBox();
             this.lblGrandTotal = new Guna.UI2.WinForms.Guna2TextBox();
+            this.lblObligationGrandTotal = new Guna.UI2.WinForms.Guna2TextBox();
             this.lblUnobligatedGrandTotal = new Guna.UI2.WinForms.Guna2TextBox();
+            this.lblDisbursementGrandTotal = new Guna.UI2.WinForms.Guna2TextBox();
             this.lblEarmarkGrandTotal = new Guna.UI2.WinForms.Guna2TextBox();
             this.lblUnpaidGrandTotal = new Guna.UI2.WinForms.Guna2TextBox();
-            this.lblDisbursementGrandTotal = new Guna.UI2.WinForms.Guna2TextBox();
-            this.lblObligationGrandTotal = new Guna.UI2.WinForms.Guna2TextBox();
             this.allotmentUIPanel = new Guna.UI2.WinForms.Guna2Panel();
-            this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.lblAllotmentUI = new Guna.UI2.WinForms.Guna2TextBox();
             this.obligationUIPanel = new Guna.UI2.WinForms.Guna2Panel();
+            this.label2 = new System.Windows.Forms.Label();
             this.lblObligationUI = new Guna.UI2.WinForms.Guna2TextBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.disbursementUIPanel = new Guna.UI2.WinForms.Guna2Panel();
+            this.label5 = new System.Windows.Forms.Label();
             this.lblDisbursementUI = new Guna.UI2.WinForms.Guna2TextBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.label5 = new System.Windows.Forms.Label();
             this.unpaidUIPanel = new Guna.UI2.WinForms.Guna2Panel();
-            this.lblUnpaidUI = new Guna.UI2.WinForms.Guna2TextBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.label7 = new System.Windows.Forms.Label();
+            this.lblUnpaidUI = new Guna.UI2.WinForms.Guna2TextBox();
             this.earmarkUIPanel = new Guna.UI2.WinForms.Guna2Panel();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.label8 = new System.Windows.Forms.Label();
             this.lblEarmarksUI = new Guna.UI2.WinForms.Guna2TextBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.unobligatedUIPanel = new Guna.UI2.WinForms.Guna2Panel();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.label9 = new System.Windows.Forms.Label();
             this.lblUnobligatedUI = new Guna.UI2.WinForms.Guna2TextBox();
+            this.label9 = new System.Windows.Forms.Label();
             this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2TextBox2 = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2TextBox3 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.account_code = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.table1)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -579,7 +579,7 @@
             this.table1.ColumnHeadersHeight = 25;
             this.table1.ColumnHeadersVisible = false;
             this.table1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
+            this.account_code,
             this.Column2,
             this.Column3,
             this.Column4,
@@ -625,76 +625,6 @@
             this.table1.ThemeStyle.RowsStyle.Height = 22;
             this.table1.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.table1.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            // 
-            // Column1
-            // 
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.Padding = new System.Windows.Forms.Padding(48, 0, 0, 0);
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Column1.DefaultCellStyle = dataGridViewCellStyle3;
-            this.Column1.FillWeight = 214.3724F;
-            this.Column1.HeaderText = "Account Code";
-            this.Column1.Name = "Column1";
-            // 
-            // Column2
-            // 
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.Padding = new System.Windows.Forms.Padding(0, 0, 6, 0);
-            this.Column2.DefaultCellStyle = dataGridViewCellStyle4;
-            this.Column2.FillWeight = 86.00269F;
-            this.Column2.HeaderText = "Allotment";
-            this.Column2.Name = "Column2";
-            // 
-            // Column3
-            // 
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.Padding = new System.Windows.Forms.Padding(0, 0, 6, 0);
-            this.Column3.DefaultCellStyle = dataGridViewCellStyle5;
-            this.Column3.FillWeight = 81.72586F;
-            this.Column3.HeaderText = "Obligation";
-            this.Column3.Name = "Column3";
-            // 
-            // Column4
-            // 
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.Padding = new System.Windows.Forms.Padding(0, 0, 6, 0);
-            this.Column4.DefaultCellStyle = dataGridViewCellStyle6;
-            this.Column4.FillWeight = 83.21719F;
-            this.Column4.HeaderText = "Disbursement";
-            this.Column4.Name = "Column4";
-            // 
-            // Column5
-            // 
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.Padding = new System.Windows.Forms.Padding(0, 0, 6, 0);
-            this.Column5.DefaultCellStyle = dataGridViewCellStyle7;
-            this.Column5.FillWeight = 82.68363F;
-            this.Column5.HeaderText = "Unpaid";
-            this.Column5.Name = "Column5";
-            // 
-            // Column6
-            // 
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.Padding = new System.Windows.Forms.Padding(0, 0, 6, 0);
-            this.Column6.DefaultCellStyle = dataGridViewCellStyle8;
-            this.Column6.FillWeight = 64.01943F;
-            this.Column6.HeaderText = "Earmarks";
-            this.Column6.Name = "Column6";
-            // 
-            // Column7
-            // 
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle9.Padding = new System.Windows.Forms.Padding(0, 0, 2, 0);
-            this.Column7.DefaultCellStyle = dataGridViewCellStyle9;
-            this.Column7.FillWeight = 87.97858F;
-            this.Column7.HeaderText = "Unobligated";
-            this.Column7.Name = "Column7";
             // 
             // lblTotalUnobligatedPerEC1
             // 
@@ -1540,6 +1470,29 @@
             this.lblGrandTotal.TabIndex = 42;
             this.lblGrandTotal.TextOffset = new System.Drawing.Point(5, 0);
             // 
+            // lblObligationGrandTotal
+            // 
+            this.lblObligationGrandTotal.BorderColor = System.Drawing.Color.Silver;
+            this.lblObligationGrandTotal.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.lblObligationGrandTotal.DefaultText = "11,873,474.08";
+            this.lblObligationGrandTotal.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.lblObligationGrandTotal.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.lblObligationGrandTotal.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.lblObligationGrandTotal.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.lblObligationGrandTotal.FillColor = System.Drawing.Color.DimGray;
+            this.lblObligationGrandTotal.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.lblObligationGrandTotal.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblObligationGrandTotal.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lblObligationGrandTotal.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.lblObligationGrandTotal.Location = new System.Drawing.Point(595, 1);
+            this.lblObligationGrandTotal.Name = "lblObligationGrandTotal";
+            this.lblObligationGrandTotal.PlaceholderText = "";
+            this.lblObligationGrandTotal.ReadOnly = true;
+            this.lblObligationGrandTotal.SelectedText = "";
+            this.lblObligationGrandTotal.Size = new System.Drawing.Size(163, 27);
+            this.lblObligationGrandTotal.TabIndex = 44;
+            this.lblObligationGrandTotal.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
             // lblUnobligatedGrandTotal
             // 
             this.lblUnobligatedGrandTotal.BorderColor = System.Drawing.Color.Silver;
@@ -1563,6 +1516,29 @@
             this.lblUnobligatedGrandTotal.TabIndex = 48;
             this.lblUnobligatedGrandTotal.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.lblUnobligatedGrandTotal.TextOffset = new System.Drawing.Point(10, 0);
+            // 
+            // lblDisbursementGrandTotal
+            // 
+            this.lblDisbursementGrandTotal.BorderColor = System.Drawing.Color.Silver;
+            this.lblDisbursementGrandTotal.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.lblDisbursementGrandTotal.DefaultText = "9,317,339.49";
+            this.lblDisbursementGrandTotal.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.lblDisbursementGrandTotal.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.lblDisbursementGrandTotal.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.lblDisbursementGrandTotal.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.lblDisbursementGrandTotal.FillColor = System.Drawing.Color.DimGray;
+            this.lblDisbursementGrandTotal.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.lblDisbursementGrandTotal.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDisbursementGrandTotal.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lblDisbursementGrandTotal.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.lblDisbursementGrandTotal.Location = new System.Drawing.Point(757, 1);
+            this.lblDisbursementGrandTotal.Name = "lblDisbursementGrandTotal";
+            this.lblDisbursementGrandTotal.PlaceholderText = "";
+            this.lblDisbursementGrandTotal.ReadOnly = true;
+            this.lblDisbursementGrandTotal.SelectedText = "";
+            this.lblDisbursementGrandTotal.Size = new System.Drawing.Size(165, 27);
+            this.lblDisbursementGrandTotal.TabIndex = 45;
+            this.lblDisbursementGrandTotal.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // lblEarmarkGrandTotal
             // 
@@ -1610,52 +1586,6 @@
             this.lblUnpaidGrandTotal.TabIndex = 46;
             this.lblUnpaidGrandTotal.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
-            // lblDisbursementGrandTotal
-            // 
-            this.lblDisbursementGrandTotal.BorderColor = System.Drawing.Color.Silver;
-            this.lblDisbursementGrandTotal.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.lblDisbursementGrandTotal.DefaultText = "9,317,339.49";
-            this.lblDisbursementGrandTotal.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.lblDisbursementGrandTotal.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.lblDisbursementGrandTotal.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.lblDisbursementGrandTotal.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.lblDisbursementGrandTotal.FillColor = System.Drawing.Color.DimGray;
-            this.lblDisbursementGrandTotal.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.lblDisbursementGrandTotal.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDisbursementGrandTotal.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblDisbursementGrandTotal.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.lblDisbursementGrandTotal.Location = new System.Drawing.Point(757, 1);
-            this.lblDisbursementGrandTotal.Name = "lblDisbursementGrandTotal";
-            this.lblDisbursementGrandTotal.PlaceholderText = "";
-            this.lblDisbursementGrandTotal.ReadOnly = true;
-            this.lblDisbursementGrandTotal.SelectedText = "";
-            this.lblDisbursementGrandTotal.Size = new System.Drawing.Size(165, 27);
-            this.lblDisbursementGrandTotal.TabIndex = 45;
-            this.lblDisbursementGrandTotal.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // lblObligationGrandTotal
-            // 
-            this.lblObligationGrandTotal.BorderColor = System.Drawing.Color.Silver;
-            this.lblObligationGrandTotal.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.lblObligationGrandTotal.DefaultText = "11,873,474.08";
-            this.lblObligationGrandTotal.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.lblObligationGrandTotal.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.lblObligationGrandTotal.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.lblObligationGrandTotal.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.lblObligationGrandTotal.FillColor = System.Drawing.Color.DimGray;
-            this.lblObligationGrandTotal.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.lblObligationGrandTotal.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblObligationGrandTotal.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblObligationGrandTotal.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.lblObligationGrandTotal.Location = new System.Drawing.Point(595, 1);
-            this.lblObligationGrandTotal.Name = "lblObligationGrandTotal";
-            this.lblObligationGrandTotal.PlaceholderText = "";
-            this.lblObligationGrandTotal.ReadOnly = true;
-            this.lblObligationGrandTotal.SelectedText = "";
-            this.lblObligationGrandTotal.Size = new System.Drawing.Size(163, 27);
-            this.lblObligationGrandTotal.TabIndex = 44;
-            this.lblObligationGrandTotal.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
             // allotmentUIPanel
             // 
             this.allotmentUIPanel.BackColor = System.Drawing.Color.Transparent;
@@ -1671,6 +1601,16 @@
             this.allotmentUIPanel.Size = new System.Drawing.Size(229, 68);
             this.allotmentUIPanel.TabIndex = 52;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(15, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(40, 40);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -1681,16 +1621,6 @@
             this.label1.Size = new System.Drawing.Size(101, 17);
             this.label1.TabIndex = 0;
             this.label1.Text = "Total Allotment";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(15, 12);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(40, 40);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
             // 
             // lblAllotmentUI
             // 
@@ -1732,6 +1662,17 @@
             this.obligationUIPanel.Size = new System.Drawing.Size(241, 68);
             this.obligationUIPanel.TabIndex = 54;
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label2.Location = new System.Drawing.Point(49, 6);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(151, 17);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Current Year Obligation";
+            // 
             // lblObligationUI
             // 
             this.lblObligationUI.BorderThickness = 0;
@@ -1747,7 +1688,7 @@
             this.lblObligationUI.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.lblObligationUI.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.lblObligationUI.Location = new System.Drawing.Point(60, 32);
-            this.lblObligationUI.Margin = new System.Windows.Forms.Padding(4);
+            this.lblObligationUI.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.lblObligationUI.Name = "lblObligationUI";
             this.lblObligationUI.PlaceholderText = "";
             this.lblObligationUI.ReadOnly = true;
@@ -1767,17 +1708,6 @@
             this.pictureBox2.TabIndex = 1;
             this.pictureBox2.TabStop = false;
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label2.Location = new System.Drawing.Point(49, 6);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(151, 17);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Current Year Obligation";
-            // 
             // disbursementUIPanel
             // 
             this.disbursementUIPanel.BackColor = System.Drawing.Color.Transparent;
@@ -1792,6 +1722,17 @@
             this.disbursementUIPanel.Name = "disbursementUIPanel";
             this.disbursementUIPanel.Size = new System.Drawing.Size(242, 68);
             this.disbursementUIPanel.TabIndex = 55;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label5.Location = new System.Drawing.Point(41, 5);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(172, 17);
+            this.label5.TabIndex = 0;
+            this.label5.Text = "Current Year Disbursement";
             // 
             // lblDisbursementUI
             // 
@@ -1828,17 +1769,6 @@
             this.pictureBox3.TabIndex = 1;
             this.pictureBox3.TabStop = false;
             // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label5.Location = new System.Drawing.Point(41, 5);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(172, 17);
-            this.label5.TabIndex = 0;
-            this.label5.Text = "Current Year Disbursement";
-            // 
             // unpaidUIPanel
             // 
             this.unpaidUIPanel.BackColor = System.Drawing.Color.Transparent;
@@ -1853,6 +1783,27 @@
             this.unpaidUIPanel.Name = "unpaidUIPanel";
             this.unpaidUIPanel.Size = new System.Drawing.Size(224, 68);
             this.unpaidUIPanel.TabIndex = 56;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
+            this.pictureBox4.Location = new System.Drawing.Point(17, 22);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(39, 35);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox4.TabIndex = 1;
+            this.pictureBox4.TabStop = false;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label7.Location = new System.Drawing.Point(51, 6);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(124, 17);
+            this.label7.TabIndex = 0;
+            this.label7.Text = "Unpaid Obligations";
             // 
             // lblUnpaidUI
             // 
@@ -1879,27 +1830,6 @@
             this.lblUnpaidUI.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.lblUnpaidUI.TextOffset = new System.Drawing.Point(-5, 0);
             // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(17, 22);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(39, 35);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox4.TabIndex = 1;
-            this.pictureBox4.TabStop = false;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label7.Location = new System.Drawing.Point(51, 6);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(124, 17);
-            this.label7.TabIndex = 0;
-            this.label7.Text = "Unpaid Obligations";
-            // 
             // earmarkUIPanel
             // 
             this.earmarkUIPanel.BackColor = System.Drawing.Color.Transparent;
@@ -1914,6 +1844,16 @@
             this.earmarkUIPanel.Name = "earmarkUIPanel";
             this.earmarkUIPanel.Size = new System.Drawing.Size(197, 68);
             this.earmarkUIPanel.TabIndex = 57;
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
+            this.pictureBox5.Location = new System.Drawing.Point(17, 21);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(30, 30);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox5.TabIndex = 1;
+            this.pictureBox5.TabStop = false;
             // 
             // label8
             // 
@@ -1951,16 +1891,6 @@
             this.lblEarmarksUI.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.lblEarmarksUI.TextOffset = new System.Drawing.Point(-5, 0);
             // 
-            // pictureBox5
-            // 
-            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
-            this.pictureBox5.Location = new System.Drawing.Point(17, 21);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(30, 30);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox5.TabIndex = 1;
-            this.pictureBox5.TabStop = false;
-            // 
             // unobligatedUIPanel
             // 
             this.unobligatedUIPanel.BackColor = System.Drawing.Color.Transparent;
@@ -1986,17 +1916,6 @@
             this.pictureBox6.TabIndex = 1;
             this.pictureBox6.TabStop = false;
             // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label9.Location = new System.Drawing.Point(45, 6);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(132, 17);
-            this.label9.TabIndex = 0;
-            this.label9.Text = "Unobligated Balance";
-            // 
             // lblUnobligatedUI
             // 
             this.lblUnobligatedUI.BorderThickness = 0;
@@ -2021,6 +1940,17 @@
             this.lblUnobligatedUI.TabIndex = 53;
             this.lblUnobligatedUI.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.lblUnobligatedUI.TextOffset = new System.Drawing.Point(-5, 0);
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label9.Location = new System.Drawing.Point(45, 6);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(132, 17);
+            this.label9.TabIndex = 0;
+            this.label9.Text = "Unobligated Balance";
             // 
             // guna2TextBox1
             // 
@@ -2096,6 +2026,76 @@
             this.guna2TextBox3.TabIndex = 59;
             this.guna2TextBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.guna2TextBox3.TextOffset = new System.Drawing.Point(-5, 0);
+            // 
+            // account_code
+            // 
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.Padding = new System.Windows.Forms.Padding(48, 0, 0, 0);
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.account_code.DefaultCellStyle = dataGridViewCellStyle3;
+            this.account_code.FillWeight = 214.3724F;
+            this.account_code.HeaderText = "Account Code";
+            this.account_code.Name = "account_code";
+            // 
+            // Column2
+            // 
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.Padding = new System.Windows.Forms.Padding(0, 0, 6, 0);
+            this.Column2.DefaultCellStyle = dataGridViewCellStyle4;
+            this.Column2.FillWeight = 86.00269F;
+            this.Column2.HeaderText = "Allotment";
+            this.Column2.Name = "Column2";
+            // 
+            // Column3
+            // 
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.Padding = new System.Windows.Forms.Padding(0, 0, 6, 0);
+            this.Column3.DefaultCellStyle = dataGridViewCellStyle5;
+            this.Column3.FillWeight = 81.72586F;
+            this.Column3.HeaderText = "Obligation";
+            this.Column3.Name = "Column3";
+            // 
+            // Column4
+            // 
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.Padding = new System.Windows.Forms.Padding(0, 0, 6, 0);
+            this.Column4.DefaultCellStyle = dataGridViewCellStyle6;
+            this.Column4.FillWeight = 83.21719F;
+            this.Column4.HeaderText = "Disbursement";
+            this.Column4.Name = "Column4";
+            // 
+            // Column5
+            // 
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.Padding = new System.Windows.Forms.Padding(0, 0, 6, 0);
+            this.Column5.DefaultCellStyle = dataGridViewCellStyle7;
+            this.Column5.FillWeight = 82.68363F;
+            this.Column5.HeaderText = "Unpaid";
+            this.Column5.Name = "Column5";
+            // 
+            // Column6
+            // 
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.Padding = new System.Windows.Forms.Padding(0, 0, 6, 0);
+            this.Column6.DefaultCellStyle = dataGridViewCellStyle8;
+            this.Column6.FillWeight = 64.01943F;
+            this.Column6.HeaderText = "Earmarks";
+            this.Column6.Name = "Column6";
+            // 
+            // Column7
+            // 
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle9.Padding = new System.Windows.Forms.Padding(0, 0, 2, 0);
+            this.Column7.DefaultCellStyle = dataGridViewCellStyle9;
+            this.Column7.FillWeight = 87.97858F;
+            this.Column7.HeaderText = "Unobligated";
+            this.Column7.Name = "Column7";
             // 
             // reports
             // 
@@ -2198,13 +2198,6 @@
         private Guna.UI2.WinForms.Guna2TextBox lblTotalAllotmentPerEC1;
         private System.Windows.Forms.Label label4;
         private Guna.UI2.WinForms.Guna2Panel panel1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
         private Guna.UI2.WinForms.Guna2Panel panel2;
         private Guna.UI2.WinForms.Guna2TextBox lblTotalAllotmentPerEC2;
         private Guna.UI2.WinForms.Guna2TextBox lblExpenseClass2;
@@ -2272,5 +2265,12 @@
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox2;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn account_code;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
     }
 }

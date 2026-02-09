@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -6,12 +7,15 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Controls;
 using System.Windows.Forms;
 
 namespace bfar8_budget_registry2025
 {
     public partial class reports : Form
     {
+        private string responsibility_center;
+        private string expense_class;
         public reports()
         {
             InitializeComponent();
@@ -68,6 +72,39 @@ namespace bfar8_budget_registry2025
             bottomPanel.Top = panel3.Bottom
                - panel3.Margin.Bottom
                - bottomPanel.Margin.Top;
+        }
+        private void ResizePanelToContent()
+        {
+            int rowsHeight = table1.Rows
+                .GetRowsHeight(DataGridViewElementStates.Visible);
+
+            // Minimum height if no rows
+            if (table1.Rows.Count == 0)
+                rowsHeight = table1.RowTemplate.Height;
+
+            table1.Height = rowsHeight;
+
+            panel1.Height = lblResCenter.Height + rowsHeight;
+        }
+        private void getAccountCodes()
+        {
+            using (MySqlConnection conn = dbconn.GetConnection())
+            {
+                try
+                {
+                    conn.Open();
+                    string query = @"SELECT account_codes
+                                FROM tbl_obligations ";
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error: " + ex.Message);
+                }
+            }
+        }
+        private void getExpenseClass()
+        {
+
         }
     }
 }

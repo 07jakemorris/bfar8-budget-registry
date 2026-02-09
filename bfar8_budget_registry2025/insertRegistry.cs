@@ -1154,7 +1154,7 @@ namespace bfar8_budget_registry2025
                     try
                     {
                         conn.Open();
-                        string query = @"SELECT payee
+                        string query = @"SELECT DISTINCT payee
                             FROM tbl_obligations WHERE payee LIKE ?
                             ";
                         using (MySqlCommand cmd = new MySqlCommand(query, conn))

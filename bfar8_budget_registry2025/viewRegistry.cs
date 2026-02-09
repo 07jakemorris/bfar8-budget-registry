@@ -14,6 +14,7 @@ namespace bfar8_budget_registry2025
 {
     public partial class viewRegistry : Form
     {
+        private string searchedPayee;
         public viewRegistry()
         {
             InitializeComponent();
@@ -24,10 +25,10 @@ namespace bfar8_budget_registry2025
             public static string selectedIDToPrint;
             public static string selectedIDToView;
         }
-
-
         private void viewRegistry_Load(object sender, EventArgs e)
         {
+            Color darkBlue = ColorTranslator.FromHtml("#2A3F55");
+            lblSearch.ForeColor = darkBlue;
             obligationsTable.ReadOnly = true;
             SetupGridColumns();
             getObligations();
@@ -156,6 +157,13 @@ namespace bfar8_budget_registry2025
                 }
             }
         }
+        private void ClearObligationsTable()
+        {
+            if (obligationsTable.DataSource is DataTable dt)
+            {
+                dt.Clear(); // Clears all rows
+            }
+        }
 
         private void obligationsTable_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -188,6 +196,79 @@ namespace bfar8_budget_registry2025
                 viewDetails.ShowDialog();
             }
 
+        }
+
+        private void txtPayee_TextChanged(object sender, EventArgs e)
+        {
+            if (txtPayee.TextLength >= 1)
+            {
+                using (MySqlConnection conn = dbconn.GetConnection())
+                {
+                    try
+                    {
+                        conn.Open();
+                        string query = @"SELECT DISTINCT payee
+                            FROM tbl_obligations WHERE payee LIKE ?
+                            ";
+                        using (MySqlCommand cmd = new MySqlCommand(query, conn))
+                        {
+                            cmd.Parameters.AddWithValue("payee", txtPayee.Text + "%");
+                            DataTable dt = new DataTable();
+                            MySqlDataAdapter da = new MySqlDataAdapter(cmd);
+                            da.Fill(dt);
+                            if (da != null && dt.Rows.Count > 0)
+                            {
+                                searchResultDGV.DataSource = dt;
+                                searchResultDGV.Height = searchResultDGV.Rows.Count * 30;
+                            }
+                            else
+                            {
+                                searchResultDGV.Height = 0;
+                            }
+                            cmd.Dispose();
+                            da.Dispose();
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Error: " + ex.Message);
+                    }
+                }
+            }
+            else if (txtPayee.TextLength <= 0)
+            {
+                searchResultDGV.Height = 0;
+            }
+        }
+
+        private void searchResultDGV_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            DataGridViewRow row = this.searchResultDGV.Rows[e.RowIndex];
+            txtPayee.Text = row.Cells["resultPayee"].Value.ToString();
+            searchedPayee = txtPayee.Text;
+            searchResultDGV.Height = 0;
+            ClearObligationsTable();
+
+            // Create new DataTable for obligations
+            DataTable dt = new DataTable();
+
+            using (MySqlConnection conn = dbconn.GetConnection())
+            {
+                conn.Open();
+                string query = @"SELECT id, month, day, year, orsNo, payee, particulars, responsibility_center, signatory, position, obligations_incurred
+                        FROM tbl_obligations 
+                        WHERE payee = @Payee
+                        ";
+                using (MySqlCommand cmd = new MySqlCommand (query, conn))
+                {
+                    cmd.Parameters.AddWithValue("@Payee", txtPayee.Text);
+                    using (MySqlDataAdapter da = new MySqlDataAdapter(cmd))
+                    {
+                        da.Fill(dt); // fill DataTable with results
+                    }
+                }
+            }
+            obligationsTable.DataSource = dt; // bind DataGridView
         }
     }
 }
