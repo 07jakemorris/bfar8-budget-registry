@@ -29,11 +29,11 @@ namespace bfar8_budget_registry2025
         private void reports_Load(object sender, EventArgs e)
         {
             initializePropertyComponents();
+            loadingTimer.Start();
         }
         private void initializePropertyComponents()
         {
             Color darkBlue = ColorTranslator.FromHtml("#2A3F55");
-
             lblReportTitle.ForeColor = darkBlue;
             label3.ForeColor = darkBlue;
             label4.ForeColor = darkBlue;
@@ -94,7 +94,12 @@ namespace bfar8_budget_registry2025
                 {
                     conn.Open();
                     string query = @"SELECT account_codes
-                                FROM tbl_obligations ";
+                                    FROM tbl_obligations WHERE responsibility_center = @ResponsibilityCenter AND expense_class = @ExpenseClass
+                                    ";
+                    using (MySqlCommand cmd = new MySqlCommand(query, conn))
+                    {
+                        cmd.Parameters.AddWithValue("@ResponsibilityCenter", txtExpenseClass.Text);
+                    }
                 }
                 catch (Exception ex)
                 {
@@ -105,6 +110,118 @@ namespace bfar8_budget_registry2025
         private void getExpenseClass()
         {
 
+        }
+
+        private void btnUp_Click(object sender, EventArgs e)
+        {
+            btnUp.Visible = false;
+            btnDown.Visible = true;
+            panelExpenseClass.Height = 0;
+        }
+
+        private void btnDown_Click(object sender, EventArgs e)
+        {
+            btnDown.Visible = false;
+            btnUp.Visible = true;
+            panelExpenseClass.Height = 117;
+        }
+
+        private void btnAllExpenseClass_Click(object sender, EventArgs e)
+        {
+            btnUp.Visible = false;
+            btnDown.Visible = true;
+            panelExpenseClass.Height = 0;
+            txtExpenseClass.Text = btnAllExpenseClass.Text;
+        }
+
+        private void btnPSClass_Click(object sender, EventArgs e)
+        {
+            btnUp.Visible = false;
+            btnDown.Visible = true;
+            panelExpenseClass.Height = 0;
+            txtExpenseClass.Text = btnPSClass.Text;
+        }
+
+        private void btnMOOEClass_Click(object sender, EventArgs e)
+        {
+            btnUp.Visible = false;
+            btnDown.Visible = true;
+            panelExpenseClass.Height = 0;
+            txtExpenseClass.Text = btnMOOEClass.Text;
+        }
+
+        private void btnCOClass_Click(object sender, EventArgs e)
+        {
+            btnUp.Visible = false;
+            btnDown.Visible = true;
+            panelExpenseClass.Height = 0;
+            txtExpenseClass.Text = btnCOClass.Text;
+        }
+
+        private void txtResponsibilityCenter_TextChanged(object sender, EventArgs e)
+        {
+            if (txtResponsibilityCenter.TextLength >= 1)
+            {
+                using (MySqlConnection conn = dbconn.GetConnection())
+                {
+                    try
+                    {
+                        conn.Open();
+                        string query = @"SELECT name
+                            FROM tbl_responsibility_center WHERE name LIKE ?
+                            ";
+                        using (MySqlCommand cmd = new MySqlCommand(query, conn))
+                        {
+                            cmd.Parameters.AddWithValue("name", txtResponsibilityCenter.Text + "%");
+                            DataTable dt = new DataTable();
+                            MySqlDataAdapter da = new MySqlDataAdapter(cmd);
+                            da.Fill(dt);
+                            if (da != null && dt.Rows.Count > 0)
+                            {
+                                responsibilityCenterResult.DataSource = dt;
+                                responsibilityCenterResult.Height = responsibilityCenterResult.Rows.Count * 30;
+                            }
+                            else
+                            {
+                                responsibilityCenterResult.Height = 0;
+                            }
+                            cmd.Dispose();
+                            da.Dispose();
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Error: " + ex.Message);
+                    }
+                }
+            }
+            else if (txtResponsibilityCenter.TextLength <= 0)
+            {
+                responsibilityCenterResult.Height = 0;
+            }
+        }
+
+        private void responsibilityCenterResult_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            DataGridViewRow row = this.responsibilityCenterResult.Rows[e.RowIndex];
+            txtResponsibilityCenter.Text = row.Cells["name"].Value.ToString();
+            responsibilityCenterResult.Height = 0;
+        }
+
+        private void loadingTimer_Tick(object sender, EventArgs e)
+        {
+            if (lblWait.Text == "Please wait.")
+            {
+                lblWait.Text = "Please wait..";
+            }
+            else if (lblWait.Text == "Please wait..")
+            {
+                lblWait.Text = "Please wait...";
+            }
+            else if (lblWait.Text == "Please wait...")
+            {
+                lblWait.Text = "Please wait.";
+            }
         }
     }
 }

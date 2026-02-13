@@ -42,7 +42,7 @@
             this.txtPayee = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             this.label3 = new System.Windows.Forms.Label();
-            this.guna2ComboBox1 = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.txtSubAccountCode = new Guna.UI2.WinForms.Guna2ComboBox();
             this.label10 = new System.Windows.Forms.Label();
             this.btnSave = new Guna.UI2.WinForms.Guna2Button();
             this.label9 = new System.Windows.Forms.Label();
@@ -312,7 +312,7 @@
             this.guna2Panel2.BorderColor = System.Drawing.Color.Black;
             this.guna2Panel2.BorderThickness = 3;
             this.guna2Panel2.Controls.Add(this.label3);
-            this.guna2Panel2.Controls.Add(this.guna2ComboBox1);
+            this.guna2Panel2.Controls.Add(this.txtSubAccountCode);
             this.guna2Panel2.Controls.Add(this.label10);
             this.guna2Panel2.Controls.Add(this.btnSave);
             this.guna2Panel2.Controls.Add(this.label9);
@@ -340,23 +340,23 @@
             this.label3.TabIndex = 31;
             this.label3.Text = "Sub Account Code:";
             // 
-            // guna2ComboBox1
+            // txtSubAccountCode
             // 
-            this.guna2ComboBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.guna2ComboBox1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2ComboBox1.BorderColor = System.Drawing.Color.Silver;
-            this.guna2ComboBox1.BorderRadius = 3;
-            this.guna2ComboBox1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.guna2ComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.guna2ComboBox1.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2ComboBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2ComboBox1.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.guna2ComboBox1.ForeColor = System.Drawing.Color.Black;
-            this.guna2ComboBox1.ItemHeight = 30;
-            this.guna2ComboBox1.Location = new System.Drawing.Point(799, 185);
-            this.guna2ComboBox1.Name = "guna2ComboBox1";
-            this.guna2ComboBox1.Size = new System.Drawing.Size(622, 36);
-            this.guna2ComboBox1.TabIndex = 32;
+            this.txtSubAccountCode.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtSubAccountCode.BackColor = System.Drawing.Color.Transparent;
+            this.txtSubAccountCode.BorderColor = System.Drawing.Color.Silver;
+            this.txtSubAccountCode.BorderRadius = 3;
+            this.txtSubAccountCode.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.txtSubAccountCode.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.txtSubAccountCode.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtSubAccountCode.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtSubAccountCode.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.txtSubAccountCode.ForeColor = System.Drawing.Color.Black;
+            this.txtSubAccountCode.ItemHeight = 30;
+            this.txtSubAccountCode.Location = new System.Drawing.Point(799, 185);
+            this.txtSubAccountCode.Name = "txtSubAccountCode";
+            this.txtSubAccountCode.Size = new System.Drawing.Size(622, 36);
+            this.txtSubAccountCode.TabIndex = 32;
             // 
             // label10
             // 
@@ -457,6 +457,7 @@
             this.txtAccountCode.Name = "txtAccountCode";
             this.txtAccountCode.Size = new System.Drawing.Size(622, 36);
             this.txtAccountCode.TabIndex = 25;
+            this.txtAccountCode.SelectedIndexChanged += new System.EventHandler(this.txtAccountCode_SelectedIndexChanged);
             // 
             // label5
             // 
@@ -487,6 +488,7 @@
             this.txtExpensesType.Name = "txtExpensesType";
             this.txtExpensesType.Size = new System.Drawing.Size(414, 36);
             this.txtExpensesType.TabIndex = 23;
+            this.txtExpensesType.SelectedIndexChanged += new System.EventHandler(this.txtExpensesType_SelectedIndexChanged);
             // 
             // label4
             // 
@@ -689,6 +691,6 @@
         private Guna.UI2.WinForms.Guna2ComboBox txtProjectInput1;
         private Guna.UI2.WinForms.Guna2ComboBox txtProjectInput2;
         private System.Windows.Forms.Label label3;
-        private Guna.UI2.WinForms.Guna2ComboBox guna2ComboBox1;
+        private Guna.UI2.WinForms.Guna2ComboBox txtSubAccountCode;
     }
 }

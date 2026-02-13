@@ -1,22 +1,13 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
+using MySql.Data.MySqlClient;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Security.Cryptography;
-using MySql.Data.MySqlClient;
 
 namespace bfar8_budget_registry2025
 {
     public partial class login : Form
     {
-        //Database configuration
-        public static string connString = "server=localhost;port=3306;user id=root;password=;database=db_bfar8;";
-
         public login()
         {
             InitializeComponent();
@@ -37,7 +28,7 @@ namespace bfar8_budget_registry2025
         }
         public bool VerifyLogin(string userID, string password)
         {
-            using (MySqlConnection conn = new MySqlConnection(connString))
+            using (MySqlConnection conn = dbconn.GetConnection())
             {
                 try
                 {
@@ -66,7 +57,7 @@ namespace bfar8_budget_registry2025
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Error verifying log in: " + ex.Message);
+                    MessageBox.Show("Error: " + ex.Message);
                     return false;
                 }
             }

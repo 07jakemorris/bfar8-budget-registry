@@ -35,6 +35,7 @@
             this.txtFundCluster = new Guna.UI2.WinForms.Guna2ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.btnBreakDown = new Guna.UI2.WinForms.Guna2Button();
             this.txtPosition = new Guna.UI2.WinForms.Guna2ComboBox();
             this.btnSearch = new Guna.UI2.WinForms.Guna2Button();
             this.label11 = new System.Windows.Forms.Label();
@@ -63,7 +64,6 @@
             this.txtExpensesType = new Guna.UI2.WinForms.Guna2ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.txtExpensesClass = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.btnBreakDown = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel1.SuspendLayout();
             this.guna2Panel2.SuspendLayout();
             this.SuspendLayout();
@@ -171,6 +171,24 @@
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.Size = new System.Drawing.Size(785, 494);
             this.guna2Panel1.TabIndex = 25;
+            // 
+            // btnBreakDown
+            // 
+            this.btnBreakDown.BorderColor = System.Drawing.Color.WhiteSmoke;
+            this.btnBreakDown.BorderRadius = 2;
+            this.btnBreakDown.BorderThickness = 2;
+            this.btnBreakDown.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnBreakDown.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnBreakDown.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnBreakDown.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnBreakDown.FillColor = System.Drawing.Color.DarkGreen;
+            this.btnBreakDown.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBreakDown.ForeColor = System.Drawing.Color.White;
+            this.btnBreakDown.Location = new System.Drawing.Point(47, 116);
+            this.btnBreakDown.Name = "btnBreakDown";
+            this.btnBreakDown.Size = new System.Drawing.Size(180, 36);
+            this.btnBreakDown.TabIndex = 33;
+            this.btnBreakDown.Text = "Create Breakdown";
             // 
             // txtPosition
             // 
@@ -529,6 +547,7 @@
             // 
             // txtAmount
             // 
+            this.txtAmount.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtAmount.BorderColor = System.Drawing.Color.Silver;
             this.txtAmount.BorderRadius = 3;
             this.txtAmount.Cursor = System.Windows.Forms.Cursors.IBeam;
@@ -542,7 +561,7 @@
             this.txtAmount.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.txtAmount.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtAmount.Location = new System.Drawing.Point(169, 232);
-            this.txtAmount.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtAmount.Margin = new System.Windows.Forms.Padding(4);
             this.txtAmount.Name = "txtAmount";
             this.txtAmount.PlaceholderForeColor = System.Drawing.Color.Black;
             this.txtAmount.PlaceholderText = "";
@@ -645,24 +664,6 @@
             this.txtExpensesClass.Size = new System.Drawing.Size(385, 36);
             this.txtExpensesClass.TabIndex = 21;
             this.txtExpensesClass.SelectedIndexChanged += new System.EventHandler(this.txtExpensesClass_SelectedIndexChanged);
-            // 
-            // btnBreakDown
-            // 
-            this.btnBreakDown.BorderColor = System.Drawing.Color.WhiteSmoke;
-            this.btnBreakDown.BorderRadius = 2;
-            this.btnBreakDown.BorderThickness = 2;
-            this.btnBreakDown.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnBreakDown.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnBreakDown.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnBreakDown.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnBreakDown.FillColor = System.Drawing.Color.DarkGreen;
-            this.btnBreakDown.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBreakDown.ForeColor = System.Drawing.Color.White;
-            this.btnBreakDown.Location = new System.Drawing.Point(47, 116);
-            this.btnBreakDown.Name = "btnBreakDown";
-            this.btnBreakDown.Size = new System.Drawing.Size(180, 36);
-            this.btnBreakDown.TabIndex = 33;
-            this.btnBreakDown.Text = "Create Breakdown";
             // 
             // earmarking
             // 

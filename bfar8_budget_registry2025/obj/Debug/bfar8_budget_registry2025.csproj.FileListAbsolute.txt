@@ -422,3 +422,5 @@ C:\Users\Lehana\OneDrive\Documents\BFAR8Budget-Registry-Project\bfar8_budget_reg
 C:\Users\Lehana\OneDrive\Documents\BFAR8Budget-Registry-Project\bfar8_budget_registry2025\bin\Debug\System.Text.Encoding.CodePages.xml
 C:\Users\Lehana\OneDrive\Documents\BFAR8Budget-Registry-Project\bfar8_budget_registry2025\obj\Debug\bfar8_budget_registry2025.csproj.SuggestedBindingRedirects.cache
 C:\Users\Lehana\OneDrive\Documents\BFAR8Budget-Registry-Project\bfar8_budget_registry2025\obj\Debug\bfar8_budget_registry2025.exe.config
+C:\Users\Lehana\OneDrive\Documents\BFAR8Budget-Registry-Project\bfar8_budget_registry2025\bin\Debug\MySqlConnector.dll
+C:\Users\Lehana\OneDrive\Documents\BFAR8Budget-Registry-Project\bfar8_budget_registry2025\bin\Debug\MySqlConnector.xml

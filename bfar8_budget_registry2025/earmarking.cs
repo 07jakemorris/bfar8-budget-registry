@@ -227,8 +227,8 @@ namespace bfar8_budget_registry2025
                 {
                     conn.Open();
                     string query = @"
-                        SELECT id
-                        FROM tbl_class_expenses WHERE id = @SelectedID
+                        SELECT expense_class_id
+                        FROM tbl_class_expenses WHERE expense_class_id = @SelectedID
                         ";
                     using (MySqlCommand cmd = new MySqlCommand(query, conn))
                     {
@@ -305,7 +305,7 @@ namespace bfar8_budget_registry2025
                 {
                     conn.Open();
                     string query = @"
-                        SELECT id 
+                        SELECT account_code_id 
                         FROM tbl_account_codes WHERE hasSubAccountCode = 1 AND codeNo = @selectedAccountCode
                         ";
                     using (MySqlCommand cmd = new MySqlCommand(query, conn))
@@ -315,7 +315,7 @@ namespace bfar8_budget_registry2025
                         {
                             if (reader.Read())
                             {
-                                account_code_id = reader["id"].ToString();
+                                account_code_id = reader["account_code_id"].ToString();
                                 getSubAccountCode(account_code_id);
                             }
                             else
@@ -737,7 +737,7 @@ namespace bfar8_budget_registry2025
                 {
                     conn.Open();
                     string query = @"
-                        SELECT *
+                        SELECT expense_class_id, name
                         FROM tbl_class_expenses
                         ";
                     using (MySqlCommand cmd = new MySqlCommand(query, conn))
@@ -746,7 +746,7 @@ namespace bfar8_budget_registry2025
                         {
                             while (reader.Read())
                             {
-                                string id = reader["id"].ToString();
+                                string id = reader["expense_class_id"].ToString();
                                 string name = reader["name"].ToString();
                                 txtExpensesClass.Items.Add($"{id} - {name}");
                             }

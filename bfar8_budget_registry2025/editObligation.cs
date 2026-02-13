@@ -23,6 +23,9 @@ namespace bfar8_budget_registry2025
         public static string expense_category;
         public static string account_code;
         public static string expenseCategoryID;
+        public static string expense_type_id;
+        public static string accountID;
+        public static string selectedAccountID;
         public editObligation()
         {
             InitializeComponent();
@@ -387,7 +390,7 @@ namespace bfar8_budget_registry2025
         }
         private void getExpenseClass()
         {
-            string query = "SELECT id, name FROM tbl_class_expenses";
+            string query = "SELECT expense_class_id, name FROM tbl_class_expenses";
             using (MySqlConnection conn = dbconn.GetConnection())
             {
                 try
@@ -399,7 +402,7 @@ namespace bfar8_budget_registry2025
                         {
                             while (reader.Read())
                             {
-                                string code = reader["id"].ToString();
+                                string code = reader["expense_class_id"].ToString();
                                 string name = reader["name"].ToString();
                                 txtExpensesClass.Items.Add($"{code} - {name}");
                             }
@@ -804,6 +807,147 @@ namespace bfar8_budget_registry2025
                 editORS.Text = "Edit ORS No.";
                 txtORSNo.ReadOnly = true;
             }
+        }
+
+        private void txtExpensesType_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            txtAccountCode.Items.Clear();
+            txtSubAccountCode.Items.Clear();
+            string selectedExpenseType = txtExpensesType.Text;
+
+            if (string.IsNullOrWhiteSpace(selectedExpenseType) || !selectedExpenseType.Contains("-"))
+                return; // skip invalid text
+
+            expense_type_id = selectedExpenseType.Split('-')[0].Trim();
+
+            string fetchExpenseType = "SELECT id FROM tbl_expenses_category WHERE id = @selectedExpenseType";
+            using (MySqlConnection conn = dbconn.GetConnection())
+            {
+                try
+                {
+                    conn.Open();
+                    using (MySqlCommand cmd = new MySqlCommand(fetchExpenseType, conn))
+                    {
+                        cmd.Parameters.AddWithValue("@selectedExpenseType", expense_type_id);
+                        using (MySqlDataReader reader = cmd.ExecuteReader())
+                        {
+                            if (reader.HasRows)
+                            {
+                                getAccountCode(expense_type_id);
+                            }
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error: " + ex.Message);
+                }
+            }
+        }
+        private void getAccountCode(string expense_type_id)
+        {
+            txtAccountCode.Items.Clear();
+            txtAccountCode.Items.Add("- Select Account Code -");
+            string fetchAccountCode = "SELECT codeNo, accountName FROM tbl_account_codes WHERE expensesCategoryID = @selectedExpensesType";
+            using (MySqlConnection conn = dbconn.GetConnection())
+            {
+                try
+                {
+                    conn.Open();
+                    using (MySqlCommand cmd = new MySqlCommand(fetchAccountCode, conn))
+                    {
+                        cmd.Parameters.AddWithValue("@selectedExpensesType", expense_type_id);
+                        using (MySqlDataReader reader = cmd.ExecuteReader())
+                        {
+                            while (reader.Read())
+                            {
+                                string code = reader["codeNo"].ToString();
+                                string account = reader["accountName"].ToString();
+                                txtAccountCode.Items.Add($"{code} - {account}");
+                            }
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error: " + ex.Message);
+                }
+            }
+            txtAccountCode.SelectedIndex = 0;
+        }
+        private void txtAccountCode_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            txtSubAccountCode.Items.Clear();
+            string selectedAccountCode = txtAccountCode.Text;
+
+            if (string.IsNullOrWhiteSpace(selectedAccountCode) || !selectedAccountCode.Contains("-"))
+                return; // skip invalid text
+
+            selectedAccountID = selectedAccountCode.Split(new string[] { " - " }, StringSplitOptions.None)[0];
+
+            string fetchAccountCode = @"
+                SELECT account_code_id 
+                FROM tbl_account_codes WHERE hasSubAccountCode = 1 AND codeNo = @selectedAccountID
+                ";
+            using (MySqlConnection conn = dbconn.GetConnection())
+            {
+                try
+                {
+                    conn.Open();
+                    using (MySqlCommand cmd = new MySqlCommand(fetchAccountCode, conn))
+                    {
+                        cmd.Parameters.AddWithValue("@selectedAccountID", selectedAccountID);
+                        using (MySqlDataReader reader = cmd.ExecuteReader())
+                        {
+                            if (reader.Read())
+                            {
+                                accountID = reader["account_code_id"].ToString();
+                                getSubAccountCode(accountID);
+                            }
+                            else
+                            {
+                                txtSubAccountCode.Items.Add("- No Sub Account Code -");
+                                txtSubAccountCode.SelectedIndex = 0;
+                            }
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error: " + ex.Message);
+                }
+            }
+        }
+        private void getSubAccountCode(string accountID)
+        {
+            txtSubAccountCode.Items.Clear();
+            txtSubAccountCode.Items.Add("- Select Sub Account Code -");
+            string fetchSubAccountCode = "SELECT subAccountCode, subAccountName FROM tbl_sub_account_codes WHERE accountCodeID = @selectedAccountID";
+            using (MySqlConnection conn = dbconn.GetConnection())
+            {
+                try
+                {
+                    conn.Open();
+                    using (MySqlCommand cmd = new MySqlCommand(fetchSubAccountCode, conn))
+                    {
+                        cmd.Parameters.AddWithValue("@selectedAccountID", accountID);
+                        using (MySqlDataReader reader = cmd.ExecuteReader())
+                        {
+                            while (reader.Read())
+                            {
+                                string code = reader["subAccountCode"].ToString();
+                                string account = reader["subAccountName"].ToString();
+                                txtSubAccountCode.Items.Add($"{code} - {account}");
+                            }
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error: " + ex.Message);
+                }
+            }
+            txtSubAccountCode.SelectedIndex = 0;
         }
     }
 }

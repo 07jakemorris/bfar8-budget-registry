@@ -544,7 +544,7 @@ namespace bfar8_budget_registry2025
         {
             txtExpensesClass.Items.Clear();
             txtExpensesClass.Items.Add("- Select Expense Class -");
-            string fetch = "SELECT id, name FROM tbl_class_expenses";
+            string fetch = "SELECT expense_class_id, name FROM tbl_class_expenses";
             using (MySqlConnection conn = dbconn.GetConnection())
             {
                 try
@@ -556,7 +556,7 @@ namespace bfar8_budget_registry2025
 
                         while (reader.Read())
                         {
-                            string id = reader["id"].ToString();
+                            string id = reader["expense_class_id"].ToString();
                             string name = reader["name"].ToString();
                             txtExpensesClass.Items.Add($"{id} - {name}");
                         }
@@ -583,7 +583,7 @@ namespace bfar8_budget_registry2025
 
             expense_class_id = selectedExpenseClass.Split('-')[0].Trim();
 
-            string fetchExpenseType = "SELECT id FROM tbl_class_expenses WHERE id = @selectedExpenseClass";
+            string fetchExpenseType = "SELECT expense_class_id FROM tbl_class_expenses WHERE expense_class_id = @selectedExpenseClass";
             using (MySqlConnection conn = dbconn.GetConnection())
             {
                 try
@@ -718,7 +718,7 @@ namespace bfar8_budget_registry2025
             selectedAccountID = selectedAccountCode.Split(new string[] { " - " }, StringSplitOptions.None)[0];
 
             string fetchAccountCode = @"
-                SELECT id 
+                SELECT account_code_id 
                 FROM tbl_account_codes WHERE hasSubAccountCode = 1 AND codeNo = @selectedAccountID
                 ";
             using (MySqlConnection conn = dbconn.GetConnection())
@@ -733,7 +733,7 @@ namespace bfar8_budget_registry2025
                         {
                             if (reader.Read())
                             {
-                                accountID = reader["id"].ToString();
+                                accountID = reader["account_code_id"].ToString();
                                 getSubAccountCode(accountID);
                             }
                             else
