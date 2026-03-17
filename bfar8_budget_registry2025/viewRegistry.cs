@@ -40,9 +40,7 @@ namespace bfar8_budget_registry2025
             obligationsTable.AutoGenerateColumns = false;
 
             obligationsTable.Columns["id"].DataPropertyName = "id";
-            obligationsTable.Columns["month"].DataPropertyName = "month";
-            obligationsTable.Columns["day"].DataPropertyName = "day";
-            obligationsTable.Columns["year"].DataPropertyName = "year";
+            obligationsTable.Columns["date"].DataPropertyName = "date";
             obligationsTable.Columns["orsNo"].DataPropertyName = "orsNo";
             obligationsTable.Columns["payee"].DataPropertyName = "payee";
             obligationsTable.Columns["particulars"].DataPropertyName = "particulars";        
@@ -255,7 +253,7 @@ namespace bfar8_budget_registry2025
             using (MySqlConnection conn = dbconn.GetConnection())
             {
                 conn.Open();
-                string query = @"SELECT id, month, day, year, orsNo, payee, particulars, responsibility_center, signatory, position, obligations_incurred
+                string query = @"SELECT id, date, orsNo, payee, particulars, responsibility_center, signatory, position, obligations_incurred
                         FROM tbl_obligations 
                         WHERE payee = @Payee
                         ";

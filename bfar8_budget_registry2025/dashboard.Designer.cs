@@ -40,6 +40,8 @@
             this.btnInsert = new Guna.UI2.WinForms.Guna2Button();
             this.btnEarmarks = new Guna.UI2.WinForms.Guna2Button();
             this.panelMenu = new System.Windows.Forms.Panel();
+            this.allocationHighlight = new Guna.UI2.WinForms.Guna2Button();
+            this.btnAllocation = new Guna.UI2.WinForms.Guna2Button();
             this.reportHighlight = new Guna.UI2.WinForms.Guna2Button();
             this.btnReport = new Guna.UI2.WinForms.Guna2Button();
             this.manageHighlight = new Guna.UI2.WinForms.Guna2Button();
@@ -140,6 +142,8 @@
             this.btnInsert.ImageSize = new System.Drawing.Size(24, 24);
             this.btnInsert.Location = new System.Drawing.Point(0, 235);
             this.btnInsert.Name = "btnInsert";
+            this.btnInsert.PressedColor = System.Drawing.Color.Transparent;
+            this.btnInsert.PressedDepth = 0;
             this.btnInsert.Size = new System.Drawing.Size(224, 45);
             this.btnInsert.TabIndex = 0;
             this.btnInsert.Text = "Insert Obligations";
@@ -161,6 +165,8 @@
             this.btnEarmarks.ImageOffset = new System.Drawing.Point(-24, 0);
             this.btnEarmarks.Location = new System.Drawing.Point(0, 280);
             this.btnEarmarks.Name = "btnEarmarks";
+            this.btnEarmarks.PressedColor = System.Drawing.Color.Transparent;
+            this.btnEarmarks.PressedDepth = 0;
             this.btnEarmarks.Size = new System.Drawing.Size(224, 45);
             this.btnEarmarks.TabIndex = 2;
             this.btnEarmarks.Text = "Earmarking";
@@ -170,6 +176,8 @@
             // panelMenu
             // 
             this.panelMenu.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.panelMenu.Controls.Add(this.allocationHighlight);
+            this.panelMenu.Controls.Add(this.btnAllocation);
             this.panelMenu.Controls.Add(this.reportHighlight);
             this.panelMenu.Controls.Add(this.btnReport);
             this.panelMenu.Controls.Add(this.manageHighlight);
@@ -188,6 +196,49 @@
             this.panelMenu.Name = "panelMenu";
             this.panelMenu.Size = new System.Drawing.Size(224, 951);
             this.panelMenu.TabIndex = 0;
+            // 
+            // allocationHighlight
+            // 
+            this.allocationHighlight.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.allocationHighlight.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.allocationHighlight.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.allocationHighlight.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.allocationHighlight.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.allocationHighlight.FillColor = System.Drawing.Color.LightSkyBlue;
+            this.allocationHighlight.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.allocationHighlight.ForeColor = System.Drawing.Color.White;
+            this.allocationHighlight.ImageOffset = new System.Drawing.Point(-30, 0);
+            this.allocationHighlight.ImageSize = new System.Drawing.Size(22, 22);
+            this.allocationHighlight.Location = new System.Drawing.Point(217, 460);
+            this.allocationHighlight.Name = "allocationHighlight";
+            this.allocationHighlight.Size = new System.Drawing.Size(7, 45);
+            this.allocationHighlight.TabIndex = 14;
+            this.allocationHighlight.TextOffset = new System.Drawing.Point(-25, 0);
+            this.allocationHighlight.Visible = false;
+            // 
+            // btnAllocation
+            // 
+            this.btnAllocation.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAllocation.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnAllocation.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnAllocation.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnAllocation.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnAllocation.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnAllocation.FillColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.btnAllocation.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            this.btnAllocation.ForeColor = System.Drawing.Color.White;
+            this.btnAllocation.Image = ((System.Drawing.Image)(resources.GetObject("btnAllocation.Image")));
+            this.btnAllocation.ImageOffset = new System.Drawing.Point(-14, 0);
+            this.btnAllocation.ImageSize = new System.Drawing.Size(22, 22);
+            this.btnAllocation.Location = new System.Drawing.Point(0, 460);
+            this.btnAllocation.Name = "btnAllocation";
+            this.btnAllocation.PressedColor = System.Drawing.Color.Transparent;
+            this.btnAllocation.PressedDepth = 0;
+            this.btnAllocation.Size = new System.Drawing.Size(224, 45);
+            this.btnAllocation.TabIndex = 13;
+            this.btnAllocation.Text = "Budget Allocation";
+            this.btnAllocation.TextOffset = new System.Drawing.Point(-12, 0);
+            this.btnAllocation.Click += new System.EventHandler(this.btnAllocation_Click);
             // 
             // reportHighlight
             // 
@@ -217,17 +268,19 @@
             this.btnReport.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnReport.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnReport.FillColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.btnReport.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReport.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
             this.btnReport.ForeColor = System.Drawing.Color.White;
             this.btnReport.Image = ((System.Drawing.Image)(resources.GetObject("btnReport.Image")));
-            this.btnReport.ImageOffset = new System.Drawing.Point(-19, 0);
+            this.btnReport.ImageOffset = new System.Drawing.Point(-29, 0);
             this.btnReport.ImageSize = new System.Drawing.Size(24, 24);
             this.btnReport.Location = new System.Drawing.Point(0, 415);
             this.btnReport.Name = "btnReport";
+            this.btnReport.PressedColor = System.Drawing.Color.Transparent;
+            this.btnReport.PressedDepth = 0;
             this.btnReport.Size = new System.Drawing.Size(224, 45);
             this.btnReport.TabIndex = 11;
-            this.btnReport.Text = "Budget Report";
-            this.btnReport.TextOffset = new System.Drawing.Point(-17, 0);
+            this.btnReport.Text = "Reports";
+            this.btnReport.TextOffset = new System.Drawing.Point(-27, 0);
             this.btnReport.Click += new System.EventHandler(this.btnReport_Click);
             // 
             // manageHighlight
@@ -341,6 +394,8 @@
             this.btnManage.ImageSize = new System.Drawing.Size(24, 24);
             this.btnManage.Location = new System.Drawing.Point(0, 370);
             this.btnManage.Name = "btnManage";
+            this.btnManage.PressedColor = System.Drawing.Color.Transparent;
+            this.btnManage.PressedDepth = 0;
             this.btnManage.Size = new System.Drawing.Size(224, 45);
             this.btnManage.TabIndex = 5;
             this.btnManage.Text = "Manage Data";
@@ -363,6 +418,8 @@
             this.btnView.ImageSize = new System.Drawing.Size(26, 26);
             this.btnView.Location = new System.Drawing.Point(0, 325);
             this.btnView.Name = "btnView";
+            this.btnView.PressedColor = System.Drawing.Color.Transparent;
+            this.btnView.PressedDepth = 0;
             this.btnView.Size = new System.Drawing.Size(224, 45);
             this.btnView.TabIndex = 4;
             this.btnView.Text = "View Obligations";
@@ -385,6 +442,8 @@
             this.btnHome.ImageSize = new System.Drawing.Size(22, 22);
             this.btnHome.Location = new System.Drawing.Point(0, 190);
             this.btnHome.Name = "btnHome";
+            this.btnHome.PressedColor = System.Drawing.Color.Transparent;
+            this.btnHome.PressedDepth = 0;
             this.btnHome.Size = new System.Drawing.Size(224, 45);
             this.btnHome.TabIndex = 1;
             this.btnHome.Text = "Home";
@@ -437,5 +496,7 @@
         private Guna.UI2.WinForms.Guna2Button viewHighlight;
         private Guna.UI2.WinForms.Guna2Button btnReport;
         private Guna.UI2.WinForms.Guna2Button reportHighlight;
+        private Guna.UI2.WinForms.Guna2Button btnAllocation;
+        private Guna.UI2.WinForms.Guna2Button allocationHighlight;
     }
 }

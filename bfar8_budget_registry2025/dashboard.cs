@@ -1,21 +1,23 @@
-﻿using System;
+﻿using FontAwesome.Sharp;
+using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Data.SqlTypes;
 using System.Drawing;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
-using FontAwesome.Sharp;
+using System.Windows;
 using System.Windows.Forms;
 
 namespace bfar8_budget_registry2025
 {
     public partial class dashboard : Form
     {
-        public static dashboard Instance;
-
+        public static dashboard Instance;      
         public dashboard()
         {
             InitializeComponent();
@@ -46,6 +48,7 @@ namespace bfar8_budget_registry2025
             btnEarmarks.FillColor = darkBlue;
             btnManage.FillColor = darkBlue;
             btnReport.FillColor = darkBlue;
+            btnAllocation.FillColor = darkBlue;
             panelTop.FillColor = darkBlue;
             MakePictureCircular(logoPic);
         }
@@ -104,12 +107,21 @@ namespace bfar8_budget_registry2025
             viewHighlight.Visible = false;
             manageHighlight.Visible = false;
             reportHighlight.Visible = false;
+            allocationHighlight.Visible = false;
         }
 
         private void btnReport_Click(object sender, EventArgs e)
         {
             hideHighlight();
             reportHighlight.Visible = true;
+
+            LoadForm(new reports());
+        }
+
+        private void btnAllocation_Click(object sender, EventArgs e)
+        {
+            hideHighlight();
+            allocationHighlight.Visible = true;
 
             LoadForm(new reports());
         }

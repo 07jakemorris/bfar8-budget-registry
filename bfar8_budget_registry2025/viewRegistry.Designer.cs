@@ -28,24 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(viewRegistry));
             this.obligationsTable = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.month = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.day = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.year = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.orsNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.payee = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.particulars = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.responsibility_center = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.signatory = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.position = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.obligations_incurred = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.txtPayee = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtORSNo = new Guna.UI2.WinForms.Guna2TextBox();
@@ -53,6 +42,15 @@
             this.lblSearch = new System.Windows.Forms.Label();
             this.searchResultDGV = new System.Windows.Forms.DataGridView();
             this.resultPayee = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.date = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.orsNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.payee = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.particulars = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.responsibility_center = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.signatory = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.position = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.obligations_incurred = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.obligationsTable)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.searchResultDGV)).BeginInit();
@@ -61,27 +59,25 @@
             // obligationsTable
             // 
             this.obligationsTable.AllowUserToAddRows = false;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
-            this.obligationsTable.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            this.obligationsTable.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.obligationsTable.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.None;
             this.obligationsTable.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
             this.obligationsTable.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.obligationsTable.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.DarkGreen;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.DarkGreen;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.obligationsTable.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.DarkGreen;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.DarkGreen;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.obligationsTable.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.obligationsTable.ColumnHeadersHeight = 32;
             this.obligationsTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.obligationsTable.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.id,
-            this.month,
-            this.day,
-            this.year,
+            this.date,
             this.orsNo,
             this.payee,
             this.particulars,
@@ -89,30 +85,30 @@
             this.signatory,
             this.position,
             this.obligations_incurred});
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.obligationsTable.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.obligationsTable.DefaultCellStyle = dataGridViewCellStyle3;
             this.obligationsTable.GridColor = System.Drawing.Color.Gray;
             this.obligationsTable.Location = new System.Drawing.Point(11, 208);
             this.obligationsTable.Name = "obligationsTable";
             this.obligationsTable.ReadOnly = true;
             this.obligationsTable.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.obligationsTable.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.obligationsTable.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.obligationsTable.RowHeadersVisible = false;
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.obligationsTable.RowsDefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.obligationsTable.RowsDefaultCellStyle = dataGridViewCellStyle5;
             this.obligationsTable.RowTemplate.DefaultCellStyle.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             this.obligationsTable.Size = new System.Drawing.Size(1434, 731);
             this.obligationsTable.TabIndex = 3;
@@ -138,84 +134,6 @@
             this.obligationsTable.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.obligationsTable.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             this.obligationsTable.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.obligationsTable_CellContentClick);
-            // 
-            // id
-            // 
-            this.id.HeaderText = "ID";
-            this.id.Name = "id";
-            this.id.ReadOnly = true;
-            this.id.Visible = false;
-            // 
-            // month
-            // 
-            this.month.HeaderText = "Month";
-            this.month.Name = "month";
-            this.month.ReadOnly = true;
-            this.month.Width = 70;
-            // 
-            // day
-            // 
-            this.day.HeaderText = "Day";
-            this.day.Name = "day";
-            this.day.ReadOnly = true;
-            this.day.Width = 50;
-            // 
-            // year
-            // 
-            this.year.HeaderText = "Year";
-            this.year.Name = "year";
-            this.year.ReadOnly = true;
-            this.year.Width = 65;
-            // 
-            // orsNo
-            // 
-            this.orsNo.HeaderText = "ORS No.";
-            this.orsNo.Name = "orsNo";
-            this.orsNo.ReadOnly = true;
-            this.orsNo.Width = 90;
-            // 
-            // payee
-            // 
-            this.payee.HeaderText = "Payee";
-            this.payee.Name = "payee";
-            this.payee.ReadOnly = true;
-            this.payee.Width = 180;
-            // 
-            // particulars
-            // 
-            this.particulars.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.particulars.HeaderText = "Particulars";
-            this.particulars.Name = "particulars";
-            this.particulars.ReadOnly = true;
-            // 
-            // responsibility_center
-            // 
-            this.responsibility_center.HeaderText = "Responsibility Center";
-            this.responsibility_center.Name = "responsibility_center";
-            this.responsibility_center.ReadOnly = true;
-            this.responsibility_center.Width = 170;
-            // 
-            // signatory
-            // 
-            this.signatory.HeaderText = "Signatory";
-            this.signatory.Name = "signatory";
-            this.signatory.ReadOnly = true;
-            this.signatory.Width = 180;
-            // 
-            // position
-            // 
-            this.position.HeaderText = "Position";
-            this.position.Name = "position";
-            this.position.ReadOnly = true;
-            this.position.Visible = false;
-            this.position.Width = 150;
-            // 
-            // obligations_incurred
-            // 
-            this.obligations_incurred.HeaderText = "Obligations Incurred";
-            this.obligations_incurred.Name = "obligations_incurred";
-            this.obligations_incurred.ReadOnly = true;
-            this.obligations_incurred.Width = 120;
             // 
             // guna2CirclePictureBox1
             // 
@@ -336,6 +254,70 @@
             this.resultPayee.Name = "resultPayee";
             this.resultPayee.ReadOnly = true;
             // 
+            // id
+            // 
+            this.id.HeaderText = "ID";
+            this.id.Name = "id";
+            this.id.ReadOnly = true;
+            this.id.Visible = false;
+            // 
+            // date
+            // 
+            this.date.HeaderText = "Obligation Date";
+            this.date.Name = "date";
+            this.date.ReadOnly = true;
+            this.date.Width = 140;
+            // 
+            // orsNo
+            // 
+            this.orsNo.HeaderText = "ORS No.";
+            this.orsNo.Name = "orsNo";
+            this.orsNo.ReadOnly = true;
+            this.orsNo.Width = 90;
+            // 
+            // payee
+            // 
+            this.payee.HeaderText = "Payee";
+            this.payee.Name = "payee";
+            this.payee.ReadOnly = true;
+            this.payee.Width = 180;
+            // 
+            // particulars
+            // 
+            this.particulars.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.particulars.HeaderText = "Particulars";
+            this.particulars.Name = "particulars";
+            this.particulars.ReadOnly = true;
+            // 
+            // responsibility_center
+            // 
+            this.responsibility_center.HeaderText = "Responsibility Center";
+            this.responsibility_center.Name = "responsibility_center";
+            this.responsibility_center.ReadOnly = true;
+            this.responsibility_center.Width = 170;
+            // 
+            // signatory
+            // 
+            this.signatory.HeaderText = "Signatory";
+            this.signatory.Name = "signatory";
+            this.signatory.ReadOnly = true;
+            this.signatory.Width = 180;
+            // 
+            // position
+            // 
+            this.position.HeaderText = "Position";
+            this.position.Name = "position";
+            this.position.ReadOnly = true;
+            this.position.Visible = false;
+            this.position.Width = 150;
+            // 
+            // obligations_incurred
+            // 
+            this.obligations_incurred.HeaderText = "Obligations Incurred";
+            this.obligations_incurred.Name = "obligations_incurred";
+            this.obligations_incurred.ReadOnly = true;
+            this.obligations_incurred.Width = 120;
+            // 
             // viewRegistry
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -362,17 +344,6 @@
 
         #endregion
         private Guna.UI2.WinForms.Guna2DataGridView obligationsTable;
-        private System.Windows.Forms.DataGridViewTextBoxColumn id;
-        private System.Windows.Forms.DataGridViewTextBoxColumn month;
-        private System.Windows.Forms.DataGridViewTextBoxColumn day;
-        private System.Windows.Forms.DataGridViewTextBoxColumn year;
-        private System.Windows.Forms.DataGridViewTextBoxColumn orsNo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn payee;
-        private System.Windows.Forms.DataGridViewTextBoxColumn particulars;
-        private System.Windows.Forms.DataGridViewTextBoxColumn responsibility_center;
-        private System.Windows.Forms.DataGridViewTextBoxColumn signatory;
-        private System.Windows.Forms.DataGridViewTextBoxColumn position;
-        private System.Windows.Forms.DataGridViewTextBoxColumn obligations_incurred;
         private Guna.UI2.WinForms.Guna2CirclePictureBox guna2CirclePictureBox1;
         private Guna.UI2.WinForms.Guna2TextBox txtPayee;
         private Guna.UI2.WinForms.Guna2TextBox txtORSNo;
@@ -380,5 +351,14 @@
         private System.Windows.Forms.Label lblSearch;
         private System.Windows.Forms.DataGridView searchResultDGV;
         private System.Windows.Forms.DataGridViewTextBoxColumn resultPayee;
+        private System.Windows.Forms.DataGridViewTextBoxColumn id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn date;
+        private System.Windows.Forms.DataGridViewTextBoxColumn orsNo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn payee;
+        private System.Windows.Forms.DataGridViewTextBoxColumn particulars;
+        private System.Windows.Forms.DataGridViewTextBoxColumn responsibility_center;
+        private System.Windows.Forms.DataGridViewTextBoxColumn signatory;
+        private System.Windows.Forms.DataGridViewTextBoxColumn position;
+        private System.Windows.Forms.DataGridViewTextBoxColumn obligations_incurred;
     }
 }

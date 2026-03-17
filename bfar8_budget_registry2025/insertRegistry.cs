@@ -823,9 +823,6 @@ namespace bfar8_budget_registry2025
         {
             //Check for creditor type -->
             string creditorType = "";
-            string month = "";
-            string day = "";
-            string year = "";
             if (btnExternalCred.Checked == true)
             {
                 creditorType = "External Creditor";
@@ -834,29 +831,16 @@ namespace bfar8_budget_registry2025
             {
                 creditorType = "Internal Creditor";
             }
-            //Breaks down txtDate value to Month, Day and Year -->
-            string dateText = txtDate.Text;
-
-            if (DateTime.TryParse(dateText, out DateTime parsedDate))
-            {
-                month = parsedDate.ToString("MMMM");
-                day = parsedDate.Day.ToString("00");    
-                year = parsedDate.Year.ToString();   
-            }
-            else
-            {
-                MessageBox.Show("Invalid date format. Please enter a valid date (e.g., 10/17/2025 10:26 AM).");
-            }
 
             //Insert obligation command -->
             string insertQuery = @"INSERT INTO `tbl_obligations`
-            (`month`, `day`, `year`, `quarter`, `orsNo`, `payee`, `creditorType`, `particulars`,
+            (`date`, `quarter`, `orsNo`, `payee`, `creditorType`, `particulars`,
             `fund_cluster`, `financing_source`, `authorization_code`, `fund_category`, `full_funding_code`,
             `department_code`, `agency_code`, `operating_unit_classification`, `lower_level_unit`,
             `responsibility_center`, `signatory`, `position`, `program_project`, `project_category`,
             `project_sub_category`, `activity_level`, `expense_class`, `expense_type`, `account_code`, `obligations_incurred`)
             VALUES 
-            (@month, @day, @year, @quarter, @orsNo, @payee, @creditorType, @particulars,
+            (@date, @quarter, @orsNo, @payee, @creditorType, @particulars,
             @fundCluster, @financingSource, @authorizationCode, @fundCategory, @fullFundingCode,
             @departmentCode, @agencyCode, @operatingUnit, @lowerUnit, @responsibilityCenter,
             @signatory, @position, @project, @projectCategory, @projectSubCategory, @activityLevel,
@@ -870,9 +854,7 @@ namespace bfar8_budget_registry2025
                     conn.Open();
                     using (MySqlCommand cmd = new MySqlCommand(insertQuery, conn))
                     {
-                        cmd.Parameters.AddWithValue("@month", month);
-                        cmd.Parameters.AddWithValue("@day", day);
-                        cmd.Parameters.AddWithValue("@year", year);
+                        cmd.Parameters.AddWithValue("@date", txtDate.Value);
                         cmd.Parameters.AddWithValue("@quarter", txtQuarter.Text);
                         cmd.Parameters.AddWithValue("@orsNo", txtORSNo.Text);
                         cmd.Parameters.AddWithValue("@payee", txtPayee.Text);

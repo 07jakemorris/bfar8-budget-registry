@@ -14,8 +14,8 @@ namespace bfar8_budget_registry2025
 {
     public partial class reports : Form
     {
-        private string responsibility_center;
-        private string expense_class;
+        private int selected_fy_id;
+        private int selected_ec_id;
         public reports()
         {
             InitializeComponent();
@@ -30,6 +30,8 @@ namespace bfar8_budget_registry2025
         {
             initializePropertyComponents();
             loadingTimer.Start();
+            loadFiscalYear();
+            txtYear.SelectedIndex = 2;
         }
         private void initializePropertyComponents()
         {
@@ -73,6 +75,33 @@ namespace bfar8_budget_registry2025
                - panel3.Margin.Bottom
                - bottomPanel.Margin.Top;
         }
+        private void loadFiscalYear()
+        {
+            using (MySqlConnection conn = dbconn.GetConnection())
+            {
+                try
+                {
+                    conn.Open();
+                    string query = @"SELECT year 
+                                    FROM tbl_fiscal_year
+                                    ";
+                    using (MySqlCommand cmd = new MySqlCommand(query, conn))
+                    {
+                        using (MySqlDataReader reader = cmd.ExecuteReader())
+                        {
+                            while (reader.Read())
+                            {
+                                txtYear.Items.Add(reader["year"].ToString());
+                            }
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error: " + ex.Message);
+                }
+            }
+        }
         private void ResizePanelToContent()
         {
             int rowsHeight = table1.Rows
@@ -107,11 +136,6 @@ namespace bfar8_budget_registry2025
                 }
             }
         }
-        private void getExpenseClass()
-        {
-
-        }
-
         private void btnUp_Click(object sender, EventArgs e)
         {
             btnUp.Visible = false;
@@ -132,6 +156,7 @@ namespace bfar8_budget_registry2025
             btnDown.Visible = true;
             panelExpenseClass.Height = 0;
             txtExpenseClass.Text = btnAllExpenseClass.Text;
+            getAllExpenseClassID();
         }
 
         private void btnPSClass_Click(object sender, EventArgs e)
@@ -140,6 +165,7 @@ namespace bfar8_budget_registry2025
             btnDown.Visible = true;
             panelExpenseClass.Height = 0;
             txtExpenseClass.Text = btnPSClass.Text;
+            getExpenseClassID();
         }
 
         private void btnMOOEClass_Click(object sender, EventArgs e)
@@ -148,6 +174,7 @@ namespace bfar8_budget_registry2025
             btnDown.Visible = true;
             panelExpenseClass.Height = 0;
             txtExpenseClass.Text = btnMOOEClass.Text;
+            getExpenseClassID();
         }
 
         private void btnCOClass_Click(object sender, EventArgs e)
@@ -156,6 +183,7 @@ namespace bfar8_budget_registry2025
             btnDown.Visible = true;
             panelExpenseClass.Height = 0;
             txtExpenseClass.Text = btnCOClass.Text;
+            getExpenseClassID();
         }
 
         private void txtResponsibilityCenter_TextChanged(object sender, EventArgs e)
@@ -206,6 +234,8 @@ namespace bfar8_budget_registry2025
             DataGridViewRow row = this.responsibilityCenterResult.Rows[e.RowIndex];
             txtResponsibilityCenter.Text = row.Cells["name"].Value.ToString();
             responsibilityCenterResult.Height = 0;
+            getFYID();
+            getData(selected_fy_id, selected_ec_id);
         }
 
         private void loadingTimer_Tick(object sender, EventArgs e)
@@ -221,6 +251,196 @@ namespace bfar8_budget_registry2025
             else if (lblWait.Text == "Please wait...")
             {
                 lblWait.Text = "Please wait.";
+            }
+        }
+        private void getFYID()
+        {
+            using (MySqlConnection conn = dbconn.GetConnection())
+            {
+                try
+                {
+                    conn.Open();
+                    string query = @"SELECT fy_id 
+                                    FROM tbl_fiscal_year
+                                    WHERE year = @selectedYear
+                                    ";
+                    using (MySqlCommand cmd = new MySqlCommand(query, conn))
+                    {
+                        cmd.Parameters.AddWithValue("@selectedYear", txtYear.Text);
+                        using (MySqlDataReader reader = cmd.ExecuteReader())
+                        {
+                            if (reader.Read())
+                            {
+                                selected_fy_id = Convert.ToInt32(reader["fy_id"]);
+                            }
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error: " + ex.Message);
+                }
+            }
+        }
+        private void getExpenseClassID()
+        {
+            using (MySqlConnection conn = dbconn.GetConnection())
+            {
+                try
+                {
+                    conn.Open();
+                    string query = @"SELECT expense_class_id 
+                                    FROM tbl_class_expenses
+                                    WHERE name = @selectedExpense
+                                    ";
+                    using (MySqlCommand cmd = new MySqlCommand(query, conn))
+                    {
+                        cmd.Parameters.AddWithValue("@selectedExpense", txtExpenseClass.Text);
+                        using (MySqlDataReader reader = cmd.ExecuteReader())
+                        {
+                            if (reader.Read())
+                            {
+                                selected_ec_id = Convert.ToInt32(reader["name"]);
+                            }
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error: " + ex.Message);
+                }
+            }
+        }
+        private void getAllExpenseClassID()
+        {
+            using (MySqlConnection conn = dbconn.GetConnection())
+            {
+                try
+                {
+                    conn.Open();
+                    string query = @"SELECT expense_class_id 
+                                    FROM tbl_class_expenses
+                                    ";
+                    using (MySqlCommand cmd = new MySqlCommand(query, conn))
+                    {
+                        cmd.Parameters.AddWithValue("@selectedExpense", txtExpenseClass.Text);
+                        using (MySqlDataReader reader = cmd.ExecuteReader())
+                        {
+                            if (reader.Read())
+                            {
+                                selected_ec_id = Convert.ToInt32(reader["name"]);
+                            }
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error: " + ex.Message);
+                }
+            }
+        }
+
+        //private void getData(string rcName, string expenseClass, string fiscalYear)
+        private void getData(int selected_fy_id, int selected_ec_id)
+        {
+            using (MySqlConnection conn = dbconn.GetConnection())
+            {
+                try
+                {
+                    conn.Open();
+                    string query = @"
+                                    SELECT 
+                                        tbl_account_codes.account_code_id,
+
+                                        IFNULL(total_allotments.total_allotment, 0) AS total_allotment,
+                                        IFNULL(total_obligations.total_obligation, 0) AS total_obligation,
+                                        IFNULL(total_disbursements.total_disbursement, 0) AS total_disbursement,
+                                        IFNULL(total_earmarks.total_earmarks, 0) AS total_earmarks,
+
+                                        (IFNULL(total_obligations.total_obligation, 0) - IFNULL(total_disbursements.total_disbursement, 0)) AS unpaid_obligation,
+                                        (IFNULL(total_allotments.total_allotment, 0) - IFNULL(total_obligations.total_obligation, 0) - IFNULL(total_earmarks.total_earmarks, 0)) AS unobligated_balance
+
+                                    FROM tbl_account_codes
+
+                                    LEFT JOIN (
+                                        SELECT 
+                                            account_code_id, 
+                                            SUM(amount_allotted) AS total_allotment
+                                        FROM tbl_allotments
+                                        WHERE responsibility_center = @rc
+                                          AND fy_id = @fy
+                                        GROUP BY account_code_id
+                                    ) AS total_allotments
+                                    ON tbl_account_codes.account_code_id = total_allotments.account_code_id
+
+                                    LEFT JOIN (
+                                        SELECT 
+                                            account_code_id, 
+                                            SUM(obligations_incurred) AS total_obligation
+                                        FROM tbl_obligations
+                                        WHERE responsibility_center = @rc
+                                          AND fy_id = @fy
+                                        GROUP BY account_code_id
+                                    ) AS total_obligations
+                                    ON tbl_account_codes.account_code_id = total_obligations.account_code_id
+
+                                    LEFT JOIN (
+                                        SELECT 
+                                            tbl_obligations.account_code_id, 
+                                            SUM(tbl_disbursements.amount_disbursed) AS total_disbursement
+                                        FROM tbl_disbursements
+                                        JOIN tbl_obligations 
+                                            ON tbl_disbursements.obligation_id = tbl_obligations.id
+                                        WHERE tbl_obligations.responsibility_center = @rc
+                                          AND tbl_obligations.fy_id = @fy
+                                        GROUP BY tbl_obligations.account_code_id
+                                    ) AS total_disbursements
+                                    ON tbl_account_codes.account_code_id = total_disbursements.account_code_id
+
+                                    LEFT JOIN (
+                                        SELECT 
+                                            account_code_id, 
+                                            SUM(amount_earmarked) AS total_earmarks
+                                        FROM tbl_earmarks
+                                        WHERE responsibility_center = @rc
+                                          AND fy_id = @fy
+                                        GROUP BY account_code_id
+                                    ) AS total_earmarks
+                                    ON tbl_account_codes.account_code_id = total_earmarks.account_code_id
+
+                                    WHERE tbl_account_codes.expense_class_id = @expClass;
+                                ";
+
+                    using (MySqlCommand cmd = new MySqlCommand(query, conn))
+                    {
+                        // Set string parameters
+                        cmd.Parameters.AddWithValue("@rc", txtResponsibilityCenter.Text);
+                        cmd.Parameters.AddWithValue("@fy", selected_fy_id);
+                        cmd.Parameters.AddWithValue("@expClass", selected_ec_id);
+
+                        MySqlDataAdapter adapter = new MySqlDataAdapter(cmd);
+                        DataTable dt = new DataTable();
+                        adapter.Fill(dt);
+
+                        // Bind to DataGridView
+                        table1.DataSource = dt;
+
+                        // Optional: format numeric columns
+                        string[] moneyCols = { "total_allotment", "total_obligation", "total_disbursement", "total_earmarks", "unpaid_obligation", "unobligated_balance" };
+                        foreach (var col in moneyCols)
+                        {
+                            if (table1.Columns[col] != null)
+                            {
+                                table1.Columns[col].DefaultCellStyle.Format = "N2";
+                                table1.Columns[col].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
+                            }
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error fetching data: " + ex.Message);
+                }
             }
         }
     }
