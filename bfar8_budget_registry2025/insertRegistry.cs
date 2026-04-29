@@ -47,9 +47,6 @@ namespace bfar8_budget_registry2025
         public static string selectedAccountID;
         public static string accountID;
 
-        //List for Responsibility Center
-        private List<(string Name, string Type)> allCenters = new List<(string, string)>();
-
         public insertRegistry()
         {
             InitializeComponent();
@@ -1039,7 +1036,7 @@ namespace bfar8_budget_registry2025
                 conn.Open();
 
                 // Get the most recent ORsNo
-                string query = "SELECT orsNo FROM tbl_obligations ORDER BY id DESC LIMIT 1";
+                string query = "SELECT orsNo FROM tbl_obligations ORDER BY obligation_id DESC LIMIT 1";
 
                 using (MySqlCommand cmd = new MySqlCommand(query, conn))
                 {

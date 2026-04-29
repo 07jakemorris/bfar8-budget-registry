@@ -39,8 +39,7 @@ namespace bfar8_budget_registry2025
         {
             obligationsTable.AutoGenerateColumns = false;
 
-            obligationsTable.Columns["id"].DataPropertyName = "id";
-            obligationsTable.Columns["date"].DataPropertyName = "date";
+            obligationsTable.Columns["obligation_id"].DataPropertyName = "obligation_id";
             obligationsTable.Columns["orsNo"].DataPropertyName = "orsNo";
             obligationsTable.Columns["payee"].DataPropertyName = "payee";
             obligationsTable.Columns["particulars"].DataPropertyName = "particulars";        
@@ -57,44 +56,6 @@ namespace bfar8_budget_registry2025
             obligationsTable.Columns["obligations_incurred"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
         }
 
-        private void addActionButtons()
-        {
-            // Edit button
-            if (!obligationsTable.Columns.Contains("edit"))
-            {
-                DataGridViewButtonColumn editBtn = new DataGridViewButtonColumn();
-                editBtn.Name = "edit";
-                editBtn.HeaderText = "Edit";
-                editBtn.Text = "Edit";
-                editBtn.UseColumnTextForButtonValue = true;
-                editBtn.Width = 50;
-                obligationsTable.Columns.Add(editBtn);
-            }
-
-            // View button
-            if (!obligationsTable.Columns.Contains("view"))
-            {
-                DataGridViewButtonColumn viewBtn = new DataGridViewButtonColumn();
-                viewBtn.Name = "view";
-                viewBtn.HeaderText = "View";
-                viewBtn.Text = "View";
-                viewBtn.UseColumnTextForButtonValue = true;
-                viewBtn.Width = 50;
-                obligationsTable.Columns.Add(viewBtn);
-            }
-
-            // Print button
-            if (!obligationsTable.Columns.Contains("print"))
-            {
-                DataGridViewButtonColumn printBtn = new DataGridViewButtonColumn();
-                printBtn.Name = "print";
-                printBtn.HeaderText = "Print";
-                printBtn.Text = "Print";
-                printBtn.UseColumnTextForButtonValue = true;
-                printBtn.Width = 50;
-                obligationsTable.Columns.Add(printBtn);
-            }
-        }
         private void obligationsTable_Paint(object sender, PaintEventArgs e)
         {
             // Get rectangles for all 3 button columns
@@ -146,7 +107,6 @@ namespace bfar8_budget_registry2025
                         da.Fill(dataTable);
 
                         obligationsTable.DataSource = dataTable;
-                        addActionButtons();
                     }
                 }
                 catch (Exception ex)
@@ -171,7 +131,7 @@ namespace bfar8_budget_registry2025
             if (obligationsTable.Columns[e.ColumnIndex].Name == "edit")
             {
                 // Get hidden ID
-                SharedData.selectedIDToEdit = obligationsTable.Rows[e.RowIndex].Cells["id"].Value.ToString();
+                SharedData.selectedIDToEdit = obligationsTable.Rows[e.RowIndex].Cells["obligation_id"].Value.ToString();
                 editObligation editForm = new editObligation();
                 dashboard.Instance.LoadForm(editForm);
             }
@@ -180,7 +140,7 @@ namespace bfar8_budget_registry2025
             else if (obligationsTable.Columns[e.ColumnIndex].Name == "print")
             {
                 // Get the ID or data to print
-                SharedData.selectedIDToPrint = obligationsTable.Rows[e.RowIndex].Cells["id"].Value.ToString();
+                SharedData.selectedIDToPrint = obligationsTable.Rows[e.RowIndex].Cells["obligation_id"].Value.ToString();
                 ORSForm orsForm = new ORSForm();
                 orsForm.ShowDialog();
             }
@@ -189,11 +149,10 @@ namespace bfar8_budget_registry2025
             else if (obligationsTable.Columns[e.ColumnIndex].Name == "view")
             {
                 // Get the ID or data to print
-                SharedData.selectedIDToView = obligationsTable.Rows[e.RowIndex].Cells["id"].Value.ToString();
+                SharedData.selectedIDToView = obligationsTable.Rows[e.RowIndex].Cells["obligation_id"].Value.ToString();
                 viewDetails viewDetails = new viewDetails();
                 viewDetails.ShowDialog();
             }
-
         }
 
         private void txtPayee_TextChanged(object sender, EventArgs e)
@@ -253,7 +212,7 @@ namespace bfar8_budget_registry2025
             using (MySqlConnection conn = dbconn.GetConnection())
             {
                 conn.Open();
-                string query = @"SELECT id, date, orsNo, payee, particulars, responsibility_center, signatory, position, obligations_incurred
+                string query = @"SELECT obligation_id, date, orsNo, payee, particulars, responsibility_center, signatory, position, obligations_incurred
                         FROM tbl_obligations 
                         WHERE payee = @Payee
                         ";

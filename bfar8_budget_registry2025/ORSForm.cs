@@ -1,18 +1,9 @@
 ﻿using MySql.Data.MySqlClient;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
 using System.Drawing.Printing;
-using PdfiumViewer;
-using System.Linq;
 using System.Runtime.InteropServices;
-using System.Text;
-using System.Threading.Tasks;
-using System.Web.UI.WebControls;
 using System.Windows.Forms;
-using TheArtOfDevHtmlRenderer.Adapters;
 using static bfar8_budget_registry2025.viewRegistry;
 
 namespace bfar8_budget_registry2025
@@ -74,7 +65,7 @@ namespace bfar8_budget_registry2025
         {
             string query = "SELECT orsNo, payee, particulars, fund_category, responsibility_center, signatory, position, " +
                 "program_project, project_sub_category, activity_level, expense_class, account_code, obligations_incurred FROM " +
-                "tbl_obligations WHERE id = @obligationIDToPrint";
+                "tbl_obligations WHERE obligation_id = @obligationIDToPrint";
 
             using (MySqlConnection conn = dbconn.GetConnection())
             {

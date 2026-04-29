@@ -69,7 +69,7 @@ namespace bfar8_budget_registry2025
         }
         private void getAccountCodeValue(string obligationID)
         {
-            string query = "SELECT account_code FROM tbl_obligations WHERE id = @selectedIDToEdit";
+            string query = "SELECT account_code FROM tbl_obligations WHERE obligation_id = @selectedIDToEdit";
             using (MySqlConnection conn = dbconn.GetConnection())
             {
                 try
@@ -417,7 +417,7 @@ namespace bfar8_budget_registry2025
         }
         private void getExpenseType()
         {
-            string query = "SELECT id, expenses_category FROM tbl_expenses_category";
+            string query = "SELECT expense_category_id, expenses_category FROM tbl_expenses_category";
             using (MySqlConnection conn = dbconn.GetConnection())
             {
                 try
@@ -429,7 +429,7 @@ namespace bfar8_budget_registry2025
                         {
                             while (reader.Read())
                             {
-                                string code = reader["id"].ToString();
+                                string code = reader["expense_category_id"].ToString();
                                 string name = reader["expenses_category"].ToString();
                                 txtExpensesType.Items.Add($"{code} - {name}");
                             }
@@ -473,7 +473,7 @@ namespace bfar8_budget_registry2025
 
         private void getObligationToEdit(string obligationID)
         {
-            string query = "SELECT * FROM tbl_obligations WHERE id = @selectedObligationID";
+            string query = "SELECT * FROM tbl_obligations WHERE obligation_id = @selectedObligationID";
             using (MySqlConnection conn = dbconn.GetConnection())
             {
                 try
@@ -573,7 +573,7 @@ namespace bfar8_budget_registry2025
             string updateQuery = "UPDATE tbl_obligations SET orsNo = @OrsNo, month = @Month, day = @Day, year = @Year, payee = @Payee, creditorType = @CreditorType, " +
                                      "quarter = @Quarter, particulars = @Particulars, signatory = @Signatory, responsibility_center = @ResponsibilityCenter, program_project = @ProgramProject, " +
                                      "project_category = @ProjectCategory, project_sub_category = @ProjectSubCategory, activity_level = @ActivityLevel, fund_category = @FundCategory, " +
-                                     "expense_class = @ExpenseClass, expense_type = @ExpenseType, account_code = @AccountCode, obligations_incurred = @ObligationsIncurred WHERE id = @ID";
+                                     "expense_class = @ExpenseClass, expense_type = @ExpenseType, account_code = @AccountCode, obligations_incurred = @ObligationsIncurred WHERE obligation_id = @ID";
 
             using (MySqlConnection conn = dbconn.GetConnection())
             {

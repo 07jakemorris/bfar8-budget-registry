@@ -42,8 +42,7 @@
             this.lblSearch = new System.Windows.Forms.Label();
             this.searchResultDGV = new System.Windows.Forms.DataGridView();
             this.resultPayee = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.date = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.obligation_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.orsNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.payee = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.particulars = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -76,8 +75,7 @@
             this.obligationsTable.ColumnHeadersHeight = 32;
             this.obligationsTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.obligationsTable.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.id,
-            this.date,
+            this.obligation_id,
             this.orsNo,
             this.payee,
             this.particulars,
@@ -254,19 +252,12 @@
             this.resultPayee.Name = "resultPayee";
             this.resultPayee.ReadOnly = true;
             // 
-            // id
+            // obligation_id
             // 
-            this.id.HeaderText = "ID";
-            this.id.Name = "id";
-            this.id.ReadOnly = true;
-            this.id.Visible = false;
-            // 
-            // date
-            // 
-            this.date.HeaderText = "Obligation Date";
-            this.date.Name = "date";
-            this.date.ReadOnly = true;
-            this.date.Width = 140;
+            this.obligation_id.HeaderText = "ID";
+            this.obligation_id.Name = "obligation_id";
+            this.obligation_id.ReadOnly = true;
+            this.obligation_id.Visible = false;
             // 
             // orsNo
             // 
@@ -351,8 +342,7 @@
         private System.Windows.Forms.Label lblSearch;
         private System.Windows.Forms.DataGridView searchResultDGV;
         private System.Windows.Forms.DataGridViewTextBoxColumn resultPayee;
-        private System.Windows.Forms.DataGridViewTextBoxColumn id;
-        private System.Windows.Forms.DataGridViewTextBoxColumn date;
+        private System.Windows.Forms.DataGridViewTextBoxColumn obligation_id;
         private System.Windows.Forms.DataGridViewTextBoxColumn orsNo;
         private System.Windows.Forms.DataGridViewTextBoxColumn payee;
         private System.Windows.Forms.DataGridViewTextBoxColumn particulars;
